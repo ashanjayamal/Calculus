@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Functions | Calculus</title>
+  <meta name="description" content="Chapter 2 Functions | Calculus" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Functions | Calculus" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Chapter 2 Functions | Calculus" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Functions | Calculus" />
+  
+  <meta name="twitter:description" content="Chapter 2 Functions | Calculus" />
+  
+
+<meta name="author" content="Ashan J" />
+
+
+<meta name="date" content="2024-11-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="limits-and-continuity.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html#functions-1"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="functions.html"><a href="functions.html#piecewise-defined-functions"><i class="fa fa-check"></i><b>2.2</b> Piecewise Defined Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html#combining-functions"><i class="fa fa-check"></i><b>2.3</b> Combining Functions</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html#inverse-functions"><i class="fa fa-check"></i><b>2.4</b> Inverse Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>3</b> Limits and Continuity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-limit-of-a-function"><i class="fa fa-check"></i><b>3.1</b> The Limit of a Function</a></li>
+<li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="functions" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Functions<a href="functions.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="functions-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Functions<a href="functions.html#functions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 2.1  </strong></span>```Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two nonempty sets. A function from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is a rule of correspondence that assigns to each element in set <span class="math inline">\(A\)</span> exactly one element in <span class="math inline">\(B\)</span>.</p>
+<ul>
+<li>The set <span class="math inline">\(A\)</span> in the definition is called the domain of the function.</li>
+<li>The set <span class="math inline">\(B\)</span> is called the co-domain of the function.</li>
+<li>The set of outputs is called the range of the function.</li>
+</ul>
+</div>
+<div id="representing-functions" class="section level4 hasAnchor" number="2.1.0.1">
+<h4><span class="header-section-number">2.1.0.1</span> Representing Functions<a href="functions.html#representing-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The rule describing the function can be represented by a:</p>
+<ul>
+<li><p>Picture</p></li>
+<li><p>Table</p></li>
+</ul>
+<p>|$x <span class="math inline">\(|\)</span>y <span class="math inline">\(|
+|:---:|:---:|
+|\)</span>− 2$|$5 <span class="math inline">\(|
+|\)</span>− 1$|$2 $|
+|$0 $|$1 $|
+|$1 $|$2 $|
+|$2 $|$5 $|</p>
+<ul>
+<li>Formula <span class="math inline">\(A = \{-2, -1, 0, 1, 2\}, B = \{1, 2, 5\}\)</span> and <span class="math inline">\(f(x) = x^2 + 1\)</span></li>
+<li>Cartesian product <span class="math inline">\(A = \{-2, -1, 0, 1, 2\}, B = \{1, 2, 5\}\)</span> and <span class="math inline">\(f = \{(-2, 5), (-1, 2), (0, 1), (1, 2), (2, 5)\}\)</span></li>
+<li>Graph</li>
+</ul>
+<p><span class="math display">\[
+f : A \rightarrow B\\
+f(x) = \text{formula}
+\]</span></p>
+<p>In this site, unless otherwise specified, the co-domain is the set of real numbers and the domain of a function is the set of real numbers for which the function is defined. We call this the domain convention.</p>
+<p><code>{example}</code>
+Determine the domain of each function</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(f(x) = -5x + 1\)</span></li>
+<li><span class="math inline">\(f(x) = \frac{x}{3x^2 - 10x - 8}\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{10x - 8}\)</span></li>
+<li><span class="math inline">\(f(x) = \sqrt{3x^2 - 10x + 8}\)</span>
+```</li>
+</ol>
+<div class="definition">
+<p><span id="def:unnamed-chunk-2" class="definition"><strong>Definition 2.2  (Graph of a Function) </strong></span>The graph of a function <span class="math inline">\(f\)</span> consists of points whose coordinates <span class="math inline">\((x, y)\)</span> satisfy <span class="math inline">\(y = f(x)\)</span>, for all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(f\)</span>.</p>
+</div>
+<p><strong>Vertical Line Test</strong></p>
+<p>A function can only have one output, <span class="math inline">\(y\)</span>, for each unique input, <span class="math inline">\(x\)</span>. If a vertical line intersects a curve on an <span class="math inline">\(xy\)</span>-plane more than once, then for one value of <span class="math inline">\(x\)</span> the curve has more than one value of <span class="math inline">\(y\)</span>, and so, the curve does not represent a function.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-3" class="example"><strong>Example 2.1  </strong></span>Use the vertical line test to determine when the graph is known.</p>
+</div>
+</div>
+</div>
+<div id="piecewise-defined-functions" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Piecewise Defined Functions<a href="functions.html#piecewise-defined-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A piecewise-defined function (also called a piecewise function) is a function defined by multiple sub-functions, where each sub-function applies to a different interval in the domain.<br />
+The absolute value function, <span class="math inline">\(f(x) = |x|\)</span></p>
+<p><span class="math display">\[f(x) = \begin{cases} x &amp; x \ge 0 \\ -x &amp; x &lt; 0 \end{cases}\]</span></p>
+<p><span class="math display">\[g(x) = \begin{cases} x^2 &amp; x \le 1 \\ -(x - 2)^2 + 2 &amp; x \ge 1 \end{cases}\]</span></p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.2  </strong></span>Given that <span class="math inline">\(f(t) =\begin{cases} 2t &amp; t \le 1 \\ 2t + 1 &amp; 1 &lt; t &lt; 3 \\ -2t + 2 &amp; t \ge 3 \end{cases}\)</span></p>
+<p>Compute <span class="math inline">\(f(0), f(1), f(2), f(3), f(5)\)</span></p>
+</div>
+</div>
+<div id="combining-functions" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Combining Functions<a href="functions.html#combining-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we are given two functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>, is it possible to combine them in some way? YES!</p>
+<ol style="list-style-type: decimal">
+<li>Combining functions arithmetically
+<ul>
+<li>Addition of functions <span class="math inline">\((f + g)(x) = f(x) + g(x)\)</span></li>
+<li>Subtraction of functions <span class="math inline">\((f - g)(x) = f(x) - g(x)\)</span></li>
+<li>Multiplication of functions <span class="math inline">\((fg)(x) = (f(x)) \cdot (g(x))\)</span></li>
+<li>Division of functions <span class="math inline">\((f/g)(x) = \frac{f(x)}{g(x)}\)</span>. BE CAREFUL! We can do this only when <span class="math inline">\(g(x) \neq 0\)</span></li>
+</ul></li>
+<li>Composition of functions <span class="math inline">\((g \circ f)(x) = g(f(x))\)</span></li>
+</ol>
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 2.3  </strong></span>Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span class="math inline">\(g(x) = \sqrt{x}\)</span>, find</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(f + g\)</span></li>
+<li><span class="math inline">\(f - g\)</span></li>
+<li><span class="math inline">\(fg\)</span></li>
+<li><span class="math inline">\(\frac{f}{g}\)</span></li>
+<li><span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span></li>
+</ol>
+</div>
+</div>
+<div id="inverse-functions" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Inverse Functions<a href="functions.html#inverse-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>QUESTION: Suppose you are given a function <span class="math inline">\(y = f(x)\)</span>. For each value of <span class="math inline">\(y\)</span>, can you find a corresponding value of <span class="math inline">\(x\)</span>?<br />
+ANSWER: Maybe… depending on the actual <span class="math inline">\(f(x)\)</span> given.<br />
+If we could, we have to solve the equation <span class="math inline">\(y = f(x)\)</span> for <span class="math inline">\(x\)</span>. The solution is called the “inverse function of <span class="math inline">\(f\)</span>”, and denoted by notation <span class="math inline">\(f^{-1}\)</span>.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2.3  </strong></span>Let <span class="math inline">\(f\)</span> be a function with domain <span class="math inline">\(D\)</span> and range <span class="math inline">\(R\)</span>. Then the function <span class="math inline">\(g\)</span> with domain <span class="math inline">\(R\)</span> and range <span class="math inline">\(D\)</span> is the inverse of <span class="math inline">\(f\)</span> if</p>
+<p>$$
+g f(x) = x x D\</p>
+<p>and</p>
+<p><span class="math display">\[
+f \circ g(x) = x \quad \forall x \in R
+\]</span></p>
+<p>If <span class="math inline">\(g\)</span> is the inverse of <span class="math inline">\(f\)</span>, we denote it by <span class="math inline">\(g = f^{-1}\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 2.4  </strong></span>Given that <span class="math inline">\(f(x) = \frac{2x + 8}{5}\)</span>, find <span class="math inline">\(f^{-1}\)</span>, and verify that the function you found is the inverse of <span class="math inline">\(f\)</span>.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="limits-and-continuity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

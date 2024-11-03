@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Limits and Continuity | Calculus</title>
+  <meta name="description" content="Chapter 3 Limits and Continuity | Calculus" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Limits and Continuity | Calculus" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Chapter 3 Limits and Continuity | Calculus" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Limits and Continuity | Calculus" />
+  
+  <meta name="twitter:description" content="Chapter 3 Limits and Continuity | Calculus" />
+  
+
+<meta name="author" content="Ashan J" />
+
+
+<meta name="date" content="2024-11-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="functions.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html#functions-1"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="functions.html"><a href="functions.html#piecewise-defined-functions"><i class="fa fa-check"></i><b>2.2</b> Piecewise Defined Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html#combining-functions"><i class="fa fa-check"></i><b>2.3</b> Combining Functions</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html#inverse-functions"><i class="fa fa-check"></i><b>2.4</b> Inverse Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>3</b> Limits and Continuity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-limit-of-a-function"><i class="fa fa-check"></i><b>3.1</b> The Limit of a Function</a></li>
+<li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="limits-and-continuity" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Limits and Continuity<a href="limits-and-continuity.html#limits-and-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-limit-of-a-function" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> The Limit of a Function<a href="limits-and-continuity.html#the-limit-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Intuitive definition of limit</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 3.1  (Left Limit) </strong></span>We write <span class="math inline">\(\lim_{{x \to c^-}} f(x) = L\)</span> if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from the left.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-2" class="definition"><strong>Definition 3.2  (Right Limit) </strong></span>We write <span class="math inline">\(\lim_{{x \to c^+}} f(x) = L\)</span> if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from the right.
+}</p>
+<p>Left Limit and Right Limit are called one-sided limits.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definition 3.3  (Two-sided Limit) </strong></span>We write</p>
+<p><span class="math inline">\(\lim_{{x \to c}} f(x) = L\)</span></p>
+<p>if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to the
+same value <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from either direction.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-4" class="theorem"><strong>Theorem 3.1  </strong></span>The two-sided limit</p>
+<p><span class="math display">\[\lim_{{x \to c}} f(x)\]</span></p>
+<p>exists if and only if the two one-sided limits</p>
+<p><span class="math display">\[\lim_{{x \to c^-}} f(x) \quad \text{and} \quad \lim_{{x \to c^+}} f(x)\]</span></p>
+<p>both exist and are equal. Furthermore, if</p>
+<p><span class="math display">\[\lim_{{x \to c^-}} f(x) = L \quad \text{and} \quad \lim_{{x \to c^+}} f(x) = L\]</span></p>
+<p>then</p>
+<p><span class="math display">\[\lim_{{x \to c}} f(x) = L.\]</span></p>
+</div>
+<p>``{example,name=‘Evaluating limits using a graph’
+For each of the following functions, write down the left limit, right limit, two-sided limit, and the function value at the given point. If any limit is
+undefined, write "UND".
+- at <span class="math inline">\(x = 4\)</span></p>
+<ul>
+<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
+<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
+<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
+</ul>
+<pre><code>
+```{Remark} In Example 3.1.5 part (a), you can observe that the
+limit (two-sided limit) at $x = 2$ is equal to the function value at
+that point. In part (d), you can observe that the limit (two-sided
+limit) at $x = 3$ is different from the function value at that point. In
+general, there is no connection between the limit of a function at a
+point ($\lim_{{x \to c}} f(x)$) and the value of the function ($f(c)$)
+at that point.
+</code></pre>
+<div class="example">
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 3.1  </strong></span>Observing the table, we can say there is a good
+chance that</p>
+<p><span class="math display">\[\lim_{{x \to 0}} f(x) = 2.\]</span></p>
+<p>One cannot use a table to calculate the limit exactly (Why?).</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 3.2  </strong></span>The following figure shows the graph of
+<span class="math inline">\(f(x) = \sin\left(\frac{1}{x}\right)\)</span>. Observe that</p>
+<p><span class="math display">\[\lim_{{x \to 0}} \sin\left(\frac{1}{x}\right)\]</span></p>
+<p>is undefined.</p>
+</div>
+<p>Figure 3.1: Graph of <span class="math inline">\(f(x) = \sin\left(\frac{1}{x}\right)\)</span>.</p>
+<p>The graph is better than the table when we use Definition 3.1. In this
+course, we stick with Definition 3.1. It’s not rigorous enough; you will
+learn the formal <span class="math inline">\(\epsilon - \delta\)</span> definition listed below in advanced
+math classes.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definition 3.4  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
+<span class="math inline">\(L \in \mathbb{R}\)</span>. We say that the limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span> and
+denote it by</p>
+<p><span class="math display">\[\lim_{{x \to c}} f(x) = L,\]</span></p>
+<p>if for each <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists <span class="math inline">\(\delta &gt; 0\)</span> such that:</p>
+<p><span class="math display">\[|x - c| &lt; \delta \Rightarrow |f(x) - L| &lt; \epsilon.\]</span></p>
+</div>
+</div>
+<div id="continuity" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Continuity<a href="limits-and-continuity.html#continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the most basic sense, a continuous function can be sketched in one
+continuous stroke without lifting a pen or pencil. We would need to lift
+our pencil in drawing a function because it has a jump or hole in its
+graph. If there is a jump or hole in the graph, at that point, either
+the limit or function value is undefined, or they take different values.
+This leads to the following definition.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 3.5  (Continuity at a point) </strong></span>We say a function is continuous at a point <span class="math inline">\(x = c\)</span>, if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to <span class="math inline">\(f(c)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from either direction. A function that is not continuous at <span class="math inline">\(c\)</span> is said to have a
+discontinuity at that point.</p>
+</div>
+<p>Following theorem is straightforward.</p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-9" class="theorem"><strong>Theorem 3.2  (Continuity theorem I) </strong></span>A function <span class="math inline">\(f\)</span> is continuous
+at a point <span class="math inline">\(x = c\)</span> if the following conditions are satisfied:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(f(c)\)</span> is defined;</p></li>
+<li><p><span class="math inline">\(\lim_{{x \to c}} f(x)\)</span> is defined;</p></li>
+<li><p><span class="math inline">\(\lim_{{x \to c}} f(x) = f(c)\)</span>.</p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 3.3  </strong></span>For each of the following functions, state whether
+the function is continuous at the given point. If not, state which
+condition of continuity is broken at that point.</p>
+<ul>
+<li><p>at <span class="math inline">\(x = 4\)</span></p></li>
+<li><p>at <span class="math inline">\(x = 2\)</span></p></li>
+<li><p>at <span class="math inline">\(x = 2\)</span></p></li>
+<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 3.6  (Continuity of a function) </strong></span>A function is
+<strong>continuous on a set</strong> <span class="math inline">\(X\)</span> if it is continuous at every point of <span class="math inline">\(X\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definition 3.7  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
+<span class="math inline">\(c \in \mathbb{R}\)</span>. <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(c\)</span> if for each <span class="math inline">\(\epsilon &gt; 0\)</span>,
+there exists <span class="math inline">\(\delta &gt; 0\)</span> such that:</p>
+<p><span class="math display">\[|x - c| &lt; \delta \Rightarrow |f(x) - f(c)| &lt; \epsilon.\]</span></p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Limits.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

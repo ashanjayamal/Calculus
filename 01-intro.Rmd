@@ -3,27 +3,40 @@
 ## Functions
 
 ```{definition}
-```Let $A$ and $B$ be two nonempty sets. A function from $A$ to $B$ is a rule of correspondence that assigns to each element in set $A$ exactly one element in $B$.
+Let $A$ and $B$ be  two nonempty sets. A function from $A$ to $B$ is a rule of correspondence that assigns to each element in set $A$ exactly one element in $B$.
 
 - The set $A$ in the definition is called the domain of the function.
 - The set $B$ is called the co-domain of the function.
 - The set of outputs is called the range of the function.
 ```
 
+ It’s helpful to think of a function as a machine.
+ 
+![](fig/fig2.png)
+
+
+If is in the domain of  the function then when enters the machine, it’s accepted as an input and the machine  produces an output according to the rule of the function.  Thus we can think of the  domain as the set of all possible inputs and the range as the set of all possible outputs.
+
+The graph of also allows us to picture the domain of on the $x$-axis and its  range on the $y$-axis as in Figure \@ref(fig:fig4).
+
+![.  (#fig:fig4) ](fig/fig4.png){width=50%}
+ 
 #### Representing Functions
 The rule describing the function can be represented by a:
 
 - Picture
 
+![](fig/fig1.png)
+
 - Table
 
-|$x  $|$y  $|
-|:---:|:---:|
-|$− 2$|$5  $|
-|$− 1$|$2  $|
-|$0  $|$1  $|
-|$1  $|$2  $|
-|$2  $|$5  $|
+| $x$ | $y$ |
+|:----:|:---:|
+| $−2$ | $5$ |
+| $−1$ | $2$ |
+| $0$ | $1$ |
+| $1$ | $2$ |
+| $2$ | $5$ |
 
 
 
@@ -31,15 +44,20 @@ The rule describing the function can be represented by a:
 - Cartesian product $A = \{-2, -1, 0, 1, 2\}, B = \{1, 2, 5\}$ and $f = \{(-2, 5), (-1, 2), (0, 1), (1, 2), (2, 5)\}$
 - Graph
 
+![](fig/fig3.png)
+
+- Function Notation
 $$
 f : A \rightarrow B\\
 f(x) = \text{formula}
 $$
+The graph of also allows us to picture the domain of on the $x$-axis and its  range on the $y$-axis as in Figure
+
 
 
 In this site, unless otherwise specified, the co-domain is the set of real numbers and the domain of a function is the set of real numbers for which the function is defined. We call this the domain convention.
 
-```{example}``` 
+```{example}
 Determine the domain of each function
 
 i. $f(x) = -5x + 1$
@@ -53,7 +71,7 @@ The graph of a function $f$ consists of points whose coordinates $(x, y)$ satisf
 
 ```
 
-
+![](fig/fig5.png)
 
 **Vertical Line Test** 
 
@@ -62,7 +80,7 @@ A function can only have one output, $y$, for each unique input, $x$. If a verti
 ```{example}
 Use the vertical line test to determine when the graph is known.
 ```
-
+![](https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/1668116667931-V2ZJH5WZH4404DKKAVWL/Recap.jpg)
 
 ## Piecewise Defined Functions
 
@@ -70,10 +88,10 @@ A piecewise-defined function (also called a piecewise function) is a function de
 The absolute value function, $f(x) = |x|$
   
 $$f(x) = \begin{cases} x & x \ge 0 \\ -x & x < 0 \end{cases}$$
+![](https://upload.wikimedia.org/wikipedia/commons/6/6b/Absolute_value.svg)
 
-
-$$g(x) = \begin{cases} x^2 & x \le 1 \\ -(x - 2)^2 + 2 & x \ge 1 \end{cases}$$
-
+$$g(x) = \begin{cases} x^2 & x < 1 \\ -(x - 2)^2 + 5 & x \geq 1 \end{cases}$$
+![](fig/fig6.png)
 
 ```{example}
 Given that $f(t) =\begin{cases} 2t & t \le 1 \\ 2t + 1 & 1 < t < 3 \\ -2t + 2 & t \ge 3 \end{cases}
@@ -96,7 +114,7 @@ If we are given two functions $f(x)$ and $g(x)$, is it possible to combine them 
 
 2. Composition of functions $(g \circ f)(x) = g(f(x))$
 
-
+![](https://e7.pngegg.com/pngimages/981/265/png-clipart-linearity-pytorch-backpropagation-function-linear-regression-mathematics-angle-magenta.png)
 ```{example}
 Given that $f(x) = x^2 + 5x + 6$ and $g(x) = \sqrt{x}$, find
 
@@ -106,19 +124,22 @@ i. $fg$
 i. $\frac{f}{g}$
 i. $f \circ g$ and $g \circ f$
 ```
+
+
 ## Inverse Functions
 
-QUESTION: Suppose you are given a function $y = f(x)$. For each value of $y$, can you find a corresponding value of $x$?  
-ANSWER: Maybe... depending on the actual $f(x)$ given.  
+- QUESTION: Suppose you are given a function $y = f(x)$. For each value of $y$, can you find a corresponding value of $x$?  
+- ANSWER: Maybe... depending on the actual $f(x)$ given.  
 If we could, we have to solve the equation $y = f(x)$ for $x$. The solution is called the “inverse function of $f$”, and denoted by notation $f^{-1}$.
-
+![](https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/924/2015/11/25200955/CNX_Precalc_Figure_01_07_0032.jpg)
+![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
 
 ```{definition}
 Let $f$ be a function with domain $D$ and range $R$. Then the function $g$ with domain $R$ and range $D$ is the inverse of $f$ if
 
 $$
-g \circ f(x) = x \quad \forall x \in D\\
-
+g \circ f(x) = x \quad \forall x \in D
+$$
 and
 
 $$

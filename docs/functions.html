@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-11-03" />
+<meta name="date" content="2024-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,6 +88,8 @@
 <ul>
 <li class="chapter" data-level="3.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-limit-of-a-function"><i class="fa fa-check"></i><b>3.1</b> The Limit of a Function</a></li>
 <li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
+<li class="chapter" data-level="3.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#algebraic-computation-of-limits"><i class="fa fa-check"></i><b>3.3</b> Algebraic computation of limits</a></li>
+<li class="chapter" data-level="3.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-indeterminate-forms-frac00"><i class="fa fa-check"></i><b>3.4</b> Limits involving indeterminate forms <span class="math inline">\(\frac{0}{0}\)</span></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -114,64 +116,107 @@
 <div id="functions-1" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Functions<a href="functions.html#functions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 2.1  </strong></span>```Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two nonempty sets. A function from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is a rule of correspondence that assigns to each element in set <span class="math inline">\(A\)</span> exactly one element in <span class="math inline">\(B\)</span>.</p>
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 2.1  </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two nonempty sets. A function from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is a rule of correspondence that assigns to each element in set <span class="math inline">\(A\)</span> exactly one element in <span class="math inline">\(B\)</span>.</p>
 <ul>
 <li>The set <span class="math inline">\(A\)</span> in the definition is called the domain of the function.</li>
 <li>The set <span class="math inline">\(B\)</span> is called the co-domain of the function.</li>
 <li>The set of outputs is called the range of the function.</li>
 </ul>
 </div>
+<p>It’s helpful to think of a function as a machine.</p>
+<p><img src="fig/fig2.png" /></p>
+<p>If is in the domain of the function then when enters the machine, it’s accepted as an input and the machine produces an output according to the rule of the function. Thus we can think of the domain as the set of all possible inputs and the range as the set of all possible outputs.</p>
+<p>The graph of also allows us to picture the domain of on the <span class="math inline">\(x\)</span>-axis and its range on the <span class="math inline">\(y\)</span>-axis as in Figure <a href="#fig:fig4">2.1</a>.</p>
+<div class="float">
+<img src="fig/fig4.png" style="width:50.0%" alt=". " />
+<div class="figcaption">. </div>
+</div>
 <div id="representing-functions" class="section level4 hasAnchor" number="2.1.0.1">
 <h4><span class="header-section-number">2.1.0.1</span> Representing Functions<a href="functions.html#representing-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The rule describing the function can be represented by a:</p>
 <ul>
-<li><p>Picture</p></li>
-<li><p>Table</p></li>
+<li>Picture</li>
 </ul>
-<p>|$x <span class="math inline">\(|\)</span>y <span class="math inline">\(|
-|:---:|:---:|
-|\)</span>− 2$|$5 <span class="math inline">\(|
-|\)</span>− 1$|$2 $|
-|$0 $|$1 $|
-|$1 $|$2 $|
-|$2 $|$5 $|</p>
+<p><img src="fig/fig1.png" /></p>
+<ul>
+<li>Table</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(−2\)</span></td>
+<td align="center"><span class="math inline">\(5\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(−1\)</span></td>
+<td align="center"><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(0\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(1\)</span></td>
+<td align="center"><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(2\)</span></td>
+<td align="center"><span class="math inline">\(5\)</span></td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Formula <span class="math inline">\(A = \{-2, -1, 0, 1, 2\}, B = \{1, 2, 5\}\)</span> and <span class="math inline">\(f(x) = x^2 + 1\)</span></li>
 <li>Cartesian product <span class="math inline">\(A = \{-2, -1, 0, 1, 2\}, B = \{1, 2, 5\}\)</span> and <span class="math inline">\(f = \{(-2, 5), (-1, 2), (0, 1), (1, 2), (2, 5)\}\)</span></li>
 <li>Graph</li>
 </ul>
-<p><span class="math display">\[
+<p><img src="fig/fig3.png" /></p>
+<ul>
+<li>Function Notation
+<span class="math display">\[
 f : A \rightarrow B\\
 f(x) = \text{formula}
-\]</span></p>
+\]</span>
+The graph of also allows us to picture the domain of on the <span class="math inline">\(x\)</span>-axis and its range on the <span class="math inline">\(y\)</span>-axis as in Figure</li>
+</ul>
 <p>In this site, unless otherwise specified, the co-domain is the set of real numbers and the domain of a function is the set of real numbers for which the function is defined. We call this the domain convention.</p>
-<p><code>{example}</code>
-Determine the domain of each function</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 2.1  </strong></span>Determine the domain of each function</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(f(x) = -5x + 1\)</span></li>
 <li><span class="math inline">\(f(x) = \frac{x}{3x^2 - 10x - 8}\)</span></li>
 <li><span class="math inline">\(f(x) = \sqrt{10x - 8}\)</span></li>
-<li><span class="math inline">\(f(x) = \sqrt{3x^2 - 10x + 8}\)</span>
-```</li>
+<li><span class="math inline">\(f(x) = \sqrt{3x^2 - 10x + 8}\)</span></li>
 </ol>
-<div class="definition">
-<p><span id="def:unnamed-chunk-2" class="definition"><strong>Definition 2.2  (Graph of a Function) </strong></span>The graph of a function <span class="math inline">\(f\)</span> consists of points whose coordinates <span class="math inline">\((x, y)\)</span> satisfy <span class="math inline">\(y = f(x)\)</span>, for all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(f\)</span>.</p>
 </div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definition 2.2  (Graph of a Function) </strong></span>The graph of a function <span class="math inline">\(f\)</span> consists of points whose coordinates <span class="math inline">\((x, y)\)</span> satisfy <span class="math inline">\(y = f(x)\)</span>, for all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(f\)</span>.</p>
+</div>
+<p><img src="fig/fig5.png" /></p>
 <p><strong>Vertical Line Test</strong></p>
 <p>A function can only have one output, <span class="math inline">\(y\)</span>, for each unique input, <span class="math inline">\(x\)</span>. If a vertical line intersects a curve on an <span class="math inline">\(xy\)</span>-plane more than once, then for one value of <span class="math inline">\(x\)</span> the curve has more than one value of <span class="math inline">\(y\)</span>, and so, the curve does not represent a function.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-3" class="example"><strong>Example 2.1  </strong></span>Use the vertical line test to determine when the graph is known.</p>
+<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.2  </strong></span>Use the vertical line test to determine when the graph is known.</p>
 </div>
+<p><img src="https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/1668116667931-V2ZJH5WZH4404DKKAVWL/Recap.jpg" /></p>
 </div>
 </div>
 <div id="piecewise-defined-functions" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Piecewise Defined Functions<a href="functions.html#piecewise-defined-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A piecewise-defined function (also called a piecewise function) is a function defined by multiple sub-functions, where each sub-function applies to a different interval in the domain.<br />
 The absolute value function, <span class="math inline">\(f(x) = |x|\)</span></p>
-<p><span class="math display">\[f(x) = \begin{cases} x &amp; x \ge 0 \\ -x &amp; x &lt; 0 \end{cases}\]</span></p>
-<p><span class="math display">\[g(x) = \begin{cases} x^2 &amp; x \le 1 \\ -(x - 2)^2 + 2 &amp; x \ge 1 \end{cases}\]</span></p>
+<p><span class="math display">\[f(x) = \begin{cases} x &amp; x \ge 0 \\ -x &amp; x &lt; 0 \end{cases}\]</span>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Absolute_value.svg" /></p>
+<p><span class="math display">\[g(x) = \begin{cases} x^2 &amp; x &lt; 1 \\ -(x - 2)^2 + 5 &amp; x \geq 1 \end{cases}\]</span>
+<img src="fig/fig6.png" /></p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.2  </strong></span>Given that <span class="math inline">\(f(t) =\begin{cases} 2t &amp; t \le 1 \\ 2t + 1 &amp; 1 &lt; t &lt; 3 \\ -2t + 2 &amp; t \ge 3 \end{cases}\)</span></p>
+<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 2.3  </strong></span>Given that <span class="math inline">\(f(t) =\begin{cases} 2t &amp; t \le 1 \\ 2t + 1 &amp; 1 &lt; t &lt; 3 \\ -2t + 2 &amp; t \ge 3 \end{cases}\)</span></p>
 <p>Compute <span class="math inline">\(f(0), f(1), f(2), f(3), f(5)\)</span></p>
 </div>
 </div>
@@ -188,34 +233,41 @@ The absolute value function, <span class="math inline">\(f(x) = |x|\)</span></p>
 </ul></li>
 <li>Composition of functions <span class="math inline">\((g \circ f)(x) = g(f(x))\)</span></li>
 </ol>
-<div class="example">
-<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 2.3  </strong></span>Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span class="math inline">\(g(x) = \sqrt{x}\)</span>, find</p>
+<p><img src="https://e7.pngegg.com/pngimages/981/265/png-clipart-linearity-pytorch-backpropagation-function-linear-regression-mathematics-angle-magenta.png" />
+::: {.example #unnamed-chunk-6}
+Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span class="math inline">\(g(x) = \sqrt{x}\)</span>, find</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(f + g\)</span></li>
 <li><span class="math inline">\(f - g\)</span></li>
 <li><span class="math inline">\(fg\)</span></li>
 <li><span class="math inline">\(\frac{f}{g}\)</span></li>
-<li><span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span></li>
+<li><span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span>
+:::</li>
 </ol>
-</div>
 </div>
 <div id="inverse-functions" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Inverse Functions<a href="functions.html#inverse-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>QUESTION: Suppose you are given a function <span class="math inline">\(y = f(x)\)</span>. For each value of <span class="math inline">\(y\)</span>, can you find a corresponding value of <span class="math inline">\(x\)</span>?<br />
-ANSWER: Maybe… depending on the actual <span class="math inline">\(f(x)\)</span> given.<br />
-If we could, we have to solve the equation <span class="math inline">\(y = f(x)\)</span> for <span class="math inline">\(x\)</span>. The solution is called the “inverse function of <span class="math inline">\(f\)</span>”, and denoted by notation <span class="math inline">\(f^{-1}\)</span>.</p>
+<ul>
+<li>QUESTION: Suppose you are given a function <span class="math inline">\(y = f(x)\)</span>. For each value of <span class="math inline">\(y\)</span>, can you find a corresponding value of <span class="math inline">\(x\)</span>?<br />
+</li>
+<li>ANSWER: Maybe… depending on the actual <span class="math inline">\(f(x)\)</span> given.<br />
+If we could, we have to solve the equation <span class="math inline">\(y = f(x)\)</span> for <span class="math inline">\(x\)</span>. The solution is called the “inverse function of <span class="math inline">\(f\)</span>”, and denoted by notation <span class="math inline">\(f^{-1}\)</span>.
+<img src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/924/2015/11/25200955/CNX_Precalc_Figure_01_07_0032.jpg" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG" /></li>
+</ul>
 <div class="definition">
-<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2.3  </strong></span>Let <span class="math inline">\(f\)</span> be a function with domain <span class="math inline">\(D\)</span> and range <span class="math inline">\(R\)</span>. Then the function <span class="math inline">\(g\)</span> with domain <span class="math inline">\(R\)</span> and range <span class="math inline">\(D\)</span> is the inverse of <span class="math inline">\(f\)</span> if</p>
-<p>$$
-g f(x) = x x D\</p>
-<p>and</p>
+<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definition 2.3  </strong></span>Let <span class="math inline">\(f\)</span> be a function with domain <span class="math inline">\(D\)</span> and range <span class="math inline">\(R\)</span>. Then the function <span class="math inline">\(g\)</span> with domain <span class="math inline">\(R\)</span> and range <span class="math inline">\(D\)</span> is the inverse of <span class="math inline">\(f\)</span> if</p>
+<p><span class="math display">\[
+g \circ f(x) = x \quad \forall x \in D
+\]</span>
+and</p>
 <p><span class="math display">\[
 f \circ g(x) = x \quad \forall x \in R
 \]</span></p>
 <p>If <span class="math inline">\(g\)</span> is the inverse of <span class="math inline">\(f\)</span>, we denote it by <span class="math inline">\(g = f^{-1}\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 2.4  </strong></span>Given that <span class="math inline">\(f(x) = \frac{2x + 8}{5}\)</span>, find <span class="math inline">\(f^{-1}\)</span>, and verify that the function you found is the inverse of <span class="math inline">\(f\)</span>.</p>
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Example 2.4  </strong></span>Given that <span class="math inline">\(f(x) = \frac{2x + 8}{5}\)</span>, find <span class="math inline">\(f^{-1}\)</span>, and verify that the function you found is the inverse of <span class="math inline">\(f\)</span>.</p>
 </div>
 
 </div>

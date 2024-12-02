@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-11-03" />
+<meta name="date" content="2024-12-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,6 +88,8 @@
 <ul>
 <li class="chapter" data-level="3.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-limit-of-a-function"><i class="fa fa-check"></i><b>3.1</b> The Limit of a Function</a></li>
 <li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
+<li class="chapter" data-level="3.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#algebraic-computation-of-limits"><i class="fa fa-check"></i><b>3.3</b> Algebraic computation of limits</a></li>
+<li class="chapter" data-level="3.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-indeterminate-forms-frac00"><i class="fa fa-check"></i><b>3.4</b> Limits involving indeterminate forms <span class="math inline">\(\frac{0}{0}\)</span></a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -138,43 +140,96 @@ same value <span class="math inline">\(L\)</span> as <span class="math inline">\
 <p>then</p>
 <p><span class="math display">\[\lim_{{x \to c}} f(x) = L.\]</span></p>
 </div>
-<p>``{example,name=‘Evaluating limits using a graph’
-For each of the following functions, write down the left limit, right limit, two-sided limit, and the function value at the given point. If any limit is
-undefined, write "UND".
-- at <span class="math inline">\(x = 4\)</span></p>
-<ul>
-<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
-<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
-<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
-</ul>
-<pre><code>
-```{Remark} In Example 3.1.5 part (a), you can observe that the
-limit (two-sided limit) at $x = 2$ is equal to the function value at
-that point. In part (d), you can observe that the limit (two-sided
-limit) at $x = 3$ is different from the function value at that point. In
-general, there is no connection between the limit of a function at a
-point ($\lim_{{x \to c}} f(x)$) and the value of the function ($f(c)$)
-at that point.
-</code></pre>
 <div class="example">
-<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 3.1  </strong></span>Observing the table, we can say there is a good
+<p><span id="exm:ex315" class="example"><strong>Example 3.1  (Evaluating limits using a graph) </strong></span>For each of the following functions, write down the left limit, right limit, two-sided limit, and the function value at the given point. If any limit is undefined, write "UND".
+- at <span class="math inline">\(x = 4\)</span></p>
+<p><img src="fig/fig7.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = 3\)</span></li>
+</ul>
+<p><img src="fig/fig8.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = -2\)</span></li>
+</ul>
+<p><img src="fig/fig9.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = 3\)</span></li>
+</ul>
+<p><img src="fig/fig10.png" /></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-1" class="remark"><em>Remark</em>. </span>In Example @ref{exm:ex315}</p>
+<ul>
+<li><p>part (a), you can observe that the limit (two-sided limit) at <span class="math inline">\(x = 2\)</span> is equal to the function value at that point.</p></li>
+<li><p>In part (d), you can observe that the limit (two-sided
+limit) at <span class="math inline">\(x = 3\)</span> is different from the function value at that point.</p></li>
+<li><p>In general, there is no connection between the limit of a function at a point (<span class="math inline">\(\lim_{{x \to c}} f(x)\)</span>) and the value of the function (<span class="math inline">\(f(c)\)</span>)
+at that point.</p></li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 3.2  </strong></span></p>
+<table>
+<thead>
+<tr class="header">
+<th>x</th>
+<th>f(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-0.05</td>
+<td>2.0025</td>
+</tr>
+<tr class="even">
+<td>-0.25</td>
+<td>2.0625</td>
+</tr>
+<tr class="odd">
+<td>-0.01</td>
+<td>2.0001</td>
+</tr>
+<tr class="even">
+<td>-0.001</td>
+<td>2.000001</td>
+</tr>
+<tr class="odd">
+<td>0.001</td>
+<td>2.000001</td>
+</tr>
+<tr class="even">
+<td>0.01</td>
+<td>2.0001</td>
+</tr>
+<tr class="odd">
+<td>0.25</td>
+<td>2.0625</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td>2.25</td>
+</tr>
+</tbody>
+</table>
+<p>Observing the table, we can say there is a good
 chance that</p>
 <p><span class="math display">\[\lim_{{x \to 0}} f(x) = 2.\]</span></p>
 <p>One cannot use a table to calculate the limit exactly (Why?).</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 3.2  </strong></span>The following figure shows the graph of
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 3.3  </strong></span>The following figure shows the graph of
 <span class="math inline">\(f(x) = \sin\left(\frac{1}{x}\right)\)</span>. Observe that</p>
 <p><span class="math display">\[\lim_{{x \to 0}} \sin\left(\frac{1}{x}\right)\]</span></p>
 <p>is undefined.</p>
 </div>
-<p>Figure 3.1: Graph of <span class="math inline">\(f(x) = \sin\left(\frac{1}{x}\right)\)</span>.</p>
+<div class="float">
+<img src="fig/fig11.png" alt="Graph of f(x) =\sin\left(\frac{1}{x}\right)." />
+<div class="figcaption">Graph of <span class="math inline">\(f(x) =\sin\left(\frac{1}{x}\right)\)</span>.</div>
+</div>
 <p>The graph is better than the table when we use Definition 3.1. In this
-course, we stick with Definition 3.1. It’s not rigorous enough; you will
-learn the formal <span class="math inline">\(\epsilon - \delta\)</span> definition listed below in advanced
-math classes.</p>
+course, we stick with Definition 3.1. It’s not rigorous enough; you will learn the formal <span class="math inline">\(\epsilon - \delta\)</span> definition listed below in advanced math classes.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definition 3.4  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
+<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 3.4  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
 <span class="math inline">\(L \in \mathbb{R}\)</span>. We say that the limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span> and
 denote it by</p>
 <p><span class="math display">\[\lim_{{x \to c}} f(x) = L,\]</span></p>
@@ -185,18 +240,13 @@ denote it by</p>
 <div id="continuity" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Continuity<a href="limits-and-continuity.html#continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the most basic sense, a continuous function can be sketched in one
-continuous stroke without lifting a pen or pencil. We would need to lift
-our pencil in drawing a function because it has a jump or hole in its
-graph. If there is a jump or hole in the graph, at that point, either
-the limit or function value is undefined, or they take different values.
-This leads to the following definition.</p>
+continuous stroke without lifting a pen or pencil. We would need to lift our pencil in drawing a function because it has a jump or hole in its graph. If there is a jump or hole in the graph, at that point, either the limit or function value is undefined, or they take different values. This leads to the following definition.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-8" class="definition"><strong>Definition 3.5  (Continuity at a point) </strong></span>We say a function is continuous at a point <span class="math inline">\(x = c\)</span>, if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to <span class="math inline">\(f(c)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from either direction. A function that is not continuous at <span class="math inline">\(c\)</span> is said to have a
-discontinuity at that point.</p>
+<p><span id="def:unnamed-chunk-9" class="definition"><strong>Definition 3.5  (Continuity at a point) </strong></span>We say a function is continuous at a point <span class="math inline">\(x = c\)</span>, if the number <span class="math inline">\(f(x)\)</span> (the function height) keeps getting close to <span class="math inline">\(f(c)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(c\)</span> from either direction. A function that is not continuous at <span class="math inline">\(c\)</span> is said to have a discontinuity at that point.</p>
 </div>
 <p>Following theorem is straightforward.</p>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-9" class="theorem"><strong>Theorem 3.2  (Continuity theorem I) </strong></span>A function <span class="math inline">\(f\)</span> is continuous
+<p><span id="thm:unnamed-chunk-10" class="theorem"><strong>Theorem 3.2  (Continuity theorem I) </strong></span>A function <span class="math inline">\(f\)</span> is continuous
 at a point <span class="math inline">\(x = c\)</span> if the following conditions are satisfied:</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(f(c)\)</span> is defined;</p></li>
@@ -205,26 +255,142 @@ at a point <span class="math inline">\(x = c\)</span> if the following condition
 </ol>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 3.3  </strong></span>For each of the following functions, state whether
-the function is continuous at the given point. If not, state which
-condition of continuity is broken at that point.</p>
+<p><span id="exm:unnamed-chunk-11" class="example"><strong>Example 3.4  </strong></span>For each of the following functions, state whether the function is continuous at the given point. If not, state which condition of continuity is broken at that point.</p>
 <ul>
-<li><p>at <span class="math inline">\(x = 4\)</span></p></li>
-<li><p>at <span class="math inline">\(x = 2\)</span></p></li>
-<li><p>at <span class="math inline">\(x = 2\)</span></p></li>
-<li><p>at <span class="math inline">\(x = 3\)</span></p></li>
+<li>at <span class="math inline">\(x = 4\)</span></li>
 </ul>
+<p><img src="fig/fig7.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = 3\)</span></li>
+</ul>
+<p><img src="fig/fig8.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = -2\)</span></li>
+</ul>
+<p><img src="fig/fig9.png" /></p>
+<ul>
+<li>at <span class="math inline">\(x = 3\)</span></li>
+</ul>
+<p><img src="fig/fig10.png" /></p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 3.6  (Continuity of a function) </strong></span>A function is
+<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definition 3.6  (Continuity of a function) </strong></span>A function is
 <strong>continuous on a set</strong> <span class="math inline">\(X\)</span> if it is continuous at every point of <span class="math inline">\(X\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definition 3.7  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
+<p><span id="def:unnamed-chunk-13" class="definition"><strong>Definition 3.7  </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span> and
 <span class="math inline">\(c \in \mathbb{R}\)</span>. <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(c\)</span> if for each <span class="math inline">\(\epsilon &gt; 0\)</span>,
 there exists <span class="math inline">\(\delta &gt; 0\)</span> such that:</p>
 <p><span class="math display">\[|x - c| &lt; \delta \Rightarrow |f(x) - f(c)| &lt; \epsilon.\]</span></p>
 </div>
+</div>
+<div id="algebraic-computation-of-limits" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Algebraic computation of limits<a href="limits-and-continuity.html#algebraic-computation-of-limits" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>{theorem,name=‘Basic properties and rules for limits’}
+For any real number <span class="math inline">\(c\)</span>, suppose that functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> both have
+limits at <span class="math inline">\(x = c\)</span>.</p>
+<ul>
+<li><p><strong>Constant rule:</strong> <span class="math inline">\(\lim_{{x \to c}} k = k\)</span>.</p></li>
+<li><p><strong>Multiple rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} [kf(x)] = k \lim_{{x \to c}} f(x)\)</span> for any
+constant <span class="math inline">\(k\)</span>.</p></li>
+<li><p><strong>Sum rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} [f(x) + g(x)] = \lim_{{x \to c}} f(x) + \lim_{{x \to c}} g(x)\)</span>.</p></li>
+<li><p><strong>Difference rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} [f(x) - g(x)] = \lim_{{x \to c}} f(x) - \lim_{{x \to c}} g(x)\)</span>.</p></li>
+<li><p><strong>Product rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} [f(x) g(x)] = [\lim_{{x \to c}} f(x)][\lim_{{x \to c}} g(x)]\)</span>.</p></li>
+<li><p><strong>Quotient rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} \frac{f(x)}{g(x)} = \frac{\lim_{{x \to c}} f(x)}{\lim_{{x \to c}} g(x)}\)</span>
+if <span class="math inline">\(\lim_{{x \to c}} g(x) \neq 0\)</span>.</p></li>
+<li><p><strong>Power rule:</strong>
+<span class="math inline">\(\lim_{{x \to c}} [f(x)]^n = [\lim_{{x \to c}} f(x)]^n\)</span>.</p></li>
+</ul>
+<p>By using the <span class="math inline">\(\epsilon - \delta\)</span> definition of continuity and the above
+theorem, we can establish the continuity of basic functions.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-14" class="example"><strong>Example 3.5  </strong></span>Prove that <span class="math inline">\(f(x) = x\)</span> is continuous on the set of
+real numbers.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>For any <span class="math inline">\(c \in \mathbb{R}\)</span> and <span class="math inline">\(\epsilon &gt; 0\)</span> let
+<span class="math inline">\(\delta = \epsilon\)</span>.</p>
+<p><span class="math display">\[|x - c| &lt; \delta \Rightarrow |x - c| &lt; \epsilon \Rightarrow |f(x) - f(c)| &lt; \epsilon\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-16" class="theorem"><strong>Theorem 3.3  (Continuity theorem II) </strong></span>If <span class="math inline">\(f\)</span> is a polynomial function, a rational function, a trigonometric
+function, a trigonometric inverse function, an exponential function, or
+a logarithmic function, then <span class="math inline">\(f\)</span> is continuous at any number <span class="math inline">\(x = c\)</span> for which <span class="math inline">\(f(c)\)</span> is defined.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span>Omitted</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-4" class="remark"><em>Remark</em>. </span>We can plug in the value to find the limit only if we
+know that the function is continuous at that point.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-19" class="example"><strong>Example 3.6  </strong></span>Evaluate each of the following limits:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\lim_{{x \to \frac{\pi}{6}}} \sin(x)\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to \frac{\pi}{6}}} \cos(x)\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to -\frac{\pi}{4}}} \sin(x)\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to 2}} x\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to \frac{\pi}{4}}} [\sin(x) + 2x + 3]\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to \frac{\sqrt{3}}{2}}} [\sin^{-1}(x) + \cos^{-1}(x)]\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to 2}} [2x^2 + 5x + 6]\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to 6}} [\ln(x) + e^x]\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to \frac{\pi}{6}}} \tan(x)\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to 2}} [2x^2 + 5x + 6]\)</span></li>
+<li><span class="math inline">\(\lim_{{x \to \frac{\pi}{4}}} \frac{\sin(x) + \cos(x)}{\sin(x) \cos(x)}\)</span></li>
+</ol>
+</div>
+</div>
+<div id="limits-involving-indeterminate-forms-frac00" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Limits involving indeterminate forms <span class="math inline">\(\frac{0}{0}\)</span><a href="limits-and-continuity.html#limits-involving-indeterminate-forms-frac00" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Rational functions</strong></p>
+<p>Evaluate <span class="math inline">\(\lim_{{x \to 5}} \frac{x^2 - 11x + 30}{x^2 - 25}\)</span></p>
+<p>Let us try applying the Quotient rule:</p>
+<p><span class="math display">\[\lim_{{x \to 5}} \frac{x^2 - 11x + 30}{x^2 - 25} = \frac{\lim_{{x \to 5}} [x^2 - 11x + 30]}{\lim_{{x \to 5}} [x^2 - 25]} = \frac{25 - 55 + 30}{25 - 25} = \frac{0}{0}\]</span></p>
+<p>The denominator (namely <span class="math inline">\(\lim_{{x \to 5}} [x^2 - 25]\)</span>) is zero;
+therefore, we cannot use the Quotient rule here.</p>
+<p><em>Remark 3.4.1. (Indeterminate form)</em> In calculus and other branches of
+mathematical analysis, an <strong>indeterminate form</strong> is an algebraic
+expression obtained in the context of limits. Limits involving algebraic
+operations are often performed by replacing expressions by their limits;
+if the expression obtained after this substitution does not give enough
+information to determine the original limit, it is known as an
+indeterminate form. <span class="math inline">\(\frac{0}{0}\)</span> is one of the indeterminate forms you
+will encounter in calculus 1.</p>
+<p>Let us examine a method that can be used to go around this problem. We
+want to evaluate <span class="math inline">\(\lim_{{x \to 5}} \frac{x^2 - 11x + 30}{x^2 - 25}\)</span>.</p>
+<p>Set <span class="math inline">\(f(x) = \frac{x^2 - 11x + 30}{x^2 - 25}\)</span> and we are looking for
+<span class="math inline">\(\lim_{{x \to 5}} f(x)\)</span>. Let us take a closer look at <span class="math inline">\(f(x)\)</span>:</p>
+<p><span class="math display">\[f(x) = \frac{x^2 - 11x + 30}{x^2 - 25} = \frac{(x - 5)(x - 6)}{(x - 5)(x + 5)} = \frac{x - 6}{x + 5} \quad \text{when } x \neq \pm 5\]</span></p>
+<p>Still, 5 is not in the domain of <span class="math inline">\(f\)</span>. Define a new function <span class="math inline">\(g(x)\)</span> by
+<span class="math inline">\(g(x) = \frac{x - 6}{x + 5}\)</span>. Observe that <span class="math inline">\(g(x)\)</span> is originally defined
+as <span class="math inline">\(\frac{x - 6}{x + 5}\)</span> and 5 is in the domain of <span class="math inline">\(g(x)\)</span>.</p>
+<p>Now look at the graphs of <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>. Observe that <span class="math inline">\(g(x)\)</span> is
+defined and continuous at <span class="math inline">\(x = 5\)</span>. Therefore, we can plug in 5 to get
+<span class="math inline">\(\lim_{{x \to 5}} g(x)\)</span>:</p>
+<p><span class="math display">\[\lim_{{x \to 5}} g(x) = g(5) = \frac{5 - 6}{5 + 5} = -\frac{1}{10}\]</span></p>
+<p>Of course, the graph of <span class="math inline">\(f(x)\)</span> has a hole at 5. Therefore, <span class="math inline">\(f\)</span> is not
+continuous at 5. We cannot plug in 5 to get <span class="math inline">\(\lim_{{x \to 5}} f(x)\)</span>, but
+comparing the graphs of <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>, one can observe that:</p>
+<p><span class="math display">\[\lim_{{x \to 5}} f(x) = \lim_{{x \to 5}} g(x)\]</span></p>
+<p>Since <span class="math inline">\(\lim_{{x \to 5}} g(x) = -\frac{1}{10}\)</span>, <span class="math inline">\(\lim_{{x \to 5}} f(x)\)</span>
+is also <span class="math inline">\(-\frac{1}{10}\)</span>.</p>
+<p>The following summarizes the observations we made. Suppose
+<span class="math inline">\(R(x) = \frac{f(x)}{g(x)}\)</span> and we want to evaluate
+<span class="math inline">\(\lim_{{x \to c}} R(x)\)</span>. Use of the quotient rule leads to the
+indeterminate form <span class="math inline">\(\frac{0}{0}\)</span>. The following steps might help to go
+around this problem:</p>
+<ol style="list-style-type: decimal">
+<li><p>Factor out the numerator and denominator.</p></li>
+<li><p>Cancel the common factors (bad guys).</p></li>
+<li><p>Use limits rules to evaluate the limit of the remaining function.</p></li>
+</ol>
+<p><strong>Example 3.4.2.</strong></p>
 
 </div>
 </div>

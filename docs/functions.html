@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2024-12-02" />
+<meta name="date" content="2025-03-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,14 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
 
@@ -90,9 +98,24 @@
 <li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
 <li class="chapter" data-level="3.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#algebraic-computation-of-limits"><i class="fa fa-check"></i><b>3.3</b> Algebraic computation of limits</a></li>
 <li class="chapter" data-level="3.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-indeterminate-forms-frac00"><i class="fa fa-check"></i><b>3.4</b> Limits involving indeterminate forms <span class="math inline">\(\frac{0}{0}\)</span></a></li>
+<li class="chapter" data-level="3.5" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-infinity"><i class="fa fa-check"></i><b>3.5</b> Limits Involving Infinity</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#infinite-limits"><i class="fa fa-check"></i><b>3.5.1</b> Infinite Limits</a></li>
+<li class="chapter" data-level="3.5.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-nature-of-discontinuities"><i class="fa fa-check"></i><b>3.5.2</b> The Nature of Discontinuities</a></li>
+<li class="chapter" data-level="3.5.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#examples-of-discontinuities"><i class="fa fa-check"></i><b>3.5.3</b> Examples of Discontinuities</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#divergent-sequences"><i class="fa fa-check"></i><b>3.6</b> Divergent Sequences</a></li>
+<li class="chapter" data-level="3.7" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limit-laws"><i class="fa fa-check"></i><b>3.7</b> Limit Laws</a></li>
+<li class="chapter" data-level="3.8" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-of-some-important-sequences"><i class="fa fa-check"></i><b>3.8</b> Limits of Some Important Sequences</a></li>
+<li class="chapter" data-level="3.9" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#exercise"><i class="fa fa-check"></i><b>3.9</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>4</b> Series</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="series.html"><a href="series.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="series.html"><a href="series.html#sequence-of-partial-sums"><i class="fa fa-check"></i><b>4.2</b> Sequence of Partial Sums</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Ashan Jayamal</a></li>
 
 </ul>
 
@@ -204,7 +227,10 @@ The graph of also allows us to picture the domain of on the <span class="math in
 <div class="example">
 <p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.2  </strong></span>Use the vertical line test to determine when the graph is known.</p>
 </div>
-<p><img src="https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/1668116667931-V2ZJH5WZH4404DKKAVWL/Recap.jpg" /></p>
+<div class="float">
+<img src="https://images.squarespace-cdn.com/content/v1/54905286e4b050812345644c/1668116667931-V2ZJH5WZH4404DKKAVWL/Recap.jpg" alt="Resource: images.squarespace-cdn.com" />
+<div class="figcaption">Resource: images.squarespace-cdn.com</div>
+</div>
 </div>
 </div>
 <div id="piecewise-defined-functions" class="section level2 hasAnchor" number="2.2">
@@ -212,7 +238,7 @@ The graph of also allows us to picture the domain of on the <span class="math in
 <p>A piecewise-defined function (also called a piecewise function) is a function defined by multiple sub-functions, where each sub-function applies to a different interval in the domain.<br />
 The absolute value function, <span class="math inline">\(f(x) = |x|\)</span></p>
 <p><span class="math display">\[f(x) = \begin{cases} x &amp; x \ge 0 \\ -x &amp; x &lt; 0 \end{cases}\]</span>
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Absolute_value.svg" /></p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Absolute_value.svg" alt="Resource: Wikipedia" /></p>
 <p><span class="math display">\[g(x) = \begin{cases} x^2 &amp; x &lt; 1 \\ -(x - 2)^2 + 5 &amp; x \geq 1 \end{cases}\]</span>
 <img src="fig/fig6.png" /></p>
 <div class="example">
@@ -233,17 +259,20 @@ The absolute value function, <span class="math inline">\(f(x) = |x|\)</span></p>
 </ul></li>
 <li>Composition of functions <span class="math inline">\((g \circ f)(x) = g(f(x))\)</span></li>
 </ol>
-<p><img src="https://e7.pngegg.com/pngimages/981/265/png-clipart-linearity-pytorch-backpropagation-function-linear-regression-mathematics-angle-magenta.png" />
-::: {.example #unnamed-chunk-6}
-Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span class="math inline">\(g(x) = \sqrt{x}\)</span>, find</p>
+<div class="float">
+<img src="fig/fig12.png" alt="Resource: Mathe Insight" />
+<div class="figcaption">Resource: Mathe Insight</div>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 2.4  </strong></span>Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span class="math inline">\(g(x) = \sqrt{x}\)</span>, find</p>
 <ol style="list-style-type: lower-roman">
 <li><span class="math inline">\(f + g\)</span></li>
 <li><span class="math inline">\(f - g\)</span></li>
 <li><span class="math inline">\(fg\)</span></li>
 <li><span class="math inline">\(\frac{f}{g}\)</span></li>
-<li><span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span>
-:::</li>
+<li><span class="math inline">\(f \circ g\)</span> and <span class="math inline">\(g \circ f\)</span></li>
 </ol>
+</div>
 </div>
 <div id="inverse-functions" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Inverse Functions<a href="functions.html#inverse-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -251,10 +280,10 @@ Given that <span class="math inline">\(f(x) = x^2 + 5x + 6\)</span> and <span cl
 <li>QUESTION: Suppose you are given a function <span class="math inline">\(y = f(x)\)</span>. For each value of <span class="math inline">\(y\)</span>, can you find a corresponding value of <span class="math inline">\(x\)</span>?<br />
 </li>
 <li>ANSWER: Maybe… depending on the actual <span class="math inline">\(f(x)\)</span> given.<br />
-If we could, we have to solve the equation <span class="math inline">\(y = f(x)\)</span> for <span class="math inline">\(x\)</span>. The solution is called the “inverse function of <span class="math inline">\(f\)</span>”, and denoted by notation <span class="math inline">\(f^{-1}\)</span>.
-<img src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/924/2015/11/25200955/CNX_Precalc_Figure_01_07_0032.jpg" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG" /></li>
+If we could, we have to solve the equation <span class="math inline">\(y = f(x)\)</span> for <span class="math inline">\(x\)</span>. The solution is called the “inverse function of <span class="math inline">\(f\)</span>”, and denoted by notation <span class="math inline">\(f^{-1}\)</span>.</li>
 </ul>
+<p><img src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/924/2015/11/25200955/CNX_Precalc_Figure_01_07_0032.jpg" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG" alt="Resource: Wikimedia" /></p>
 <div class="definition">
 <p><span id="def:unnamed-chunk-7" class="definition"><strong>Definition 2.3  </strong></span>Let <span class="math inline">\(f\)</span> be a function with domain <span class="math inline">\(D\)</span> and range <span class="math inline">\(R\)</span>. Then the function <span class="math inline">\(g\)</span> with domain <span class="math inline">\(R\)</span> and range <span class="math inline">\(D\)</span> is the inverse of <span class="math inline">\(f\)</span> if</p>
 <p><span class="math display">\[
@@ -267,7 +296,7 @@ f \circ g(x) = x \quad \forall x \in R
 <p>If <span class="math inline">\(g\)</span> is the inverse of <span class="math inline">\(f\)</span>, we denote it by <span class="math inline">\(g = f^{-1}\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-8" class="example"><strong>Example 2.4  </strong></span>Given that <span class="math inline">\(f(x) = \frac{2x + 8}{5}\)</span>, find <span class="math inline">\(f^{-1}\)</span>, and verify that the function you found is the inverse of <span class="math inline">\(f\)</span>.</p>
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Example 2.5  </strong></span>Given that <span class="math inline">\(f(x) = \frac{2x + 8}{5}\)</span>, find <span class="math inline">\(f^{-1}\)</span>, and verify that the function you found is the inverse of <span class="math inline">\(f\)</span>.</p>
 </div>
 
 </div>
@@ -309,7 +338,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-functions.Rmd",
 "text": "Edit"
 },
 "history": {

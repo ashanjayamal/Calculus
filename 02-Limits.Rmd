@@ -281,7 +281,8 @@ $$\lim_{{x \to 5}} \frac{x^2 - 11x + 30}{x^2 - 25} = \frac{\lim_{{x \to 5}} [x^2
 The denominator (namely $\lim_{{x \to 5}} [x^2 - 25]$) is zero;
 therefore, we cannot use the Quotient rule here.
 
-```{Remark}
+```{remark}
+
 _(Indeterminate form)_ In calculus and other branches of
 mathematical analysis, an **indeterminate form** is an algebraic
 expression obtained in the context of limits. Limits involving algebraic operations are often performed by replacing expressions by their limits;
@@ -328,5 +329,560 @@ around this problem:
 2.  Cancel the common factors.
 
 3.  Use limits rules to evaluate the limit of the remaining function.
+
+```
+
+
+
+
+
+
+
+## Limits Involving Infinity
+
+### Infinite Limits
+
+It may happen that a function $f$ does not have a finite limit as $x \rightarrow c$. When $\lim _{x \rightarrow c} f(x)$ fails to exist, the function values $f(x)$ are said to diverge as $x \rightarrow c$.
+
+```{example}
+Consider the function $f(x)=\frac{1}{x^{2}}$.
+
+| $x$ | $f(x)$ |
+| :---: | :---: |
+| 0.1 | 100 |
+| 0.01 | 10000 |
+| 0.001 | $10^{6}$ |
+| 0.0001 | $10^{8}$ |
+| 0.00001 | $10^{10}$ |
+
+As $x \rightarrow 0, f(x) \rightarrow \infty$. The graph of $f(x)=\frac{1}{x^{2}}$ illustrates this behavior.
+```
+
+![Graph of $f(x)=\frac{1}{x^{2}}$](https://cdn.mathpix.com/cropped/2024_12_21_cc496b389b0f492c53b9g-35.jpg?height=660&width=747&top_left_y=857&top_left_x=689)
+
+
+
+```{definition}
+A function $f$ that increases or decreases without bound as $x$ approaches $c$ is said to tend to infinity ( $\infty$ ) at c. We indicate this behavior by writing:
+
+$$
+\lim _{x \rightarrow c} f(x)=\infty \quad \text { or } \quad \lim _{x \rightarrow c} f(x)=-\infty
+$$
+```
+
+```{example}
+
+$$
+\lim _{x \rightarrow 0} \frac{1}{x^{2}}=\infty
+$$
+
+$$
+\lim _{x \rightarrow 0^{-}} \frac{1}{x}=-\infty \quad \text { and } \quad \lim _{x \rightarrow 0^{+}} \frac{1}{x}=\infty
+$$
+```
+
+The graph of $f(x)=\frac{1}{x}$ shows this behavior:
+![Graph of $f(x)=\frac{1}{x}$](https://cdn.mathpix.com/cropped/2024_12_21_cc496b389b0f492c53b9g-36.jpg?height=614&width=735&top_left_y=276&top_left_x=695)
+
+
+
+```{example}
+Evaluate the limit:
+
+$$
+\lim _{x \rightarrow 1}\left(\frac{1}{x^{2}-1}-1\right)
+$$
+
+**Solution**: We begin by substituting $x=1+h$, where $h \rightarrow 0$. The expression becomes:
+
+$$
+\frac{1}{(1+h)^{2}-1}-1
+$$
+
+Expanding $(1+h)^{2}$ :
+
+$$
+(1+h)^{2}-1=2 h+h^{2}
+$$
+
+So, the expression becomes:
+
+$$
+\frac{1}{2 h+h^{2}}-1=\frac{1-\left(2 h+h^{2}\right)}{2 h+h^{2}}=\frac{1-2 h-h^{2}}{2 h+h^{2}}
+$$
+
+One-Sided Limits: As $h \rightarrow 0$ :
+
+- For $h \rightarrow 0^{+}$(approaching from the right):
+
+For $h>0$, we analyze the expression $\frac{1}{2 h+h^{2}}$. Since $h$ is positive and small, the term $h^{2}$ is negligible compared to $2 h$, so the expression behaves similarly to $\frac{1}{2 h}$.
+
+As $h \rightarrow 0^{+}, 2 h$ becomes very small, and the reciprocal $\frac{1}{2 h}$ grows without bound towards $+\infty$.
+Thus, the limit from the right is $+\infty$.
+
+- For $h \rightarrow 0^{-}$(approaching from the left):
+
+For $h<0$, the expression $\frac{1}{2 h+h^{2}}$ behaves similarly to $\frac{1}{2 h}$, but since $h$ is negative, $\frac{1}{2 h}$ becomes negative. As $h \rightarrow 0^{-}, 2 h$ still becomes very small, but the expression grows large and negative.
+
+Thus, the limit from the left is $-\infty$.
+Since the one-sided limits are not equal, the two-sided limit does not exist.
+Thus, the limit is:
+
+$$
+\lim _{x \rightarrow 1}\left(\frac{1}{x^{2}-1}-1\right) \text { does not exist. }
+$$
+```
+
+
+```{example}
+Evaluate the limit:
+
+$$
+\lim \frac{x^{2}+3 x-4}{2}
+$$
+```
+
+**Solution**
+Step 1: Factor the numerator and denominator:
+
+$$
+\frac{x^{2}+3 x-4}{x^{2}-4}=\frac{(x-1)(x+4)}{(x-2)(x+2)}
+$$
+
+Step 2: Substitute $x=2+h$, where $h \rightarrow 0$ :
+Substitute $x=2+h$ into the factored form:
+
+- The numerator becomes:
+
+$$
+(x-1)(x+4)=(2+h-1)(2+h+4)=(1+h)(6+h)
+$$
+
+- The denominator becomes:
+
+$$
+(x-2)(x+2)=(2+h-2)(2+h+2)=h(4+h)
+$$
+
+Thus, the expression becomes:
+
+$$
+\frac{(1+h)(6+h)}{h(4+h)}=\frac{6+7 h+h^{2}}{4 h+h^{2}}
+$$
+
+Step 3: Analyze the one-sided limits:
+Case 1: $h \rightarrow 0^{+}$(from the right):
+As $h \rightarrow 0^{+}$, the numerator behaves like $6+7 h$ and the denominator behaves like $4 h$, which is positive. The expression behaves like:
+
+$$
+\frac{6+7 h}{4 h} \rightarrow \frac{6}{4 h} \rightarrow+\infty \quad\left(\text { as } h \rightarrow 0^{+}\right)
+$$
+
+Thus, the limit from the right is $+\infty$.
+
+Case 2: $h \rightarrow 0^{-}$(from the left):
+
+As $h \rightarrow 0^{-}$, the numerator behaves like $6+7 h$ and the denominator behaves like $4 h$, which is negative. The expression behaves like:
+
+$$
+\frac{6+7 h}{4 h} \rightarrow \frac{6}{4 h} \rightarrow-\infty \quad\left(\text { as } h \rightarrow 0^{-}\right)
+$$
+
+Thus, the limit from the left is $-\infty$.
+Step 4: Conclusion:
+Since the one-sided limits are not equal (the limit from the right is $+\infty$ and the limit from the left is $-\infty$ ), the two-sided limit does not exist.
+
+$$
+\lim _{x \rightarrow 2} \frac{x^{2}+3 x-4}{x^{2}-4} \text { does not exist.}
+$$
+
+
+```{example}
+ Evaluate the limit:
+
+$$
+\lim _{x \rightarrow 0} \frac{1}{\sin (x)}
+$$
+```
+
+### The Nature of Discontinuities
+
+Discontinuities can be classified as jump, infinite, removable, or oscillating.
+
+- Removable Discontinuities: The limit exists finitely. Removable discontinuities can be "fixed" by redefining the function.
+- Jump Discontinuities: Both one-sided limits exist and are finite, but have different values.
+- Infinite Discontinuities: An infinite discontinuity exists when one of the one-sided limits of the function is infinite.
+- Oscillating Discontinuities: An oscillating discontinuity exists when the values of the function appear to be approaching two or more values simultaneously.
+
+
+### Examples of Discontinuities
+
+```{example}
+(Removable Discontinuity). Consider the function $f(x)=\frac{x^{2}-1}{x-1}$. The function has a removable discontinuity at $x=1$.
+
+$$
+f(x)=\frac{(x-1)(x+1)}{x-1}=x+1 \quad \text { for } \quad x \neq 1
+$$
+
+By defining $f(1)=2$, the discontinuity is removed.
+```
+
+```{example,name="(Jump Discontinuity)"}
+Consider the function
+
+$$
+f(x)= \begin{cases}x^{2} & \text { if } x<1 \\ 2-x & \text { if } x \geq 1\end{cases}
+$$
+
+The function has a jump discontinuity at $x=1$.
+```
+
+```{example,name="(Infinite Discontinuity)"} Consider the function
+
+$$
+f(x)=\frac{1}{x-1}
+$$
+
+The function has an infinite discontinuity at $x=1$.
+```
+
+```{example}
+(Oscillating Discontinuity). Consider the function
+
+$$
+f(x)=\sin \left(\frac{1}{x}\right)
+$$
+
+The function has an oscillating discontinuity at $x=0$.
+```
+
+```{example}
+ Evaluate the limit:
+
+$$
+\lim _{x \rightarrow 2} \frac{x^{2}-4}{x-2}
+$$
+```
+
+**Solution**. The function has a removable discontinuity at $x=2$. Factor the numerator:
+
+$$
+\frac{x^{2}-4}{x-2}=\frac{(x-2)(x+2)}{x-2}=x+2 \quad \text { for } \quad x \neq 2
+$$
+
+Thus,
+
+$$
+\lim _{x \rightarrow 2} \frac{x^{2}-4}{x-2}=\lim _{x \rightarrow 2}(x+2)=4
+$$
+
+```{example}
+Determine the continuity of the function:
+
+$$
+f(x)= \begin{cases}3 x+1 & \text { if } x<0 \\ 2 x-1 & \text { if } x>0\end{cases}
+$$
+```
+
+**Solution**: Check the limits from both sides at $x=0$ :
+
+$$
+\lim _{x \rightarrow 0^{-}}(3 x+1)=1 \quad \text { and } \quad \lim _{x \rightarrow 0^{+}}(2 x-1)=-1
+$$
+
+The function has a jump discontinuity at $x=0$.
+
+
+```{example}
+Given
+
+$$
+g(x)=\frac{x-2}{(x-1)^{2}(x-3)}
+$$
+
+(a) $\lim _{x \rightarrow 1} g(x)$
+(b) $\lim _{x \rightarrow 3} g(x)$
+```
+
+**Solution**.
+
+
+
+a. $\lim _{x \rightarrow 1} g(x)$
+
+Let's use the substitution $x=1+h$, where $h \rightarrow 0$.
+
+$$
+g(1+h)=\frac{(1+h)-2}{((1+h)-1)^{2}((1+h)-3)}=\frac{h-1}{h^{2}(h-2)}=\frac{h-1}{h^{3}-2 h^{2}}=\frac{1-\frac{1}{h}}{h^{2}-2 h}
+$$
+
+As $h \rightarrow 0$, we need to consider the behavior of the function from both sides of $x=1$ :
+
+- For $h \rightarrow 0^{+}$(approaching 1 from the right):
+
+$$
+g(1+h) \approx \frac{-1}{h^{2}} \quad \Rightarrow \quad \lim _{h \rightarrow 0^{+}} g(1+h)=-\infty
+$$
+
+- For $h \rightarrow 0^{-}$(approaching 1 from the left):
+
+$$
+g(1+h) \approx \frac{-1}{h^{2}} \quad \Rightarrow \quad \lim _{h \rightarrow 0^{-}} g(1+h)=-\infty
+$$
+
+Since both one-sided limits approach $-\infty$ :
+
+$$
+\lim _{x \rightarrow 1} g(x)=-\infty
+$$
+
+b. $\lim _{x \rightarrow 3} g(x)$
+
+Let's use the substitution $x=3+h$, where $h \rightarrow 0$.
+
+$$
+g(3+h)=\frac{(3+h)-2}{((3+h)-1)^{2}((3+h)-3)}=\frac{1+h}{h(2+h)^{2}}=\frac{1+h}{h\left(4+4 h+h^{2}\right)} \approx \frac{1}{4 h} \quad \text { as } \quad h \rightarrow 0
+$$
+
+As $h \rightarrow 0$, we need to consider the behavior of the function from both sides of $x=3$ :
+
+- For $h \rightarrow 0^{+}$(approaching 3 from the right):
+
+$$
+g(3+h) \approx \frac{1}{4 h} \quad \Rightarrow \quad \lim _{h \rightarrow 0^{+}} g(3+h)=+\infty
+$$
+
+- For $h \rightarrow 0^{-}$(approaching 3 from the left):
+
+$$
+g(3+h) \approx \frac{1}{4 h} \quad \Rightarrow \quad \lim _{h \rightarrow 0^{-}} g(3+h)=-\infty
+$$
+
+Since the one-sided limits approach $\pm \infty$ :
+
+$$
+\lim _{x \rightarrow 3} g(x) \text { does not exist. }
+$$
+
+$$
+\lim _{x \rightarrow-4^{+}} \frac{-x^{3}+5 x^{2}-6 x}{-x^{3}-4 x^{2}}
+$$
+
+```{definition}
+(Vertical Asymptote). If $\lim _{x \rightarrow a} f(x)= \pm \infty, \lim _{x \rightarrow a^{+}} f(x)= \pm \infty$, or $\lim _{x \rightarrow a^{-}} f(x)= \pm \infty$, the line $x=a$ is called a vertical asymptote of $f$.
+```
+
+**Solution**. 
+
+- The numerator is:
+
+$$
+-x^{3}+5 x^{2}-6 x=-x\left(x^{2}-5 x+6\right)
+$$
+
+Factorizing $x^{2}-5 x+6$ :
+
+$$
+x^{2}-5 x+6=(x-2)(x-3)
+$$
+
+Thus, the numerator becomes:
+
+$$
+-x^{3}+5 x^{2}-6 x=-x(x-2)(x-3)
+$$
+
+- The denominator is:
+
+$$
+-x^{3}-4 x^{2}=-x^{2}(x+4)
+$$
+
+Step 2: Rewrite the limit
+
+Substitute the factored forms into the limit:
+
+$$
+\lim _{x \rightarrow-4^{+}} \frac{-x(x-2)(x-3)}{-x^{2}(x+4)}
+$$
+
+Simplify by canceling $-x($ note $x \neq 0)$ :
+
+$$
+\lim _{x \rightarrow-4^{+}} \frac{(x-2)(x-3)}{x(x+4)}
+$$
+
+Step 3: Substitute $x=-4+h$
+
+Let $x=-4+h$, where $h \rightarrow 0^{+}$. Then:
+$x+4=(-4+h)+4=h, \quad x=-4+h, \quad x-2=(-4+h)-2=-6+h, \quad x-3=(-4+h)-3=-7+h$.
+Substitute these into the simplified expression:
+
+$$
+\frac{(x-2)(x-3)}{x(x+4)}=\frac{(-6+h)(-7+h)}{(-4+h) h}
+$$
+
+Step 4: Analyze dominant terms as $h \rightarrow 0^{+}$
+
+For small $h$, the dominant terms are:
+
+$$
+-6+h \approx-6, \quad-7+h \approx-7, \quad-4+h \approx-4, \quad x+4 \approx h .
+$$
+
+Thus, the expression becomes approximately:
+
+$$
+\frac{(-6)(-7)}{(-4)(h)}
+$$
+
+Simplify the constants:
+
+$$
+\frac{(-6)(-7)}{(-4)(h)}=\frac{42}{-4 h}=-\frac{42}{4 h}=-\frac{21}{2 h} .
+$$
+
+Step 5: Take the limit as $h \rightarrow 0^{+}$
+
+As $h \rightarrow 0^{+}, \frac{1}{h} \rightarrow \infty$. Therefore:
+
+$$
+-\frac{21}{2 h} \rightarrow-\infty
+$$
+
+Final Answer
+
+The limit is:
+
+$$
+\lim _{x \rightarrow-4^{+}} \frac{-x^{3}+5 x^{2}-6 x}{-x^{3}-4 x^{2}}=-\infty
+$$
+
+![ Graph of a function with a vertical asymptote at $x=a$.](https://cdn.mathpix.com/cropped/2024_12_21_cc496b389b0f492c53b9g-41.jpg?height=562&width=939&top_left_y=1795&top_left_x=571)
+
+
+
+```{example}
+Let
+
+$$
+f(x)=\frac{x^{2}-4 x+3}{x^{2}-1}
+$$
+Evaluate the following limits and find the vertical asymptotes of $f$ . Verify your work with a graphing utility.
+
+a. $\lim _{x \rightarrow 1} f(x)$
+b. $\lim _{x \rightarrow-1^{-}} f(x)$
+c. $\lim _{x \rightarrow-1^{+}} f(x)$
+```
+
+**Solution**. We are given the function
+
+$$
+f(x)=\frac{x^{2}-4 x+3}{x^{2}-1}
+$$
+
+First, we factorize both the numerator and the denominator:
+
+$$
+x^{2}-4 x+3=(x-3)(x-1), \quad x^{2}-1=(x-1)(x+1) .
+$$
+
+Thus, the function becomes:
+
+$$
+f(x)=\frac{(x-3)(x-1)}{(x-1)(x+1)}
+$$
+
+We can cancel out the common factor of $(x-1)($ note that $x \neq 1)$ :
+
+$$
+f(x)=\frac{x-3}{x+1}, \quad \text { for } x \neq 1
+$$
+
+**Vertical Asymptotes**\
+Vertical asymptotes occur where the denominator is zero but the numerator is not zero. From the factorized form, we can see that: - The denominator $x^{2}-1=(x-1)(x+1)$ is zero when $x=1$ or $x=-1$. - At $x=1$, the factor $(x-1)$ cancels out, so there is a removable discontinuity (not a vertical asymptote). - At $x=-1$, the denominator is zero, but the numerator $x-3$ is not zero. Therefore, there is a **vertical asymptote at $x=-1$**.
+
+Thus, the function has a vertical asymptote at $x=-1$.
+Step-by-Step Evaluation of Limits
+
+(a) $\lim _{x \rightarrow 1} f(x)$
+
+Since $x=1$ is a removable discontinuity, we evaluate the limit using the simplified function:
+
+$$
+f(x)=\frac{x-3}{x+1}
+$$
+
+Substitute $x=1$ :
+
+$$
+\begin{gathered}
+\lim _{x \rightarrow 1} f(x)=\frac{1-3}{1+1}=\frac{-2}{2}=-1 \\
+\lim _{x \rightarrow 1} f(x)=-1
+\end{gathered}
+$$
+
+(b) $\lim _{x \rightarrow-1^{-}} f(x)$
+
+Now, we substitute $x=-1+h$, where $h \rightarrow 0^{-}$(approaching -1 from the left). We have:
+
+$$
+x-3=(-1+h)-3=-4+h, \quad x+1=(-1+h)+1=h .
+$$
+
+Thus, the function becomes:
+
+$$
+f(x)=\frac{x-3}{x+1}=\frac{-4+h}{h} .
+$$
+
+For small $h$, the dominant terms are:
+
+$$
+f(x) \approx \frac{-4}{h} .
+$$
+
+As $h \rightarrow 0^{-}$, the expression $\frac{-4}{h}$ approaches $+\infty$ because $h$ is negative.
+
+$$
+\lim _{x \rightarrow-1^{-}} f(x)=+\infty
+$$
+c)  $\lim _{x \rightarrow-1^{+}} f(x)$
+
+Similarly, let $x=-1+h$, where $h \rightarrow 0^{+}$(approaching -1 from the right). We have:
+
+$$
+x-3=(-1+h)-3=-4+h, \quad x+1=(-1+h)+1=h .
+$$
+
+Thus, the function becomes:
+
+$$
+f(x)=\frac{x-3}{x+1}=\frac{-4+h}{h} .
+$$
+
+For small $h$, the dominant terms are:
+
+$$
+f(x) \approx \frac{-4}{h}
+$$
+
+As $h \rightarrow 0^{+}$, the expression $\frac{-4}{h}$ approaches $-\infty$ because $h$ is positive.
+
+$$
+\lim _{x \rightarrow-1^{+}} f(x)=-\infty
+$$
+
+**Conclusion**
+
+a) $\lim _{x \rightarrow 1} f(x)=-1$, 
+b) $\lim _{x \rightarrow-1^{-}} f(x)=+\infty$, 
+c) $\lim _{x \rightarrow-1^{+}} f(x)=-\infty$.
+
+The function has a **vertical asymptote** at $x=-1$.
+![Graph of a function with a vertical asymptote at $x=-1$ and a removable discontinuity at $\mathrm{x}=1$.](https://cdn.mathpix.com/cropped/2024_12_21_cc496b389b0f492c53b9g-43.jpg?height=847&width=972&top_left_y=891&top_left_x=628)
+
+
+
 
 

@@ -11,15 +11,15 @@ Let $A$ and $B$ be  two nonempty sets. A function from $A$ to $B$ is a rule of c
 ```
 
  It’s helpful to think of a function as a machine.
- 
-![](fig/fig2.png)
-
+<center>
+![](fig/fig2.png){width=30%}
+</center>
 
 If is in the domain of  the function then when enters the machine, it’s accepted as an input and the machine  produces an output according to the rule of the function.  Thus we can think of the  domain as the set of all possible inputs and the range as the set of all possible outputs.
 
 The graph of also allows us to picture the domain of on the $x$-axis and its  range on the $y$-axis as in Figure \@ref(fig:fig4).
 
-![.  (#fig:fig4) ](fig/fig4.png){width=50%}
+![(#fig:fig4) ](fig/fig4.png){width=50%}
  
 #### Representing Functions
 The rule describing the function can be represented by a:

@@ -1,0 +1,813 @@
+# Series
+
+
+## Introduction
+Let the sequence $\{S_n\}$ be defined as follows:
+
+
+\[
+S_1 = 1
+\]
+
+
+
+
+\[
+S_2 = 1 + 2 = 3
+\]
+
+
+
+
+\[
+S_3 = 1 + 2 + 3 = 6
+\]
+
+
+
+
+\[
+S_4 = 1 + 2 + 3 + 4 = 10
+\]
+
+
+
+
+By observing $\{S_n\}$, we conclude that the series $1 + 2 + 3 + 4 + \dots$ diverges.
+
+To determine the behavior of $1 + 2 + 3 + \dots$, we need to compute $\lim_{n \to \infty} S_n$.
+
+An **infinite series**, informally speaking, is the sum of the terms of an infinite sequence. It can be expressed in the form:
+
+
+\[
+a_1 + a_2 + a_3 + \dots = \sum_{i=1}^{\infty} a_i
+\]
+
+
+
+The $n$th **partial sum** of the series is:
+
+
+\[
+S_n = a_1 + a_2 + a_3 + \dots + a_n = \sum_{i=1}^{n} a_i
+\]
+
+
+
+The series is said to **converge** to the sum $S$ if the sequence of partial sums $\{S_n\}$ converges to $S$. In this case, we write:
+
+
+\[
+\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} S_n = S
+\]
+
+
+
+If the sequence does not converge, the series $\sum_{i=1}^{\infty} a_i$ **diverges** and does not have a sum.
+
+## Sequence of Partial Sums
+
+**Geometric Series**
+
+A geometric sequence is one where each term is obtained by multiplying the previous term by a fixed ratio $r$.
+
+For example:
+
+- $2, 6, 18, 54, \dots$ has a common ratio of $r = 3$.
+- $10, 5, 2.5, 1.25, \dots$ has a common ratio of $r = \frac{1}{2}$.
+
+A geometric series has the form:
+
+
+\[
+a + ar + ar^2 + ar^3 + \dots = \sum_{i=0}^{\infty} ar^i
+\]
+
+
+
+```{theorem,name='The Convergence and Divergence of a Geometric Series'}
+
+
+Consider the geometric series:
+
+
+\[
+a + ar + ar^2 + ar^3 + \dots + ar^{n-1} + \dots
+\]
+
+
+
+The sequence of partial sums is given by:
+
+
+\[
+S_n = \frac{a(1 - r^n)}{1 - r}, \quad \text{when } |r| < 1.
+\]
+
+
+
+- If \(|r| < 1\), the infinite series converges:
+
+
+\[
+\sum_{i=1}^\infty a_i = \frac{a}{1 - r}.
+\]
+
+
+
+- If \(|r| \geq 1\), the series \(\sum_{i=1}^\infty a_i\) diverges.
+
+```
+
+```{proof}
+
+
+\begin{eqnarray}
+S_n  &=& a + ar + ar^2 + \dots + ar^{n-1}\\
+rS_n &=& ar + ar^2 + \dots + ar^n \\
+S_n - rS_n &=& a - ar^n\\
+S_n(1 - r) &=& a(1 - r^n)\\
+S_n &=& \frac{a(1 - r^n)}{1 - r}
+\end{eqnarray}
+
+Taking the limit as \(n \to \infty\):
+
+
+\begin{eqnarray}
+\sum_{i=1}^\infty a_i 
+&=& \lim_{n \to \infty} S_n\\
+&=& \lim_{n \to \infty} \frac{a(1 - r^n)}{1 - r}\\
+&=& \frac{a(1 - \lim_{n \to \infty} r^n)}{1 - r} \\
+\end{eqnarray}
+
+- When \(|r| < 1\), \(\lim_{n \to \infty} r^n = 0\), so:
+
+\[
+\sum_{i=1}^\infty a_i = \frac{a}{1 - r}.
+\]
+
+- When \(|r| \geq 1\), the series \(\sum_{i=1}^\infty a_i\) diverges.
+```
+
+
+
+```{example}
+Find the Sum of the Following Infinite Series}
+
+If it is divergent, write "Diverges."
+
+
+a.  \( 1000, 500, 250, \dots \)
+    
+    This is a geometric series with a common ratio \( r = \frac{1}{2} < 1 \), hence:
+    
+
+\[
+    \sum_{i=1}^\infty a_i = \frac{a}{1-r} = \frac{1000}{1 - \frac{1}{2}} = 2000
+    \]
+
+
+
+b. \( 0.1, 0.2, 0.4, \dots \)
+
+    This is a geometric series with a common ratio \( r = 2 \), hence it diverges.
+
+c. \( 1, \frac{1}{2}, \frac{1}{4}, \dots \)
+
+    This is a geometric series with a common ratio \( r = \frac{1}{2} < 1 \), hence:
+    
+
+\[
+    \sum_{i=1}^\infty a_i = \frac{a}{1-r} = \frac{1}{1 - \frac{1}{2}} = 2
+    \]
+
+```
+
+
+```{example} 
+Consider the Following Series
+
+
+\[
+\sum_{n=1}^\infty \frac{x^n}{3^n}
+\]
+```
+
+
+
+Find the values of \( x \) for which the series converges.
+
+First, observe that:
+    
+
+\[
+    \sum_{n=1}^\infty \frac{x^n}{3^n} = \frac{x}{3} + \frac{x^2}{3^2} + \frac{x^3}{3^3} + \dots
+    \]
+
+
+
+This is a geometric series with a common ratio \( r = \frac{x}{3} \). The series will converge when:
+    
+
+\[
+    \left|\frac{x}{3}\right| < 1 \quad \Rightarrow \quad -3 < x < 3
+    \]
+
+
+
+Find the sum of the series for those values of \( x \). Write the formula in terms of \( x \).
+
+When \( |r| < 1 \), the sum of the geometric series is given by:
+    
+
+\[\sum_{n=1}^\infty a_i = \frac{a}{1-r}\]
+
+
+
+Here:
+    
+
+\[\sum_{n=1}^\infty \frac{x^n}{3^n} = \frac{\frac{x}{3}}{1 - \frac{x}{3}} = \frac{x}{3 - x}\]
+
+
+
+
+```{remark}
+The function:
+
+
+\[
+f(x) = \frac{x}{3 - x}
+\]
+
+
+can be expressed as the limit of polynomial functions inside the interval \( -3 < x < 3 \):
+
+
+\[
+f(x) = \frac{x}{3 - x} = \lim_{k \to \infty} \sum_{n=1}^k \frac{x^n}{3^n}.
+\]
+
+
+
+Sometimes, properties of the terms of the sequence will be passed to the limit. Instead of studying the limiting function, we can study the behavior of simpler polynomial functions to understand the limiting function.
+
+```
+
+
+
+```{example}
+Write $1.\overline{405}$ as a rational number $\frac{p}{q}$.\
+(The bar over the 405 indicates that this block of digits is to be repeated:
+$1.40\overline{5} = 1.405405405\ldots$)
+
+This can be expressed as:
+\begin{align}
+1.40\overline{5} &= 1 + \frac{405}{10^3} + \frac{405}{10^6} + \frac{405}{10^9} + \cdots \\
+&= 1 + \frac{405}{10^3}\left(1 + \frac{1}{10^3} + \frac{1}{10^6} + \cdots\right)
+\end{align}
+
+The series $\frac{405}{10^3} + \frac{405}{10^6} + \frac{405}{10^9} + \cdots$ is a geometric series with $a = 1$ and $r = \frac{1}{10^3}$.
+
+\begin{align}
+1 + \frac{1}{10^3} + \frac{1}{10^6} + \cdots &= \frac{a}{1-r} = \frac{1}{1-\frac{1}{1000}} = \frac{1}{\frac{999}{1000}} = \frac{1000}{999}
+\end{align}
+
+Therefore:
+\begin{align}
+1.\overline{405} &= 1 + \frac{405}{10^3} \cdot \frac{1000}{999} \\
+&= 1 + \frac{405}{999} \\
+&= \frac{1404}{999}
+\end{align}
+```
+
+### Telescoping Series
+
+
+
+```{definition}
+A telescoping series is a series whose general term $t_n$ can be written as $t_n = a_n - a_{n+1}$, i.e., the difference of two consecutive terms of a sequence.
+
+The partial sums of a telescoping series consist of only two terms of $\{a_n\}$ after cancellation.
+```
+
+```{example}
+Show that the series $\sum_{k=1}^{\infty} \frac{1}{(k+1)(k+2)}$ converges and find its sum.
+
+Let $a_k = \frac{1}{(k+1)(k+2)}$. Using partial fraction decomposition:
+$$a_k = \frac{1}{k+1} - \frac{1}{k+2}$$
+
+We can use this to get a formula for the $n$th partial sum $S_n$:
+\begin{align}
+a_1 &= \frac{1}{2} - \frac{1}{3} \\
+a_2 &= \frac{1}{3} - \frac{1}{4} \\
+\vdots &\quad\vdots \quad \vdots \quad \vdots\\
+a_{n-1} &= \frac{1}{n} - \frac{1}{n+1} \\
+a_n &= \frac{1}{n+1} - \frac{1}{n+2}
+\end{align}
+
+Therefore: $S_n = \frac{1}{2} - \frac{1}{n+2}$
+
+\begin{align}
+\sum_{k=1}^{\infty} \frac{1}{(k+1)(k+2)} &= \lim_{n \to \infty} S_n \\
+&= \lim_{n \to \infty} \left(\frac{1}{2} - \frac{1}{n+2}\right) \\
+&= \frac{1}{2}
+\end{align}
+
+The series $\sum_{k=1}^{\infty} \frac{1}{(k+1)(k+2)}$ converges to $\frac{1}{2}$.
+```
+
+```{remark}
+\begin{itemize}
+\item The convergence or divergence of an infinite series is determined by the behavior of the $n$th partial sum $S_n$ as $n \to \infty$.
+\item It is often difficult or even impossible to find a formula for the $n$th partial sum of a series.
+\item There are other techniques to determine the convergence and divergence of a series.
+\end{itemize}
+```
+
+## Series Convergence Tests
+
+```{theorem,name='Divergence Test'}
+If $\lim_{n \to \infty} a_n$ is not zero, or does not exist, then the series $\sum_{i=1}^{\infty} a_i$ diverges.
+```
+
+```{remark}
+
+- The divergence test can only tell us that $\sum_{i=1}^{\infty} a_i$ diverges if $\lim_{n \to \infty} a_n \neq 0$.
+- If $\lim_{n \to \infty} a_n = 0$, the test is inconclusive and cannot be used to show the convergence of a series.
+- For example:
+
+  - $\lim_{n \to \infty} \frac{1}{n^2} = 0$ and series $\sum_{i=1}^{\infty} \frac{1}{n^2}$ converges
+  - $\lim_{n \to \infty} \frac{1}{n} = 0$ but series $\sum_{i=1}^{\infty} \frac{1}{n}$ diverges.
+
+```
+
+```{example}
+Show that the series $\sum_{i=1}^{\infty} \frac{2n+1}{3n}$ diverges.
+
+Let $a_n = \frac{2n+1}{3n}$. Then:
+$$\lim_{n \to \infty} \frac{2n+1}{3n} = \frac{2}{3}$$
+
+Since $\lim_{n \to \infty} a_n \neq 0$, the divergence test tells us that the series diverges.
+```
+
+```{remark}
+Suppose $\sum_{i=1}^{\infty} a_i$ is a series of non-negative numbers. Then the sequence $\{S_n\}$ of partial sums is an increasing sequence. From the Bounded Monotonic Sequence Theorem, the sequence of partial sums converges or diverges to $\infty$, and so does the series.
+```
+
+```{definition,name='P-Series'}
+A series of the form $\sum_{k=1}^{\infty} \frac{1}{k^p}$ is called a p-series.
+```
+
+```{theorem,name='P-Series Test'}
+$$\sum_{k=1}^{\infty} \frac{1}{k^p} = \begin{cases}
+\text{converges} & \text{if } p > 1 \\
+\text{diverges} & \text{if } p \leq 1
+\end{cases}$$
+```
+
+```{example}
+Test each of the following series for convergence.
+
+a) $\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}$
+
+b) $\sum_{k=1}^{\infty} \frac{2}{\sqrt[3]{k}}$
+
+**Solution:**
+
+a) $\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}} = \sum_{k=1}^{\infty} \frac{1}{k^{1/2}}$
+
+Since $p = \frac{1}{2} < 1$, $\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}$ is divergent.
+
+b) $\sum_{k=1}^{\infty} \frac{2}{\sqrt[3]{k}} = 2\sum_{k=1}^{\infty} \frac{1}{k^{3/2}}$
+
+Since $p = \frac{3}{2} > 1$, $\sum_{k=1}^{\infty} \frac{2}{\sqrt[3]{k}}$ is convergent.
+```
+
+```{theorem,name='Direct Comparison Test'}
+Suppose $0 \leq a_k \leq b_k$ for all $k$ ($b_k$ dominates $a_k$).
+
+- If $\sum_{k=1}^{\infty} b_k$ converges, then $\sum_{k=1}^{\infty} a_k$ also converges.
+- If $\sum_{k=1}^{\infty} a_k$ diverges, then $\sum_{k=1}^{\infty} b_k$ also diverges.
+- The above results are also true if the inequalities (dominance) hold for all $k \geq N$ for some fixed $N$.
+
+```
+
+```{example}
+Test the series $\sum_{k=1}^{\infty} \frac{1}{2^k + 1}$ for convergence.
+
+Observe that $0 \leq \frac{1}{2^k + 1} \leq \frac{1}{2^k}$ for all $k$.
+
+$\sum_{k=1}^{\infty} \frac{1}{2^k} = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots$ is a geometric series with $r = \frac{1}{2}$, hence $\sum_{k=1}^{\infty} \frac{1}{2^k}$ converges.
+
+$\sum_{k=1}^{\infty} \frac{1}{2^k + 1}$ converges from the direct comparison test.
+```
+
+```{remark}
+
+- Given series $\sum_{k=1}^{\infty} a_k$ is a series of non-negative numbers.
+- If the given series has the general appearance as another convergent series and if you can show that each term of the given series is smaller than the corresponding term of the convergent series, you can use the direct comparison test to conclude that the given series is convergent.
+- If the given series has the general appearance as another divergent series and if you can show that each term of the given series is larger than the corresponding term of the divergent series, you can use the direct comparison test to conclude that the given series is divergent.
+- When $a_n$ is defined as a fraction:
+  - If you replace the numerator of $a_n$ by a larger term, then the resulting fraction is larger than $a_n$.
+  - If you replace the numerator of $a_n$ by a smaller term, then the resulting fraction is smaller than $a_n$.
+  - If you replace the denominator of $a_n$ by a larger term, then the resulting fraction is smaller than $a_n$.
+  - If you replace the denominator of $a_n$ by a smaller term, then the resulting fraction is larger than $a_n$.
+```
+
+```{example}
+Test the series $\sum_{k=1}^{\infty} \frac{k+1}{k^2-1}$ for convergence.
+
+$\frac{k+1}{k^2-1} \geq \frac{k}{k^2-1} \geq \frac{k}{k^2} = \frac{1}{k}$ for all $k$.
+
+So $0 \leq \frac{1}{k} \leq \frac{k+1}{k^2-1}$ for all $k$. The harmonic series $\sum_{k=1}^{\infty} \frac{1}{k}$ diverges.
+
+$\sum_{k=1}^{\infty} \frac{k+1}{k^2-1}$ diverges from the direct comparison test.
+```
+
+```{example}
+Test the series $\sum_{k=1}^{\infty} \frac{k+8}{k^3+k+8}$ for convergence.
+
+Observe that $\frac{k+8}{k^3+k+8} \leq \frac{k+8}{k^3} \leq \frac{k+k}{k^3} \leq \frac{2k}{k^3} = \frac{2}{k^2}$ for all $k > 8$.
+
+So $0 \leq \frac{k+8}{k^3+k+8} \leq \frac{2}{k^2}$ for all $k > 8$.
+
+The series $\sum_{k=1}^{\infty} \frac{2}{k^2}$ converges from the p-series test.
+
+$\sum_{k=1}^{\infty} \frac{k+8}{k^3+k+8}$ converges from the direct comparison test.
+```
+
+
+
+
+
+```{remark}
+
+- We would expect $\sum_{k=1}^{\infty} \frac{1}{2^k - 5}$ to converge because it is so much like the convergent geometric series $\sum_{k=1}^{\infty} \frac{1}{2^k}$.
+- But $0 \leq \frac{1}{2^k} \leq \frac{1}{2^k - 5}$.
+- The direct comparison test cannot be used in this situation.
+- We often use the limit comparison test in these situations.
+
+```
+
+```{theorem,name='Limit Comparison Test'}
+
+- Suppose $a_k > 0$ and $b_k > 0$ for all sufficiently large $k$ and that
+$$\lim_{n \to \infty} \frac{a_k}{b_k} = L$$
+where $L$ is finite and positive $(0 < L < \infty)$.
+- Then $\sum_{k=1}^{\infty} a_k$ and $\sum_{k=1}^{\infty} b_k$ either both converge or both diverge.
+
+```
+
+```{remark}
+You are asked to test the convergence of $\sum_{k=1}^{\infty} a_k$.
+
+- Find a series $\sum_{k=1}^{\infty} b_k$ whose convergent properties are known and whose general term $b_k$ is essentially the same as $a_k$.
+- Verify that $\lim_{k \to \infty} \frac{a_k}{b_k}$ exists and is positive.
+- Determine whether $\sum_{k=1}^{\infty} b_k$ converges or diverges. Then the limit comparison test tells us that $\sum_{k=1}^{\infty} a_k$ does the same.
+
+```
+
+```{example}
+Test the series $\sum_{k=1}^{\infty} \frac{1}{2^k - 5}$ for convergence.
+
+Let $a_k = \frac{1}{2^k - 5}$ and $b_k = \frac{1}{2^k}$.
+
+$a_k > 0$ and $b_k > 0$ for all $k > 2$.
+
+\begin{align}
+\lim_{k \to \infty} \frac{a_k}{b_k} &= \lim_{k \to \infty} \frac{\frac{1}{2^k - 5}}{\frac{1}{2^k}} \\
+&= \lim_{k \to \infty} \frac{2^k}{2^k - 5} \\
+&= \lim_{k \to \infty} \frac{1}{1 - \frac{5}{2^k}} \\
+&= 1
+\end{align}
+
+$\sum_{k=1}^{\infty} \frac{1}{2^k}$ is a geometric series with $r = \frac{1}{2}$, hence converges.
+
+$\sum_{k=1}^{\infty} \frac{1}{2^k - 5}$ converges from the limit comparison test.
+```
+
+```{example}
+Test the series $\sum_{k=1}^{\infty} \frac{1}{\sqrt{k} - 5}$ for convergence.
+
+Let $a_k = \frac{1}{\sqrt{k} - 5}$ and find a series $\sum_{k=1}^{\infty} b_k$ whose convergent properties are known and whose general term $b_k$ is essentially the same as $a_k$.
+
+Since $\sqrt{k}$ dominates the constant 5, for large $k$ the series should behave as $b_k = \frac{1}{\sqrt{k}}$.
+
+Verify that $\lim_{k \to \infty} \frac{a_k}{b_k}$ exists and is positive:
+\begin{align}
+\lim_{k \to \infty} \frac{a_k}{b_k} &= \lim_{k \to \infty} \frac{\frac{1}{\sqrt{k} - 5}}{\frac{1}{\sqrt{k}}} \\
+&= \lim_{k \to \infty} \frac{\sqrt{k}}{\sqrt{k} - 5} \\
+&= \lim_{k \to \infty} \frac{1}{1 - \frac{5}{\sqrt{k}}} \\
+&= 1
+\end{align}
+
+$\sum_{k=1}^{\infty} \frac{1}{\sqrt{k}}$ diverges (p-series test).
+
+$\sum_{k=1}^{\infty} \frac{1}{\sqrt{k} - 5}$ diverges from the limit comparison test.
+```
+
+```{example}
+Determine whether $\sum_{n=2}^{\infty} \frac{3n + 3}{8n^5 + 2n^2 + 4}$ converges or diverges.
+
+Let $a_n = \frac{3n + 3}{8n^5 + 2n^2 + 4}$ and find a series $\sum_{n=1}^{\infty} b_n$ whose convergent properties are known and whose general term $b_n$ is essentially the same as $a_n$.
+
+Fractions involving only polynomials or polynomials under radicals will behave in the same way as the largest power of $n$ will behave in the limit. So, the terms in this series should behave as:
+$$b_n = \frac{3n}{8n^5} = \frac{3}{8n^4}$$
+
+\begin{align}
+L &= \lim_{n \to \infty} \frac{a_n}{b_n} \\
+&= \lim_{n \to \infty} \frac{\frac{3n + 3}{8n^5 + 2n^2 + 4}}{\frac{3}{8n^4}} \\
+&= \lim_{n \to \infty} \frac{3n + 3}{8n^5 + 2n^2 + 4} \times \frac{8n^4}{3} \\
+&= \lim_{n \to \infty} \frac{8n^5 + 8n^4}{8n^5 + 2n^2 + 4} \\
+&= \lim_{n \to \infty} \frac{8 + \frac{8}{n}}{8 + \frac{2}{n^3} + \frac{4}{n^5}} \\
+&= 1
+\end{align}
+
+$\sum_{n=1}^{\infty} \frac{3}{8n^4}$ converges (p-series test).
+
+$\sum_{n=1}^{\infty} \frac{3n + 3}{8n^5 + 2n^2 + 4}$ converges from the limit comparison test.
+```
+
+```{theorem,name='Ratio Test'}
+Given the series $\sum_{k=1}^{\infty} a_k$ with $a_k > 0$. Let
+$$\lim_{k \to \infty} \frac{a_{k+1}}{a_k} = L$$
+
+The ratio test states the following:
+
+- If $L < 1$, then the series $\sum_{k=1}^{\infty} a_k$ converges.
+- If $L > 1$, then the series $\sum_{k=1}^{\infty} a_k$ diverges.
+- If $L = 1$, then the test is inconclusive (the series may be divergent or conditionally convergent).
+
+```
+
+```{example}
+Determine whether $\sum_{k=1}^{\infty} \frac{2^k}{k!}$ converges or diverges.
+
+Let $a_k = \frac{2^k}{k!}$.
+
+\begin{align}
+L &= \lim_{k \to \infty} \frac{a_{k+1}}{a_k} \\
+&= \lim_{k \to \infty} \frac{\frac{2^{k+1}}{(k+1)!}}{\frac{2^k}{k!}} \\
+&= \lim_{k \to \infty} \frac{2^{k+1}}{(k+1)!} \times \frac{k!}{2^k} \\
+&= \lim_{k \to \infty} \frac{2}{k+1} \\
+&= 0
+\end{align}
+
+Since $L < 1$, $\sum_{k=1}^{\infty} \frac{2^k}{k!}$ converges from the ratio test.
+```
+
+```{example}
+Determine whether $\sum_{k=2}^{\infty} \frac{k^k}{k!}$ converges or diverges.
+
+Let $a_k = \frac{k^k}{k!}$.
+
+\begin{align}
+L &= \lim_{k \to \infty} \frac{a_{k+1}}{a_k} \\
+&= \lim_{k \to \infty} \frac{\frac{(k+1)^{k+1}}{(k+1)!}}{\frac{k^k}{k!}} \\
+&= \lim_{k \to \infty} \frac{(k+1)^{k+1}}{(k+1)!} \times \frac{k!}{k^k} \\
+&= \lim_{k \to \infty} \frac{(k+1)^k}{k^k} \\
+&= \lim_{k \to \infty} \left(\frac{k+1}{k}\right)^k \\
+&= e
+\end{align}
+
+Since $L > 1$, $\sum_{k=2}^{\infty} \frac{k^k}{k!}$ diverges from the ratio test.
+```
+
+```{theorem,name='Root Test'}
+Given the series $\sum_{k=1}^{\infty} a_k$ with $a_k > 0$. Let
+$$\lim_{k \to \infty} \sqrt[k]{a_k} = L$$
+
+
+- If $L < 1$, then the series $\sum_{k=1}^{\infty} a_k$ converges.
+- If $L > 1$, then the series $\sum_{k=1}^{\infty} a_k$ diverges.
+- If $L = 1$, then the test is inconclusive.
+
+```
+
+```{example}
+Determine whether $\sum_{k=2}^{\infty} \left(\frac{\ln k}{k}\right)^k$ converges or diverges.
+
+Let $a_k = \left(\frac{\ln k}{k}\right)^k$.
+
+\begin{align}
+L &= \lim_{k \to \infty} \sqrt[k]{a_k} \\
+&= \lim_{k \to \infty} \sqrt[k]{\left(\frac{\ln k}{k}\right)^k} \\
+&= \lim_{k \to \infty} \frac{\ln k}{k} \\
+&= 0
+\end{align}
+
+Since $L < 1$, $\sum_{k=1}^{\infty} \left(\frac{\ln k}{k}\right)^k$ converges from the root test.
+```
+
+```{example}
+Determine whether $\sum_{k=2}^{\infty} \left(\frac{4k}{3k+2}\right)^k$ converges or diverges.
+
+Let $a_k = \left(\frac{4k}{3k+2}\right)^k$.
+
+\begin{align}
+L &= \lim_{k \to \infty} \sqrt[k]{a_k} \\
+&= \lim_{k \to \infty} \sqrt[k]{\left(\frac{4k}{3k+2}\right)^k} \\
+&= \lim_{k \to \infty} \frac{4k}{3k+2} \\
+&= \lim_{k \to \infty} \frac{4k^{1/k}}{(3k+2)^{1/k}} \\
+&= \lim_{k \to \infty} \frac{4}{3^{1 + \frac{2}{k}}} \\
+&= \frac{4}{3}
+\end{align}
+
+Since $L > 1$, $\sum_{k=1}^{\infty} \left(\frac{4k}{3k+2}\right)^k$ diverges from the root test.
+```
+
+```{definition}
+An alternating series is any series which can be written in one of the following two forms:
+$$\sum_{k=1}^{\infty} (-1)^k a_k \quad \text{or} \quad \sum_{k=1}^{\infty} (-1)^{k+1} a_k$$
+where $a_k > 0$ for all $k$.
+```
+
+```{theorem,name='Alternating Series Test'}
+An alternating series $\sum_{k=1}^{\infty} (-1)^k a_k$ or $\sum_{k=1}^{\infty} (-1)^{k+1} a_k$ converges if both of the following conditions are satisfied:
+
+- $\lim_{k \to \infty} a_k = 0$
+- $\{a_k\}$ is a decreasing sequence; that is, $a_{k+1} < a_k$ for all $k$.
+
+```
+
+```{remark}
+Alone, not satisfying the hypotheses of the Alternating Series Test is not sufficient reason to conclude that the series does not converge. The theorem says that if its conditions are satisfied, then the series converges. If the conditions are not satisfied, the test is inconclusive.
+```
+
+```{example}
+Determine whether $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converges or diverges.
+
+The series can be expressed as $\sum_{n=1}^{\infty} (-1)^n a_n$, where $a_n = \frac{1}{n}$.
+
+We have $\lim_{n \to \infty} \frac{1}{n} = 0$.
+
+Since $\frac{1}{n+1} < \frac{1}{n}$ for all $n > 0$, the sequence $\{a_n\}$ is decreasing.
+
+Thus the alternating series test tells us that the given series must converge.
+```
+
+```{example}
+Determine whether $\sum_{k=1}^{\infty} \sin\left(\frac{k\pi}{2}\right) \frac{\ln(k)}{k}$ converges or diverges.
+
+| $k$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
+|-----|-----|-----|-----|-----|-----|-----|
+| $\sin\left(\dfrac{k\pi}{2}\right)$ | $1$ | $0$ | $-1$ | $0$ | $1$ | $0$ |
+| $\dfrac{\ln(k)}{k}$ | $\dfrac{\ln(1)}{1}$ | $\dfrac{\ln(2)}{2}$ | $\dfrac{\ln(3)}{3}$ | $\dfrac{\ln(4)}{4}$ | $\dfrac{\ln(5)}{5}$ | $\dfrac{\ln(6)}{6}$ |
+
+
+
+\begin{align}
+\sum_{k=1}^{\infty} \sin\left(\frac{k\pi}{2}\right) \frac{\ln(k)}{k} &= \frac{\ln(1)}{1} + 0 - \frac{\ln(3)}{3} + 0 + \frac{\ln(5)}{5} + 0 - \frac{\ln(7)}{7} + \cdots \\
+&= \sum_{k=1}^{\infty} (-1)^{k+1} \frac{\ln(2k-1)}{2k-1} \\
+&= \frac{\ln(1)}{1} - \frac{\ln(3)}{3} + \frac{\ln(5)}{5} - \frac{\ln(7)}{7} + \cdots
+\end{align}
+
+The series can be expressed as $\sum_{n=1}^{\infty} (-1)^{n+1} a_n$, where $a_k = \frac{\ln(2k-1)}{2k-1}$.
+
+Let $f(x) = \frac{\ln(2x-1)}{2x-1}$.
+
+\begin{align}
+f'(x) &= \frac{d}{dx} \frac{\ln(2x-1)}{2x-1} \\
+&= \frac{(2x-1) \cdot 2 - (2x-1)^{-2} \cdot \ln(2x-1)}{(2x-1)^2} \\
+&= \frac{2(1-\ln(2x-1))}{(2x-1)^2}
+\end{align}
+
+$(2x-1)^2 > 0$ for all $x \in (1,\infty)$ and $(1-\ln(2x-1)) < 0$ for all $x \geq \frac{e+1}{2}$.
+
+$f'(x) < 0$, $\forall x \geq \frac{e+1}{2}$.
+
+$f(x)$ is decreasing for $\forall x \geq \frac{e+1}{2}$
+
+The sequence $\{a_k\}$ is decreasing $\forall k \geq \frac{e+1}{2}$
+
+\begin{align}
+\lim_{n \to \infty} a_k &= \lim_{k \to \infty} \frac{\ln(2k-1)}{2k-1} \\
+&= \lim_{n \to \infty} \frac{\ln(n)}{n} \quad \text{(Let $n = 2k-1$, then $k \to \infty \Rightarrow n \to \infty$)} \\
+&= 0
+\end{align}
+
+$\lim_{k \to \infty} a_k = 0$ and $\{a_k\}$ is a decreasing sequence. Thus alternating test tells us that the given series must converge.
+```
+
+```{example}
+Determine whether $\sum_{n=1}^{\infty} (-1)^{n+1} \frac{(2n^2+1)}{n^2+2}$ converges or diverges.
+
+
+Series can be expressed as $\sum_{n=1}^{\infty} (-1)^n a_n$, where $a_n = \frac{2n^2+1}{n^2+2}$.
+
+\begin{align}
+\lim_{n \to \infty} \frac{2n^2+1}{n^2+2} &= \lim_{n \to \infty} \frac{2 + \frac{1}{n^2}}{1 + \frac{2}{n^2}} = 2 \neq 0
+\end{align}
+
+So, the first condition isn't met and so there is no reason to check the second.
+
+Since this condition isn't met we'll need to use another test to check convergence.
+
+In these cases where the first condition isn't met it is usually best to use the divergence test.
+
+First part of $(-1)^{n+1} \frac{(2n^2+1)}{n^2+2}$ just alternates between positive and negative values that are getting closer and closer to $-2$ and $2$, Thus
+$\lim_{n \to \infty} (-1)^{n+1} \frac{(2n^2+1)}{n^2+2}$ is undefined and so by the Divergence Test this series diverges.
+```
+
+```{theorem,name='Alternating P-series'}
+The series $\sum_{k=1}^{\infty} \frac{(-1)^k}{k^p}$ is called the alternating P-series. The alternating P-series converges for all $P > 0$.
+\end{theorem}
+
+```{theorem,name='Error Estimates for alternating Series'}
+Suppose the alternating series $\sum_{k=1}^{\infty} (-1)^k a_k$ or $\sum_{k=1}^{\infty} (-1)^{k+1} a_k$ satisfies the conditions of the alternating series tests (namely $\lim_{k \to \infty} a_k = 0$ and $\{a_k\}$ is decreasing). If the series has sum $S$, then
+$$|S - S_n| \leq a_{n+1}$$
+where $S_n$ is the $n$th partial sum of the series.
+```
+
+
+
+
+
+## Absolutely Convergence and Conditional Convergence
+
+```{definition}
+- A series $\sum_{k=1}^{\infty} a_k$ is called **absolutely convergent** if $\sum_{k=1}^{\infty} |a_k|$ is convergent.
+- The series $\sum_{k=1}^\infty$a_k is **conditionally convergent** If $\sum_{k=1}^{\infty} a_k$  converges but $\sum_{k=1}^{\infty} |a_k|$  diverges.
+
+
+```{example}
+Determine whether the series $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converges or diverges.
+
+- The series $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ converges (alternating series test)
+
+- but $\sum_{n=1}^{\infty} \left|\frac{(-1)^n}{n}\right| = \sum_{n=1}^{\infty} \frac{1}{n}$ diverges (harmonic series)
+
+- Therefore the series $\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ conditionally converges.
+```
+
+```{theorem,name='Generalized Ratio Test'}
+Given the series $\sum_{k=1}^{\infty} a_k$ Let,
+$$\lim_{k \to \infty} \left|\frac{a_{k+1}}{a_k}\right| = L$$
+  
+- If $L > 1$, then the series $\sum_{k=1}^{\infty} a_k$ diverges.
+- If $L = 1$, then the test is inconclusive (The series may be divergent or conditionally convergent)
+```
+
+
+
+```{theorem,name='Absolute Convergent Test'}
+A series of real numbers $\sum a_k$ must converges if the related absolute value series $\sum |a_k|$ converges.
+```
+
+
+```{example}
+Determine whether $\sum_{k=1}^{\infty} \frac{\sin(k)(2)^k}{k!|\sin(k)|}$ converges or diverges.
+
+Because $\sin(k)$ take both positive and negative values, the series cannot analyzed by methods that apply only to series of positive terms. Moreover, note that series is not strictly alternating.
+
+Let $a_k = \frac{\sin(k)(2)^k}{k!|\sin(k)|} = \frac{|\sin(k)|(2)^k}{k!|\sin(k)|} = \frac{2^k}{k!}$
+
+\begin{align}
+L &= \lim_{k \to \infty} \frac{a_{k+1}}{a_k} \\
+&= \lim_{k \to \infty} \frac{2^{k+1}}{(k+1)!} \cdot \frac{k!}{2^k} \\
+&= \lim_{k \to \infty} \frac{2^{k+1}}{(k+1)!} \cdot \frac{k!}{2^k} \\
+&= \lim_{k \to \infty} \left(\frac{2}{k+1}\right) \\
+&= 0
+\end{align}
+
+$L < 1$, hence $\sum_{k=1}^{\infty} a_k$ converges from Ratio Test. $\therefore \sum_{k=1}^{\infty} \frac{\sin(k)(2)^k}{k!|\sin(k)|}$ converges from Absolute Convergent Test.
+
+we can use this above idea to generalize the test's for positive series:
+```
+
+
+
+
+
+```{theorem,name='Generalized Ratio Test'}
+
+Given the series $\sum_{k=1}^{\infty} a_k$ Let,
+$$\lim_{k \to \infty} \left|\frac{a_{k+1}}{a_k}\right| = L$$
+
+where $L$ is a real number or $\infty$ then The generalized ratio test states the followings:
+
+
+- If $L < 1$, then the series $\sum_{k=1}^{\infty} a_k$ converges.
+
+- If $L > 1$, then the series $\sum_{k=1}^{\infty} a_k$ diverges.
+
+- If $L = 1$, then the test is inconclusive (The series may be divergent or conditionally convergent)
+```
+
+```{theorem,name='Generalized Root Test'}
+Given the series $\sum_{k=1}^{\infty} a_k$ with $a_k > 0$
+
+Let,
+$$\lim_{k \to \infty} \sqrt[k]{|a_k|} = L$$
+
+The generalized root test states the followings:
+
+
+- If $L < 1$, then the series $\sum_{k=1}^{\infty} a_k$ converges.
+
+- If $L > 1$, then the series $\sum_{k=1}^{\infty} a_k$ diverges.
+
+- If $L = 1$, then the test is inconclusive.
+```

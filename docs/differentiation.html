@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Differentiation | Calculus</title>
+  <meta name="description" content="Chapter 4 Differentiation | Calculus" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Differentiation | Calculus" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Chapter 4 Differentiation | Calculus" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Differentiation | Calculus" />
+  
+  <meta name="twitter:description" content="Chapter 4 Differentiation | Calculus" />
+  
+
+<meta name="author" content="Ashan J" />
+
+
+<meta name="date" content="2025-07-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="limits-and-continuity.html"/>
+<link rel="next" href="sequence.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Calculus</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html#functions-1"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="functions.html"><a href="functions.html#piecewise-defined-functions"><i class="fa fa-check"></i><b>2.2</b> Piecewise Defined Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html#combining-functions"><i class="fa fa-check"></i><b>2.3</b> Combining Functions</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html#inverse-functions"><i class="fa fa-check"></i><b>2.4</b> Inverse Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>3</b> Limits and Continuity</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-limit-of-a-function"><i class="fa fa-check"></i><b>3.1</b> The Limit of a Function</a></li>
+<li class="chapter" data-level="3.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity"><i class="fa fa-check"></i><b>3.2</b> Continuity</a></li>
+<li class="chapter" data-level="3.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#algebraic-computation-of-limits"><i class="fa fa-check"></i><b>3.3</b> Algebraic computation of limits</a></li>
+<li class="chapter" data-level="3.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-indeterminate-forms-frac00"><i class="fa fa-check"></i><b>3.4</b> Limits involving indeterminate forms <span class="math inline">\(\frac{0}{0}\)</span></a></li>
+<li class="chapter" data-level="3.5" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#limits-involving-infinity"><i class="fa fa-check"></i><b>3.5</b> Limits Involving Infinity</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#infinite-limits"><i class="fa fa-check"></i><b>3.5.1</b> Infinite Limits</a></li>
+<li class="chapter" data-level="3.5.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#the-nature-of-discontinuities"><i class="fa fa-check"></i><b>3.5.2</b> The Nature of Discontinuities</a></li>
+<li class="chapter" data-level="3.5.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#examples-of-discontinuities"><i class="fa fa-check"></i><b>3.5.3</b> Examples of Discontinuities</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="differentiation.html"><a href="differentiation.html"><i class="fa fa-check"></i><b>4</b> Differentiation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="differentiation.html"><a href="differentiation.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="differentiation.html"><a href="differentiation.html#linear-functions-and-slope"><i class="fa fa-check"></i><b>4.1.1</b> Linear Functions and Slope</a></li>
+<li class="chapter" data-level="4.1.2" data-path="differentiation.html"><a href="differentiation.html#applications-of-slope"><i class="fa fa-check"></i><b>4.1.2</b> Applications of Slope</a></li>
+<li class="chapter" data-level="4.1.3" data-path="differentiation.html"><a href="differentiation.html#the-challenge-of-curved-functions"><i class="fa fa-check"></i><b>4.1.3</b> The Challenge of Curved Functions</a></li>
+<li class="chapter" data-level="4.1.4" data-path="differentiation.html"><a href="differentiation.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>4.1.4</b> Secant and Tangent Lines</a></li>
+<li class="chapter" data-level="4.1.5" data-path="differentiation.html"><a href="differentiation.html#from-average-to-instantaneous-rates"><i class="fa fa-check"></i><b>4.1.5</b> From Average to Instantaneous Rates</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="differentiation.html"><a href="differentiation.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>4.2</b> Definition of the Derivative</a></li>
+<li class="chapter" data-level="4.3" data-path="differentiation.html"><a href="differentiation.html#derivative-notation"><i class="fa fa-check"></i><b>4.3</b> Derivative Notation</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="differentiation.html"><a href="differentiation.html#lagranges-notation"><i class="fa fa-check"></i><b>4.3.1</b> Lagrange’s Notation</a></li>
+<li class="chapter" data-level="4.3.2" data-path="differentiation.html"><a href="differentiation.html#leibniz-notation"><i class="fa fa-check"></i><b>4.3.2</b> Leibniz Notation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="differentiation.html"><a href="differentiation.html#derivatives-of-standard-functions"><i class="fa fa-check"></i><b>4.4</b> Derivatives of Standard Functions</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="differentiation.html"><a href="differentiation.html#summary-table"><i class="fa fa-check"></i><b>4.4.1</b> Summary Table</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="differentiation.html"><a href="differentiation.html#existence-of-derivative"><i class="fa fa-check"></i><b>4.5</b> Existence of Derivative</a></li>
+<li class="chapter" data-level="4.6" data-path="differentiation.html"><a href="differentiation.html#common-examples-where-a-derivative-does-not-exist"><i class="fa fa-check"></i><b>4.6</b> Common examples where a derivative does not exist:</a></li>
+<li class="chapter" data-level="4.7" data-path="differentiation.html"><a href="differentiation.html#derivative-of-fx-and-tangent-line-to-the-graph-of-fx"><i class="fa fa-check"></i><b>4.7</b> Derivative of <span class="math inline">\(f(x)\)</span> and Tangent Line to the Graph of <span class="math inline">\(f(x)\)</span></a></li>
+<li class="chapter" data-level="4.8" data-path="differentiation.html"><a href="differentiation.html#derivative-as-instantaneous-rate-of-change"><i class="fa fa-check"></i><b>4.8</b> Derivative as Instantaneous Rate of Change</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="differentiation.html"><a href="differentiation.html#rectilinear-motion"><i class="fa fa-check"></i><b>4.8.1</b> Rectilinear Motion</a></li>
+<li class="chapter" data-level="4.8.2" data-path="differentiation.html"><a href="differentiation.html#falling-body-problems"><i class="fa fa-check"></i><b>4.8.2</b> Falling Body Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="differentiation.html"><a href="differentiation.html#real-world-application-of-chain-rule"><i class="fa fa-check"></i><b>4.9</b> Real-World Application of Chain Rule</a></li>
+<li class="chapter" data-level="4.10" data-path="differentiation.html"><a href="differentiation.html#extreme-values-of-a-function"><i class="fa fa-check"></i><b>4.10</b> # Extreme Values of a Function</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="differentiation.html"><a href="differentiation.html#steps-to-find-critical-numbers"><i class="fa fa-check"></i><b>4.10.1</b> Steps to Find Critical Numbers</a></li>
+<li class="chapter" data-level="4.10.2" data-path="differentiation.html"><a href="differentiation.html#absolute-extrema"><i class="fa fa-check"></i><b>4.10.2</b> Absolute Extrema</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sequence.html"><a href="sequence.html"><i class="fa fa-check"></i><b>5</b> Sequence</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sequence.html"><a href="sequence.html#the-epsilon--n-definition-of-a-limit-of-sequence"><i class="fa fa-check"></i><b>5.1</b> The <span class="math inline">\(\epsilon- N\)</span> Definition of a Limit of Sequence</a></li>
+<li class="chapter" data-level="5.2" data-path="sequence.html"><a href="sequence.html#divergent-sequences"><i class="fa fa-check"></i><b>5.2</b> Divergent Sequences</a></li>
+<li class="chapter" data-level="5.3" data-path="sequence.html"><a href="sequence.html#limit-laws"><i class="fa fa-check"></i><b>5.3</b> Limit Laws</a></li>
+<li class="chapter" data-level="5.4" data-path="sequence.html"><a href="sequence.html#limits-of-some-important-sequences"><i class="fa fa-check"></i><b>5.4</b> Limits of Some Important Sequences</a></li>
+<li class="chapter" data-level="5.5" data-path="sequence.html"><a href="sequence.html#exercise"><i class="fa fa-check"></i><b>5.5</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>6</b> Series</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="series.html"><a href="series.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="series.html"><a href="series.html#sequence-of-partial-sums"><i class="fa fa-check"></i><b>6.2</b> Sequence of Partial Sums</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="series.html"><a href="series.html#telescoping-series"><i class="fa fa-check"></i><b>6.2.1</b> Telescoping Series</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="series.html"><a href="series.html#series-convergence-tests"><i class="fa fa-check"></i><b>6.3</b> Series Convergence Tests</a></li>
+<li class="chapter" data-level="6.4" data-path="series.html"><a href="series.html#absolutely-convergence-and-conditional-convergence"><i class="fa fa-check"></i><b>6.4</b> Absolutely Convergence and Conditional Convergence</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="appedicses.html"><a href="appedicses.html"><i class="fa fa-check"></i><b>7</b> Appedicses</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Ashan Jayamal</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differentiation" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Differentiation<a href="differentiation.html#differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Introduction<a href="differentiation.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Having established both conceptual understanding and computational techniques for limits, we now possess the fundamental tools necessary for studying calculus. Calculus encompasses the mathematical discipline concerned with derivatives and integrals. Historical consensus attributes the independent development of calculus to Isaac Newton of England and Gottfried Leibniz of Germany. Their crucial contribution was recognizing the fundamental relationship connecting derivatives and integrals.</p>
+<p>The derivative generalizes the notion of slope from straight lines to arbitrary functions. We begin by examining the familiar concept of slope.</p>
+<div id="linear-functions-and-slope" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Linear Functions and Slope<a href="differentiation.html#linear-functions-and-slope" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A straight line represents a one-dimensional geometric object of zero width, conceptualized as an infinite collection of connected points without curvature.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-49" class="definition"><strong>Definition 4.1  (Slope) </strong></span>The slope (also called gradient, incline, or pitch) quantifies the steepness of a straight line. Key properties include:</p>
+<ul>
+<li>The slope remains constant throughout the entire line</li>
+<li>Greater slope values correspond to steeper lines</li>
+<li>Slope indicates the line’s directional behavior (increasing or decreasing)</li>
+<li>Slope represents the rate of change</li>
+</ul>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-50" class="theorem"><strong>Theorem 4.1  (Slope Formula) </strong></span>For a straight line passing through points <span class="math inline">\(P(x_1, y_1)\)</span> and <span class="math inline">\(Q(x_2, y_2)\)</span>, the slope is:
+<span class="math display">\[m = \frac{y_2 - y_1}{x_2 - x_1}\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-6" class="remark"><em>Remark</em> (Linear Equations). </span>Straight lines can be expressed in various forms:</p>
+<ul>
+<li>Slope-intercept form: <span class="math inline">\(y = mx + c\)</span> (where <span class="math inline">\(m\)</span> is slope and <span class="math inline">\(c\)</span> is y-intercept)</li>
+<li>Point-slope form: <span class="math inline">\(y = m(x - x_1) + y_1\)</span> (passing through point <span class="math inline">\((x_1, y_1)\)</span>)</li>
+</ul>
+</div>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+</div>
+<div id="applications-of-slope" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Applications of Slope<a href="differentiation.html#applications-of-slope" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Slope provides valuable information across numerous contexts. For instance,</p>
+<ul>
+<li>a mountain’s slope indicates its steepness,</li>
+<li>while in physics, slope might represent
+<ul>
+<li>velocity,</li>
+<li>acceleration, or</li>
+<li>other rates of change.</li>
+</ul></li>
+</ul>
+<center>
+<video src="fig\plant_growth.mp4" style="width:100.0%" controls=""><a href="fig\plant_growth.mp4">Video</a></video>
+</center>
+<p>Consider an object travelling 20 meters in 5 seconds.
+<img src="fig/fig14.png" />
+The slope calculation yields:
+<span class="math display">\[\text{Speed} = \frac{\text{change in }y}{\text{change in }x}=\frac{\text{change in distance}}{\text{change in time}}=\frac{20 \text{ meters}}{5 \text{ seconds}} = 4 \text{ meters per second}\]</span></p>
+</div>
+<div id="the-challenge-of-curved-functions" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> The Challenge of Curved Functions<a href="differentiation.html#the-challenge-of-curved-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Most real-world applications involve curved rather than linear graphs. Unfortunately, curved functions present a fundamental challenge: their rate of change varies continuously from point to point, making the standard slope formula inapplicable.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-54" class="example"><strong>Example 4.1  (Position Function) </strong></span>Consider a car whose position follows <span class="math inline">\(f(t) = t^2\)</span>. To find the speed at <span class="math inline">\(t = 1\)</span> second, we might attempt using the slope formula with different point pairs:</p>
+<p>Points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,4)\)</span>:
+<span class="math display">\[m = \frac{4-1}{2-1} = 3\]</span></p>
+<p>Points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((3,9)\)</span>:
+<span class="math display">\[m = \frac{9-1}{3-1} = 4\]</span></p>
+<p>This yields two different “slopes” at <span class="math inline">\(t = 1\)</span>, but the car should have exactly one speed at that instant.</p>
+</div>
+<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+</div>
+<div id="secant-and-tangent-lines" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Secant and Tangent Lines<a href="differentiation.html#secant-and-tangent-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To resolve this dilemma, we introduce two fundamental concepts:</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-56" class="definition"><strong>Definition 4.2  (Secant Line) </strong></span>A secant line is a straight line connecting two distinct points on a function’s graph.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-57" class="definition"><strong>Definition 4.3  (Tangent Line) </strong></span>A tangent line is a straight line that “just touches” a curve at exactly one point, representing the instantaneous direction of the curve at that point.</p>
+</div>
+<p><img src="fig/fig15.jpg" /></p>
+</div>
+<div id="from-average-to-instantaneous-rates" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> From Average to Instantaneous Rates<a href="differentiation.html#from-average-to-instantaneous-rates" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In our car example, the value 3 represents the slope of the secant line through <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,4)\)</span>, giving the average speed between <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 2\)</span>. Similarly, 4 represents the average speed between <span class="math inline">\(t = 1\)</span> and <span class="math inline">\(t = 3\)</span>.</p>
+<p>However, we seek the instantaneous speed at <span class="math inline">\(t = 1\)</span> - the speedometer reading at that precise moment. This corresponds to the slope of the tangent line at that point.</p>
+<p>The challenge lies in computing the tangent line’s slope using the two-point slope formula when we know only one point on the tangent line. The derivative resolves this by expressing the tangent line’s slope as the limit of secant line slopes as the second point approaches the first.</p>
+</div>
+</div>
+<div id="definition-of-the-derivative" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Definition of the Derivative<a href="differentiation.html#definition-of-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-58" class="definition"><strong>Definition 4.4  (Derivative) </strong></span>Let <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span>. At a point <span class="math inline">\((x_0, f(x_0))\)</span>, if the limit
+<span class="math display">\[
+\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+\]</span>
+exists, then this limit represents the slope of the tangent line to the curve at <span class="math inline">\((x_0, f(x_0))\)</span>. When this limit exists, we say that <span class="math inline">\(f\)</span> is <strong>differentiable</strong> at <span class="math inline">\(x_0\)</span>.</p>
+</div>
+<p><video src="fig\fig17.mp4" style="width:100.0%" controls=""><a href="fig\fig17.mp4">Video</a></video>
+<strong>Important Notes</strong>:</p>
+<ul>
+<li>This is a two-sided limit, meaning <span class="math inline">\(h\)</span> approaches zero from both positive and negative directions.</li>
+<li>The slope of the tangent line to <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_0\)</span> is called the derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x = x_0\)</span>.</li>
+</ul>
+<div class="example">
+<p><span id="exm:unnamed-chunk-59" class="example"><strong>Example 4.2  (Derivative of $f(x) = x^2$) </strong></span>Let <span class="math inline">\(f(x) = x^2\)</span>. We want to find the derivative of $f
+<video src="fig\fig16.mp4" style="width:100.0%" controls=""><a href="fig\fig16.mp4">Video</a></video>
+To find the slope of the tangent line to <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x = x_0\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+m_{x_0} &amp;= \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h} \\
+&amp;= \lim_{h \to 0} \frac{(x_0 + h)^2 - x_0^2}{h} \\
+&amp;= \lim_{h \to 0} \frac{x_0^2 + 2x_0h + h^2 - x_0^2}{h} \\
+&amp;= \lim_{h \to 0} \frac{2x_0h + h^2}{h} \\
+&amp;= \lim_{h \to 0} (2x_0 + h) \\
+&amp;= 2x_0
+\end{align}\]</span></p>
+</div>
+<p>Notice that the derivative of <span class="math inline">\(f(x) = x^2\)</span> depends on <span class="math inline">\(x\)</span>. In general, the derivative of a function is itself a function.</p>
+</div>
+<div id="derivative-notation" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Derivative Notation<a href="differentiation.html#derivative-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="lagranges-notation" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Lagrange’s Notation<a href="differentiation.html#lagranges-notation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The derivative of <span class="math inline">\(f(x)\)</span> is denoted as <span class="math inline">\(f&#39;(x)\)</span>.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-60" class="example"><strong>Example 4.3  </strong></span>If <span class="math inline">\(f(x) = x^2\)</span>, then <span class="math inline">\(f&#39;(x) = 2x\)</span>.</p>
+</div>
+</div>
+<div id="leibniz-notation" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Leibniz Notation<a href="differentiation.html#leibniz-notation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The derivative of <span class="math inline">\(f(x)\)</span> is denoted as <span class="math inline">\(\frac{df}{dx}\)</span> or <span class="math inline">\(\frac{d}{dx}f(x)\)</span>.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-61" class="example"><strong>Example 4.4  </strong></span></p>
+<ul>
+<li>If <span class="math inline">\(f(x) = x^2\)</span>, then <span class="math inline">\(\frac{d}{dx}f(x) = 2x\)</span></li>
+<li>If <span class="math inline">\(y = t^2\)</span>, then <span class="math inline">\(\frac{dy}{dt} = 2t\)</span></li>
+</ul>
+<p>The variable in the denominator (e.g., <span class="math inline">\(x\)</span> in <span class="math inline">\(\frac{d}{dx}\)</span>) indicates the variable of differentiation.</p>
+</div>
+</div>
+</div>
+<div id="derivatives-of-standard-functions" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Derivatives of Standard Functions<a href="differentiation.html#derivatives-of-standard-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="constant-function" class="section level4 hasAnchor" number="4.4.0.1">
+<h4><span class="header-section-number">4.4.0.1</span> Constant Function<a href="differentiation.html#constant-function" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Function</strong> <span class="math inline">\(f(x) = k\)</span> where <span class="math inline">\(k\)</span> is a constant.</p>
+<p><strong>Derivative</strong> <span class="math inline">\(f&#39;(x) = 0\)</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-7" class="proof"><em>Proof</em>. </span><span class="math display">\[\begin{align}
+f&#39;(x) &amp;= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
+&amp;= \lim_{h \to 0} \frac{k - k}{h} \\
+&amp;= \lim_{h \to 0} \frac{0}{h} = 0
+\end{align}\]</span></p>
+</div>
+</div>
+<div id="power-rule" class="section level4 hasAnchor" number="4.4.0.2">
+<h4><span class="header-section-number">4.4.0.2</span> Power Rule<a href="differentiation.html#power-rule" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Function</strong> <span class="math inline">\(f(x) = x^n\)</span> where <span class="math inline">\(n\)</span> is a positive integer.</p>
+<p><strong>Derivative</strong> <span class="math inline">\(f&#39;(x) = nx^{n-1}\)</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>for <span class="math inline">\(f(x) = x^3\)</span>
+<span class="math display">\[\begin{align}
+\frac{df}{dx} &amp;= \lim_{h \to 0} \frac{(x + h)^3 - x^3}{h} \\
+&amp;= \lim_{h \to 0} \frac{x^3 + 3x^2h + 3xh^2 + h^3 - x^3}{h} \\
+&amp;= \lim_{h \to 0} \frac{3x^2h + 3xh^2 + h^3}{h} \\
+&amp;= \lim_{h \to 0} (3x^2 + 3xh + h^2) \\
+&amp;= 3x^2
+\end{align}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-9" class="proof"><em>Proof</em>. </span>**General proof for <span class="math inline">\(f(x) = x^n\)</span>
+Using the binomial theorem:
+<span class="math display">\[\begin{align}
+(x + h)^n &amp;= \sum_{k=0}^{n} \binom{n}{k} x^{n-k} h^k \\
+&amp;= x^n + nx^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \ldots + h^n
+\end{align}\]</span></p>
+</div>
+<p>Therefore:
+<span class="math display">\[\begin{align}
+\frac{df}{dx} &amp;= \lim_{h \to 0} \frac{(x + h)^n - x^n}{h} \\
+&amp;= \lim_{h \to 0} \frac{nx^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \ldots + h^n}{h} \\
+&amp;= \lim_{h \to 0} \left(nx^{n-1} + \frac{n(n-1)}{2}x^{n-2}h + \ldots + h^{n-1}\right) \\
+&amp;= nx^{n-1}
+\end{align}\]</span></p>
+</div>
+<div id="linear-function" class="section level4 hasAnchor" number="4.4.0.3">
+<h4><span class="header-section-number">4.4.0.3</span> Linear Function<a href="differentiation.html#linear-function" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Function</strong><span class="math inline">\(f(x) = mx + c\)</span> where <span class="math inline">\(m, c \in \mathbb{R}\)</span> are constants.</p>
+<p><strong>Derivative</strong> <span class="math inline">\(f&#39;(x) = m\)</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-10" class="proof"><em>Proof</em>. </span><span class="math display">\[\begin{align}
+f&#39;(x) &amp;= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
+&amp;= \lim_{h \to 0} \frac{m(x + h) + c - (mx + c)}{h} \\
+&amp;= \lim_{h \to 0} \frac{mh}{h} \\
+&amp;= m
+\end{align}\]</span></p>
+</div>
+<p>This confirms that the derivative of a linear function equals its slope.</p>
+</div>
+<div id="trigonometric-functions" class="section level4 hasAnchor" number="4.4.0.4">
+<h4><span class="header-section-number">4.4.0.4</span> Trigonometric Functions<a href="differentiation.html#trigonometric-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Function</strong><span class="math inline">\(f(x) = \sin(x)\)</span></p>
+<p><strong>Derivative</strong> <span class="math inline">\(f&#39;(x) = \cos(x)\)</span></p>
+<div class="proof">
+<p><span id="unlabeled-div-11" class="proof"><em>Proof</em>. </span><span class="math display">\[\begin{align}
+\frac{df}{dx} &amp;= \lim_{h \to 0} \frac{\sin(x + h) - \sin(x)}{h} \\
+&amp;= \lim_{h \to 0} \frac{2\cos\left(\frac{2x + h}{2}\right)\sin\left(\frac{h}{2}\right)}{h} \\
+&amp;= \cos(x) \lim_{h \to 0} \frac{\sin\left(\frac{h}{2}\right)}{\frac{h}{2}} \\
+&amp;= \cos(x) \cdot 1 = \cos(x)
+\end{align}\]</span></p>
+</div>
+<p>Similarly <span class="math inline">\(\frac{d}{dx}[\cos(x)] = -\sin(x)\)</span></p>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-67" class="exercise"><strong>Exercise 4.1  </strong></span>Proove that <span class="math inline">\(\frac{d}{dx}[\cos(x)] = -\sin(x)\)</span></p>
+</div>
+</div>
+<div id="square-root-function" class="section level4 hasAnchor" number="4.4.0.5">
+<h4><span class="header-section-number">4.4.0.5</span> Square Root Function<a href="differentiation.html#square-root-function" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Function</strong><span class="math inline">\(f(x) = \sqrt{x}\)</span></p>
+<p><strong>Derivative</strong> <span class="math inline">\(f&#39;(x) = \frac{1}{2\sqrt{x}}\)</span></p>
+</div>
+<div id="summary-table" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Summary Table<a href="differentiation.html#summary-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="23%" />
+<col width="28%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function Type</th>
+<th>Function</th>
+<th>Derivative</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Constant</strong></td>
+<td><span class="math inline">\(f(x) = k\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = 0\)</span></td>
+<td>Where <span class="math inline">\(k\)</span> is any constant</td>
+</tr>
+<tr class="even">
+<td><strong>Power Rule</strong></td>
+<td><span class="math inline">\(f(x) = x^n\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = nx^{n-1}\)</span></td>
+<td>Where <span class="math inline">\(n\)</span> is a positive integer</td>
+</tr>
+<tr class="odd">
+<td><strong>Linear</strong></td>
+<td><span class="math inline">\(f(x) = mx + c\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = m\)</span></td>
+<td>Where <span class="math inline">\(m, c \in \mathbb{R}\)</span> are constants</td>
+</tr>
+<tr class="even">
+<td><strong>Sine</strong></td>
+<td><span class="math inline">\(f(x) = \sin(x)\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = \cos(x)\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Cosine</strong></td>
+<td><span class="math inline">\(f(x) = \cos(x)\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = -\sin(x)\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Square Root</strong></td>
+<td><span class="math inline">\(f(x) = \sqrt{x}\)</span></td>
+<td><span class="math inline">\(f&#39;(x) = \frac{1}{2\sqrt{x}}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="existence-of-derivative" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Existence of Derivative<a href="differentiation.html#existence-of-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have introduced the definition of derivatives and observed the use of the definition to compute derivatives. All the examples up now involved differentiable functions; in this section, we see examples of functions and points where the function is not differentiable.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-68" class="example"><strong>Example 4.5  </strong></span>Let <span class="math inline">\(f(x) = |x|\)</span>. Find derivative of curve <span class="math inline">\(f(x)\)</span> at:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(x = 1\)</span></li>
+<li><span class="math inline">\(x = -1\)</span></li>
+<li><span class="math inline">\(x = 0\)</span></li>
+</ol>
+</div>
+<p><em>proof:</em>
+Let <span class="math inline">\(f(x) = |x|\)</span>.</p>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="42%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Visual Explanation:</strong></th>
+<th><strong>proof</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a.</td>
+<td><img src="fig/fig18.png" alt="The limit depends on values close to zero; we can focus on h values less than |h| &lt; \frac{1}{2}. If |h| &lt; \frac{1}{2}, then 1 + h &gt; 0 and we can drop the absolute value signs in |1 + h|." /></td>
+<td><span class="math display">\[
+\begin{aligned}
+f&#39;(1) &amp;= \lim_{h \to 0} \frac{f(1+h) - f(1)}{h} \\
+&amp;= \lim_{h \to 0} \frac{|1+h| - 1}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} \frac{1+h - 1}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} \frac{h}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} 1 \\
+&amp;= 1
+\end{aligned}
+\]</span></td>
+</tr>
+<tr class="even">
+<td>b.</td>
+<td><img src="fig/fig19.png" alt="The limit depends on values close to zero; we can focus on h values less than |h| &lt; \frac{1}{2}. If |h| &lt; \frac{1}{2}, then -1 + h &lt; 0, when dropping the absolute value signs in |-1 + h| we have to multiply it by -1." /></td>
+<td><span class="math display">\[\begin{align}
+f&#39;(-1) &amp;= \lim_{h \to 0} \frac{f(-1+h) - f(-1)}{h} \\
+&amp;= \lim_{h \to 0} \frac{|-1+h| - |-1|}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} \frac{-(-1+h) - 1}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} \frac{-h}{h} \\
+&amp;= \lim_{\substack{h \to 0 \\ |h| &lt; \frac{1}{2}}} -1 \\
+&amp;= -1
+\end{align}\]</span></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div style="display: flex; justify-content: center; gap: 20px;">
+<div>
+<img src="fig/fig21.png" width="300"><br>
+<center>
+<em>h takes negative values on left side</em>
+</center>
+</div>
+<div>
+<img src="fig/fig20.png" width="300"><br>
+<center>
+<em>h takes positive values on right side</em>
+</center>
+</div>
+</div>
+<p>How small we pick <span class="math inline">\(h\)</span> to be at 0, <span class="math inline">\(h\)</span> takes both negative and positive values and ends up being on different pieces of the graph.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="math display">\[\begin{align} \lim_{h \to 0^-} \frac{f(0+h) - f(0)}{h} &amp;= \lim_{h \to 0^-} \frac{|0+h| - |0|}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &lt; 0}} \frac{|h|}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &lt; 0}} \frac{-h}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &lt; 0}} -1 \\ &amp;= -1 \end{align}\]</span></td>
+<td><span class="math display">\[\begin{align} \lim_{h \to 0^+} \frac{f(0+h) - f(0)}{h} &amp;= \lim_{h \to 0^+} \frac{|0+h| - |0|}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &gt; 0}} \frac{|h|}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &gt; 0}} \frac{h}{h} \\ &amp;= \lim_{\substack{h \to 0 \\ h &gt; 0}} 1 \\ &amp;= 1 \end{align}\]</span></td>
+</tr>
+</tbody>
+</table>
+<p>Since <span class="math display">\[\lim_{h \to 0^-} \frac{f(0+h) - f(0)}{h} \neq \lim_{h \to 0^+} \frac{f(0+h) - f(0)}{h}\]</span>, the limit <span class="math inline">\(\lim_{h \to 0} \frac{f(0+h) - f(0)}{h}\)</span> does not exist. Derivative of <span class="math inline">\(|x|\)</span> does not exist at <span class="math inline">\(x = 0\)</span>. Note that the graph of <span class="math inline">\(|x|\)</span> has a corner point at 0.</p>
+</div>
+<div id="common-examples-where-a-derivative-does-not-exist" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Common examples where a derivative does not exist:<a href="differentiation.html#common-examples-where-a-derivative-does-not-exist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Points where the derivative does not exist.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Points</th>
+<th>Visual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cusp</td>
+<td><img src="fig/fig22.png" /></td>
+</tr>
+<tr class="even">
+<td>Corner</td>
+<td><img src="fig/fig23.png" /></td>
+</tr>
+<tr class="odd">
+<td>Vertical Tangent</td>
+<td><img src="fig/fig24.png" /></td>
+</tr>
+<tr class="even">
+<td>Point of Discontinuity:</td>
+<td><img src="fig/fig25.png" /></td>
+</tr>
+</tbody>
+</table>
+<div class="theorem">
+<p><span id="thm:derivative-continuity" class="theorem"><strong>Theorem 4.2  </strong></span>If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(c\)</span>, then it is also continuous at <span class="math inline">\(c\)</span>.</p>
+<p>The converse is not true in general (If function is continuous at <span class="math inline">\(x = c\)</span> it may or may not be differentiable at <span class="math inline">\(x = c\)</span>).</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-12" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span>, then
+<span class="math display">\[\begin{equation}
+f&#39;(c) = \lim_{h \to 0} \frac{f(x) - f(c)}{h}
+\end{equation}\]</span></p>
+<p>Let’s use theorem <a href="differentiation.html#thm:derivative-continuity">4.2</a> establish the continuity. First let’s show that <span class="math inline">\(\lim_{x \to c} [f(x) - f(c)] = 0\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+\lim_{x \to c} [f(x) - f(c)] &amp;= \lim_{x \to c} (f(x) - f(c)) \times \frac{h}{h} \quad \text{where } h = x - c \\
+&amp;= \lim_{x \to c} \frac{f(x) - f(c)}{h} \times h \\
+&amp;= \lim_{h \to 0} \frac{f(x) - f(c)}{h} \times \lim_{h \to 0} h \quad \text{since } x \to c \Rightarrow h \to 0 \\
+&amp;= \underbrace{\lim_{h \to 0} \frac{f(x) - f(c)}{h}}_{f&#39;(c)} \times \underbrace{\lim_{h \to 0} h}_{0} \\
+&amp;= f&#39;(c) \times 0 = 0
+\end{align}\]</span></p>
+<p>Therefore:
+<span class="math display">\[\begin{align}
+\lim_{x \to c} [f(x) - f(c)] &amp;= 0 \\
+\lim_{x \to c} f(x) - \lim_{x \to c} f(c) &amp;= 0 \\
+\lim_{x \to c} f(x) - f(c) &amp;= 0 \\
+\lim_{x \to c} f(x) &amp;= f(c)
+\end{align}\]</span></p>
+<p>Thus <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x = c\)</span>.</p>
+<p>If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(c\)</span>, then it is also continuous at <span class="math inline">\(c\)</span>. The converse is not true in general (If function is continuous at <span class="math inline">\(x = c\)</span> it may or may not be differentiable at <span class="math inline">\(x = c\)</span>).</p>
+</div>
+</div>
+<div id="derivative-of-fx-and-tangent-line-to-the-graph-of-fx" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Derivative of <span class="math inline">\(f(x)\)</span> and Tangent Line to the Graph of <span class="math inline">\(f(x)\)</span><a href="differentiation.html#derivative-of-fx-and-tangent-line-to-the-graph-of-fx" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that: We already know that the derivative of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x = x_0\)</span> gives the slope of the tangent line to the graph of <span class="math inline">\(y = f(x)\)</span> at <span class="math inline">\(x = x_0\)</span>. This section will go over problems that revolve around this concept.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-70" class="example"><strong>Example 4.6  </strong></span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the equation for tangent line to the graph of <span class="math inline">\(y = 3x^2 + 1\)</span> at <span class="math inline">\(x = 1\)</span></li>
+<li>Find the equation for normal line to the graph of <span class="math inline">\(y = 3x^2 + 1\)</span> at <span class="math inline">\(x = 2\)</span></li>
+<li>Find the equation of all tangent lines to the graph of <span class="math inline">\(y = 2x^2 + 4\)</span> that passes through <span class="math inline">\((0,2)\)</span></li>
+<li>Find the coordinates of each point on the graph of <span class="math inline">\(f(t) = \frac{1}{3}t^3 + \frac{5}{2}t^2 + 6t\)</span>, where the tangent line is horizontal.</li>
+</ol>
+</div>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the equation for tangent line to the graph of <span class="math inline">\(y = 3x^2 + 1\)</span> at <span class="math inline">\(x = 1\)</span>}</li>
+</ol>
+<p>Let’s draw a rough sketch to record the given information (The graph does not have to resemble the actual graph of <span class="math inline">\(y = 3x^2 + 1\)</span>). We are supposed to find the equation of the tangent line to the graph at <span class="math inline">\(x = 1\)</span>.</p>
+<center>
+<img src="fig/fig26.png" style="width:50.0%" />
+</center>
+<p>The graph and tangent line both pass through the same point at <span class="math inline">\(x = 1\)</span>. We know the equation of the graph. We can easily find the <span class="math inline">\(y\)</span>-coordinate of the common point by plugging in <span class="math inline">\(x = 1\)</span> to the equation of the graph.</p>
+<p><span class="math display">\[\begin{align}
+y_1 &amp;= f(1) \\
+&amp;= 3 \cdot (1)^2 + 1 \\
+&amp;= 4
+\end{align}\]</span></p>
+<p>The tangent line passes through the point <span class="math inline">\((1,4)\)</span>. The equation of a line whose slope is <span class="math inline">\(m\)</span> and which passes through a point <span class="math inline">\((x_1, y_1)\)</span> is:
+<span class="math display">\[\begin{equation}
+y = m(x - x_1) + y_1 \quad \text{(Point-slope form)}
+\end{equation}\]</span></p>
+<p>We already know a point; we just need the slope. Let <span class="math inline">\(m\)</span> be the slope of the tangent line.</p>
+<p><span class="math display">\[\begin{align}
+m &amp;= \frac{dy}{dx}\bigg|_{x=1} \\
+&amp;= 6x\bigg|_{x=1} \\
+&amp;= 6(1) \\
+&amp;= 6
+\end{align}\]</span></p>
+<p>The tangent line passes through the point <span class="math inline">\((x_1, y_1) = (1, 4)\)</span> and has a slope of <span class="math inline">\(m = 6\)</span>. By substituting this information into equation (4.105), we get:
+<span class="math display">\[\begin{equation}
+y = 6(x - 1) + 4
+\end{equation}\]</span></p>
+<p>The equation of the tangent line to the graph of <span class="math inline">\(y = 3x^2 + 1\)</span> at <span class="math inline">\(x = 1\)</span> is <span class="math inline">\(y = 6(x - 1) + 4\)</span>.</p>
+<p>The figure below shows the actual graph and the tangent line. Even if we used this initially, It would not have provided any additional insight that would help solve the problem.</p>
+<p><img src="fig/fig27.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find the equation for normal line to the graph of <span class="math inline">\(y = 3x^2 + 1\)</span> at <span class="math inline">\(x = 2\)</span>}</li>
+</ol>
+<p>Let’s draw a rough sketch to record the given information ( The graph does not have to resemble the actual graph of <span class="math inline">\(y = 3x^2 +1\)</span>)</p>
+<center>
+<img src="fig/fig29.png" style="width:50.0%" />
+</center>
+<p>We are supposed to find the equation of the normal line to the graph at <span class="math inline">\(x = 2\)</span>. The graph, tangent line, and normal line all pass through the same point at <span class="math inline">\(x = 2\)</span>. We know the equation of the graph. We can easily find the <span class="math inline">\(y\)</span>-coordinate of the common point by plugging in <span class="math inline">\(x = 2\)</span> to the equation of the graph.</p>
+<p><span class="math display">\[\begin{align}
+y_1 &amp;= f(2) \\
+&amp;= 3 \cdot (2)^2 + 1 \\
+&amp;= 13
+\end{align}\]</span></p>
+<p>The normal line passes through the point <span class="math inline">\((2, 13)\)</span>. We already know a point; we just need the slope. Let <span class="math inline">\(m_t\)</span> be the slope of the tangent line and <span class="math inline">\(m_n\)</span> be the slope of the normal line.</p>
+<p><span class="math display">\[\begin{align}
+f&#39;(x) &amp;= 6x \\
+m_t &amp;= f&#39;(2) \\
+&amp;= 6 \times 2 \\
+&amp;= 12
+\end{align}\]</span></p>
+<p>Since the normal line is perpendicular to the tangent line:
+<span class="math display">\[\begin{align}
+m_n \times m_t &amp;= -1 \\
+m_n &amp;= -\frac{1}{m_t} \\
+&amp;= -\frac{1}{12}
+\end{align}\]</span></p>
+<p>The slope of the normal line is <span class="math inline">\(-\frac{1}{12}\)</span> and it passes through the point <span class="math inline">\((2, 13)\)</span>. Substituting these values, the equation of the normal line is:
+<span class="math display">\[\begin{equation}
+y = -\frac{1}{12}(x - 2) + 13
+\end{equation}\]</span></p>
+<div class="float">
+<img src="fig/fig30.png" alt="Actual graph of y = f(x) = 3x^2 +1, the tangent and normal lines at (2,13)" />
+<div class="figcaption">Actual graph of y = f(x) = 3x^2 +1, the tangent and normal lines at (2,13)</div>
+</div>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the equation of all tangent lines to the graph of <span class="math inline">\(y = 2x^2 + 4\)</span> that passes through <span class="math inline">\((0,2)\)</span>}</li>
+</ol>
+<center>
+<div class="float">
+<img src="fig/fig31.png" style="width:50.0%" alt="A rough sketch of information" />
+<div class="figcaption">A rough sketch of information</div>
+</div>
+</center>
+<p>The problem states that the tangent line passes through <span class="math inline">\((0,2)\)</span>; the point <span class="math inline">\((0,2)\)</span> may not be on the graph. Let’s check it by plugging <span class="math inline">\((0,2)\)</span> into the equation of the graph.</p>
+<p><span class="math display">\[\begin{align}
+y &amp;= 2x^2 + 4 \\
+(0, 2) &amp;\Rightarrow x = 0, y = 2 \\
+2 &amp;= 2(0)^2 + 4 \\
+2 &amp;= 4
+\end{align}\]</span></p>
+<p>Plugging <span class="math inline">\((0,2)\)</span> into the equation <span class="math inline">\(y = 2x^2 + 4\)</span> produces a contradiction <span class="math inline">\(2 = 4\)</span> (a false statement). The point <span class="math inline">\((0,2)\)</span> is not on the graph of <span class="math inline">\(y = 2x^2 + 4\)</span>. We don’t know the <span class="math inline">\(x\)</span>-coordinate of the tangent point. If we know the <span class="math inline">\(x\)</span>-coordinate, we could follow the steps in part a). Let the <span class="math inline">\(x\)</span>-coordinate be <span class="math inline">\(a\)</span>, where <span class="math inline">\(a\)</span> is an arbitrary constant.</p>
+<p>Let’s follow the steps in part a) while having <span class="math inline">\(a\)</span> as the <span class="math inline">\(x\)</span>-coordinate of the tangent point. The tangent point is on the graph of <span class="math inline">\(y = 2x^2 + 4\)</span> and has an <span class="math inline">\(x\)</span>-coordinate of <span class="math inline">\(a\)</span>. Therefore, we can find the <span class="math inline">\(y\)</span>-coordinate by substituting <span class="math inline">\(x = a\)</span> in <span class="math inline">\(y = 2x^2 + 4\)</span>.</p>
+<p><span class="math display">\[\begin{equation}
+y = 2a^2 + 4
+\end{equation}\]</span></p>
+<p>The point <span class="math inline">\((a, 2a^2 + 4)\)</span> is on the tangent line. We need the slope of the tangent line. Let’s label the slope by <span class="math inline">\(m\)</span>.</p>
+<p><span class="math display">\[\begin{align}
+m &amp;= \frac{dy}{dx}\bigg|_{x=a} \\
+&amp;= 4x\bigg|_{x=a} \\
+&amp;= 4a
+\end{align}\]</span></p>
+<p>The point <span class="math inline">\((a, 2a^2 + 4)\)</span> is on the tangent line and the tangent line has a slope of <span class="math inline">\(4a\)</span>. Substituting this information, we get:
+<span class="math display">\[\begin{equation}
+y = 4a(x - a) + 2a^2 + 4
+\end{equation}\]</span></p>
+<p>If we can find the value of <span class="math inline">\(a\)</span>, we are done. To find <span class="math inline">\(a\)</span>, we can construct an equation by using the fact that “the tangent line passes through <span class="math inline">\((0,2)\)</span>.” Since it’s on the line, it should satisfy the equation of the tangent line given by <span class="math inline">\(y = 4a(x - a) + 2a^2 + 4\)</span>. So substituting <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y = 2\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+2 &amp;= 4a(0 - a) + 2a^2 + 4 \\
+2 &amp;= -4a^2 + 2a^2 + 4 \\
+2 &amp;= -2a^2 + 4 \\
+-2a^2 &amp;= -2 \\
+a^2 &amp;= 1 \\
+a &amp;= \pm 1
+\end{align}\]</span></p>
+<p>We got two values for <span class="math inline">\(a\)</span>; each value gives a tangent line. There are two tangent lines satisfying the given conditions. We can find them by plugging in the <span class="math inline">\(a\)</span> values in <span class="math inline">\(y = 4a(x - a) + 2a^2 + 4\)</span>. The two tangent lines are:</p>
+<p><span class="math display">\[\begin{align}
+y &amp;= 4(x - 1) + 6 \quad \text{(given by } a = 1\text{)} \\
+y &amp;= -4(x + 1) + 6 \quad \text{(given by } a = -1\text{)}
+\end{align}\]</span></p>
+<div class="float">
+<img src="fig/fig32.png" alt="Actual graph of y = f(x) = 2x2 +4 and two tangent lines that passes through (0,2)" />
+<div class="figcaption">Actual graph of y = f(x) = 2x2 +4 and two tangent lines that passes through (0,2)</div>
+</div>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the coordinates of each point on the graph of <span class="math inline">\(f(t) = \frac{1}{3}t^3 + \frac{5}{2}t^2 + 6t\)</span> where the tangent line is horizontal</li>
+</ol>
+<p>Horizontal lines have a slope of zero, and the derivative gives the slope of the tangent line. Therefore, when the derivative is zero, the tangent line is horizontal. We are hunting for the points that will make the derivative zero. Find the derivative, set it to zero, and solve the resulting equation for the independent variable.</p>
+<div class="float">
+<img src="fig/fig33.png" alt="Horizontal lines have a slope of zero" />
+<div class="figcaption">Horizontal lines have a slope of zero</div>
+</div>
+<p>Find the derivative:
+<span class="math display">\[\begin{align}
+f(t) &amp;= \frac{1}{3}t^3 + \frac{5}{2}t^2 + 6t \\
+f&#39;(t) &amp;= \frac{3t^2}{3} + \frac{5 \times 2t}{2} + 6 \\
+&amp;= t^2 + 5t + 6
+\end{align}\]</span></p>
+<p>Set the derivative equal to zero and solve for <span class="math inline">\(t\)</span>:
+<span class="math display">\[\begin{align}
+t^2 + 5t + 6 &amp;= 0 \\
+(t + 2)(t + 3) &amp;= 0 \\
+t + 2 = 0 \quad &amp;\text{or} \quad t + 3 = 0 \\
+t = -2 \quad &amp;\text{or} \quad t = -3
+\end{align}\]</span></p>
+<p>The tangent line is horizontal at <span class="math inline">\(t = -2\)</span> and <span class="math inline">\(t = -3\)</span>. To find the coordinates, plug these values into the original equation:</p>
+<p><span class="math display">\[\begin{align}
+f(t) &amp;= \frac{1}{3}t^3 + \frac{5}{2}t^2 + 6t \\
+f(-2) &amp;= \frac{1}{3}(-2)^3 + \frac{5}{2}(-2)^2 + 6(-2) \\
+&amp;= \frac{1}{3}(-8) + \frac{5}{2}(4) + (-12) \\
+&amp;= -\frac{8}{3} + 10 - 12 \\
+&amp;= -\frac{8}{3} - 2 \\
+&amp;= -\frac{14}{3}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+f(-3) &amp;= \frac{1}{3}(-3)^3 + \frac{5}{2}(-3)^2 + 6(-3) \\
+&amp;= \frac{1}{3}(-27) + \frac{5}{2}(9) + (-18) \\
+&amp;= -9 + \frac{45}{2} - 18 \\
+&amp;= -27 + \frac{45}{2} \\
+&amp;= \frac{-54 + 45}{2} \\
+&amp;= -\frac{9}{2}
+\end{align}\]</span></p>
+<p>The tangent line is horizontal at points <span class="math inline">\(\left(-2, -\frac{14}{3}\right)\)</span> and <span class="math inline">\(\left(-3, -\frac{9}{2}\right)\)</span>.</p>
+</div>
+<div id="derivative-as-instantaneous-rate-of-change" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> Derivative as Instantaneous Rate of Change<a href="differentiation.html#derivative-as-instantaneous-rate-of-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We know that the derivative of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_0\)</span> is given by:
+<span class="math display">\[\begin{equation}
+\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+\end{equation}\]</span></p>
+<p>Observe that:
+<span class="math display">\[\begin{align}
+f(x_0 + h) - f(x_0) &amp;\text{ is the change in } y\text{-coordinates} \\
+x_0 + h - x_0 = h &amp;\text{ is the change in } x\text{-coordinates} \\
+\frac{f(x_0 + h) - f(x_0)}{h} &amp;\text{ is tgive the the instantaneous rate of change of } f(x) \text{at a  point} x0
+\end{align}\]</span></p>
+<p>The limit <span class="math inline">\(\lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}\)</span> gives the <strong>instantaneous rate of change</strong> of <span class="math inline">\(f(x)\)</span> at a point <span class="math inline">\(x_0\)</span>. That is, the derivative of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_0\)</span> (which is the slope of the tangent line to the graph of <span class="math inline">\(y = f(x)\)</span> at <span class="math inline">\(x_0\)</span>) gives the instantaneous rate of change of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x_0\)</span>. This interpretation of the derivative is helpful in solving real-world problems.</p>
+<div id="rectilinear-motion" class="section level3 hasAnchor" number="4.8.1">
+<h3><span class="header-section-number">4.8.1</span> Rectilinear Motion<a href="differentiation.html#rectilinear-motion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(s(t)\)</span> represents the position of an object on a line at time <span class="math inline">\(t\)</span>, then:</p>
+<ul>
+<li><span class="math inline">\(v(t)\)</span>, the (instantaneous) velocity, is equal to <span class="math inline">\(\frac{ds}{dt}\)</span> (<span class="math inline">\(s&#39;(t)\)</span>)</li>
+<li><span class="math inline">\(a(t)\)</span>, the (instantaneous) acceleration, is equal to <span class="math inline">\(\frac{dv}{dt}\)</span> (<span class="math inline">\(v&#39;(t)\)</span>), which is <span class="math inline">\(\frac{d^2s}{dt^2}\)</span> (<span class="math inline">\(s&#39;&#39;(t)\)</span>)</li>
+</ul>
+<p>Thus, velocity is the rate of change of position, and acceleration is the rate of change of velocity. Also note that the speed of the object is <span class="math inline">\(|v(t)|\)</span>.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-71" class="example"><strong>Example 4.7  </strong></span>Assume that the position at time <span class="math inline">\(t\)</span> of an object moving along a line is given by:
+<span class="math display">\[
+s(t) = 2\cos(t) + 2\sin(t) - 2
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the initial position, velocity, and acceleration for the object.</li>
+<li>Find the times where the object is stationary.</li>
+<li>Find the time interval where the object is advancing.</li>
+<li>Find the time interval where the object is retracting.</li>
+</ol>
+</div>
+<p><strong>Solution</strong></p>
+<p><span class="math display">\[\begin{align}
+    s(t) &amp;= 2\cos(t) + 2\sin(t) - 2  \\
+    v(t) &amp;= \frac{d}{dt}[2\cos(t) + 2\sin(t) - 2]  \\
+         &amp;= -2\sin(t) + 2\cos(t)  \\
+    a(t) &amp;= \frac{d}{dt}[-2\sin(t) + 2\cos(t)]  \\
+         &amp;= -2\cos(t) - 2\sin(t)
+\end{align}\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<ul>
+<li>Initial position: <span class="math inline">\(s(0) = 2\cos(0) + 2\sin(0) - 2 = 0\)</span> \</li>
+<li>Initial velocity: <span class="math inline">\(v(0) = -2\sin(0) + 2\cos(0) = 2\)</span> \</li>
+<li>Initial acceleration: <span class="math inline">\(a(0) = -2\cos(0) - 2\sin(0) = -2\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>The object is stationary when velocity is zero:
+<span class="math display">\[\begin{align}
+v(t) &amp;= 0  \\
+2\cos(t) - 2\sin(t) &amp;= 0 \\
+\sin(t) &amp;= \cos(t)  \\
+\tan(t) &amp;= 1  \\
+t &amp;= n\pi + \frac{\pi}{4}, \quad n \in \mathbb{Z}
+\end{align}\]</span></p></li>
+<li><p>Find the time interval where object is advancing in interval <span class="math inline">\([0,2\pi]\)</span>.
+The object is advancing when <span class="math inline">\(s(t) &gt; 0, v(t) &gt; 0\)</span> or <span class="math inline">\(s(t) &lt; 0, v(t) &lt; 0\)</span> in <span class="math inline">\([0, 2\pi]\)</span>.
+Let’s make a sign chart.</p></li>
+</ol>
+<ul>
+<li>First, let’sidentifythepointswhere <span class="math inline">\(s(t) = 0\)</span>.
+<span class="math display">\[\begin{align}
+s(t) &amp;=0\\
+2\cos(t) + 2\sin(t) - 2 &amp;= 0\\
+2\cos(t) + 2\sin(t)  &amp;= 2\\
+\cos(t) + \sin(t) &amp;= 1\\
+\underbrace{\frac{1}{\sqrt{2}}\cos(t) + \frac{1}{\sqrt{2}}\sin(t)} &amp;= \frac{1}{\sqrt{2}}\\
+\sin\left(t + \frac{\pi}{4}\right) &amp;= \frac{1}{\sqrt{2}}\\
+t + \frac{\pi}{4} &amp;= n\pi+(-1)^n\frac{\pi}{4},\quad n \in \mathbb{Z}\\
+t &amp;= n\pi+(-1)^n\frac{\pi}{4}- \frac{\pi}{4} ,\quad n \in \mathbb{Z}\\
+\end{align}\]</span></li>
+</ul>
+<p>Since we are looking for solutions in <span class="math inline">\([0,2\pi]\)</span>
+<span class="math display">\[t = 0, \quad  t = \frac{\pi}{2} \quad t=2\pi\]</span></p>
+<p>Mark the solution on the number line.
+<span class="math display">\[s(t) = 2cos(t) + 2sin(t) − 2\]</span></p>
+<p><img src="fig/fig33.png" /></p>
+<p>Pick a test value from each sub interval and evaluate <span class="math inline">\(s(t)\)</span> at test values.(only interested in sub intervals <span class="math inline">\(I \subset [0,2\pi]\)</span></p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Interval</th>
+<th align="center"><span class="math inline">\(\left(0, \frac{\pi}{2}\right)\)</span></th>
+<th align="center"><span class="math inline">\(\left(\frac{\pi}{2}, 2\pi\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Test Value</td>
+<td align="center"><span class="math inline">\(\frac{\pi}{4}\)</span></td>
+<td align="center"><span class="math inline">\(\frac{5\pi}{4}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Sign of <span class="math inline">\(s(t)\)</span></td>
+<td align="center"><span class="math inline">\(+\)</span></td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[s(t) = 2cos(t) + 2sin(t) − 2\]</span></p>
+<ul>
+<li><p>Second, let’s identify the points where <span class="math inline">\(v(t) = 0\)</span></p></li>
+<li><p>If <span class="math inline">\(s(t) &gt; 0\)</span> at the test value, then it is positive throughout that subinterval.</p></li>
+<li><p>If <span class="math inline">\(s(t) &lt; 0\)</span> at the test value, then it is negative throughout that subinterval.</p></li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>The object is retracting when <span class="math inline">\(s(t) &gt; 0, v(t) &lt; 0\)</span> or <span class="math inline">\(s(t) &lt; 0, v(t) &gt; 0\)</span> in <span class="math inline">\([0, 2\pi]\)</span>.</li>
+</ol>
+<center>
+<span style="color:blue"> <em>I will update this part</em> text</span>.
+</center>
+</div>
+<div id="falling-body-problems" class="section level3 hasAnchor" number="4.8.2">
+<h3><span class="header-section-number">4.8.2</span> Falling Body Problems<a href="differentiation.html#falling-body-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An object projected directly upward with initial velocity <span class="math inline">\(v_0\)</span> from height <span class="math inline">\(s_0\)</span>, under constant downward acceleration <span class="math inline">\(g\)</span> (32 ft/s<span class="math inline">\(^2\)</span> or 9.8 m/s<span class="math inline">\(^2\)</span>), has height at time <span class="math inline">\(t\)</span> given by:
+<span class="math display">\[
+h(t) = -\frac{1}{2}gt^2 + v_0 t + s_0
+\]</span></p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-72" class="example"><strong>Example 4.8  </strong></span>A projectile is shot upward from Earth with initial velocity 320 ft/s.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the velocity after 5 seconds?</li>
+<li>What is the acceleration after 5 seconds?</li>
+<li>Find the maximum height reached.</li>
+<li>When does the ball hit the ground, and what is the impact velocity?</li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-73" class="example"><strong>Example 4.9  </strong></span>A bucket containing 5 gallons of water has a leak. After <span class="math inline">\(t\)</span> seconds, the remaining water is:
+<span class="math display">\[
+Q(t) = 5\left(1 - \frac{t}{25}\right)^2 \text{ gallons}
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>At what rate (to the nearest hundredth gallon) is water leaking after 2 seconds?</li>
+<li>How long does it take for all water to leak out?</li>
+<li>At what rate is water leaking when the last drop leaks out?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="real-world-application-of-chain-rule" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> Real-World Application of Chain Rule<a href="differentiation.html#real-world-application-of-chain-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An importer estimates that local consumers will buy:
+<span class="math display">\[
+D(p) = \frac{4374}{p^2} \text{ pounds of coffee per week}
+\]</span>
+when the price is <span class="math inline">\(p\)</span> dollars per pound. The estimated price of coffee <span class="math inline">\(t\)</span> weeks from now is:
+<span class="math display">\[
+p(t) = 0.02t^2 + 0.1t + 6 \text{ dollars per pound}
+\]</span>
+At what rate will the weekly demand for coffee be changing with respect to time 10 weeks from now? Will the demand be increasing or decreasing?</p>
+</div>
+<div id="extreme-values-of-a-function" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> # Extreme Values of a Function<a href="differentiation.html#extreme-values-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-74" class="definition"><strong>Definition 4.5  (Absolute Extrema) </strong></span>Let <span class="math inline">\(f\)</span> be a function defined on an interval <span class="math inline">\(I\)</span> that contains the number <span class="math inline">\(c\)</span>. Then</p>
+<ul>
+<li><span class="math inline">\(f(c)\)</span> is an <strong>absolute maximum</strong> of <span class="math inline">\(f\)</span> on <span class="math inline">\(I\)</span> if <span class="math inline">\(f(c) \geq f(x)\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\(I\)</span>.</li>
+<li><span class="math inline">\(f(c)\)</span> is an <strong>absolute minimum</strong> of <span class="math inline">\(f\)</span> on <span class="math inline">\(I\)</span> if <span class="math inline">\(f(c) \leq f(x)\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\(I\)</span>.</li>
+</ul>
+<p>Absolute maximums and minimums are called <strong>extreme values</strong> or the <strong>absolute extrema</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-75" class="example"><strong>Example 4.10  </strong></span>Locate the extreme values of <span class="math inline">\(f\)</span> defined on the closed interval <span class="math inline">\([a, b]\)</span>.</p>
+</div>
+<div class="float">
+<img src="fig/fig35.png" alt="Graph of f" />
+<div class="figcaption">Graph of <span class="math inline">\(f\)</span></div>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-76" class="example"><strong>Example 4.11  </strong></span></p>
+The function defined by
+<span class="math display">\[
+h(x) = \begin{cases}
+x^2 &amp; \text{if } x \neq 0 \\
+1 &amp; \text{if } x = 0
+\end{cases}
+\]</span>
+has a maximum which is on the closed interval <span class="math inline">\([-1,1]\)</span>, but no minimum.
+<center>
+<div class="float">
+<img src="fig/fig36.png" style="width:50.0%" alt="Grpah of h" />
+<div class="figcaption">Grpah of h</div>
+</div>
+</center>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-77" class="example"><strong>Example 4.12  </strong></span></p>
+The continuous function <span class="math inline">\(g(x) = x\)</span> has neither a maximum nor a minimum on the open interval <span class="math inline">\((0,1)\)</span>.
+<center>
+<div class="float">
+<img src="fig/fig37.png" style="width:50.0%" alt="Grpah of h" />
+<div class="figcaption">Grpah of h</div>
+</div>
+</center>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-78" class="theorem"><strong>Theorem 4.3  (Extreme Value Theorem) </strong></span>A function <span class="math inline">\(f\)</span> has both an absolute maximum and an absolute minimum on any closed, bounded interval <span class="math inline">\([a,b]\)</span> where it is continuous.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-79" class="definition"><strong>Definition 4.6  (Relative Extrema) </strong></span></p>
+<ul>
+<li>If there is an open interval containing <span class="math inline">\(c\)</span> on which <span class="math inline">\(f(c)\)</span> is a maximum, then <span class="math inline">\(f(c)\)</span> is called a **relative maximum} of <span class="math inline">\(f\)</span>.</li>
+<li>If there is an open interval containing <span class="math inline">\(c\)</span> on which <span class="math inline">\(f(c)\)</span> is a minimum, then <span class="math inline">\(f(c)\)</span> is called a **relative minimum} of <span class="math inline">\(f\)</span>.</li>
+</ul>
+<p>Relative maximums and minimums are called **relative extrema}.</p>
+</div>
+<center>
+<img src="fig/fig38.png" />
+</center>
+<div class="definition">
+<p><span id="def:unnamed-chunk-80" class="definition"><strong>Definition 4.7  (Critical Number) </strong></span>Let <span class="math inline">\(f\)</span> be defined at <span class="math inline">\(c\)</span>. If <span class="math inline">\(f&#39;(c) = 0\)</span> or if <span class="math inline">\(f&#39;(c)\)</span> is undefined, then <span class="math inline">\(c\)</span> is a <strong>critical number</strong> of <span class="math inline">\(f\)</span>. The point <span class="math inline">\((c, f(c))\)</span> on the graph of <span class="math inline">\(f\)</span> is called a <strong>critical point</strong>.</p>
+</div>
+<div id="steps-to-find-critical-numbers" class="section level3 hasAnchor" number="4.10.1">
+<h3><span class="header-section-number">4.10.1</span> Steps to Find Critical Numbers<a href="differentiation.html#steps-to-find-critical-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(f&#39;(x)\)</span></li>
+<li>Set <span class="math inline">\(f&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span>. Solutions give you critical numbers.</li>
+<li>Also look for the points where <span class="math inline">\(f(x)\)</span> is defined, but <span class="math inline">\(f&#39;(x)\)</span> is not defined. These will also give critical numbers.
+<ol style="list-style-type: lower-alpha">
+<li>One way to identify points where <span class="math inline">\(f&#39;(x)\)</span> is not defined is setting the denominator of <span class="math inline">\(f&#39;(x)\)</span> to zero. (Don’t forget the fact that functions have to be defined at the critical value)</li>
+<li>Occasionally you might have to use the definition of derivative.</li>
+</ol></li>
+</ol>
+<div class="example">
+<p><span id="exm:unnamed-chunk-81" class="example"><strong>Example 4.13  </strong></span>Find the critical numbers of <span class="math inline">\(f(x) = \frac{\sqrt[3]{x}}{1-x}\)</span>.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Find <span class="math inline">\(f&#39;(x)\)</span>
+<span class="math display">\[\begin{align}
+f(x) &amp;= \frac{\sqrt[3]{x}}{1-x} \\
+f&#39;(x) &amp;= \left(\frac{\sqrt[3]{x}}{1-x}\right)&#39; \\
+&amp;= \frac{(1-x)(\sqrt[3]{x})&#39; - \sqrt[3]{x}(1-x)&#39;}{(1-x)^2} \\
+&amp;= \frac{(1-x) \cdot \frac{1}{3x^{2/3}} + \sqrt[3]{x}}{(1-x)^2} \\
+&amp;= \frac{\frac{1-x+3x}{3x^{2/3}}}{(1-x)^2} \\
+&amp;= \frac{1+2x}{3x^{2/3}(1-x)^2}
+\end{align}\]</span></p></li>
+<li><p>Set <span class="math inline">\(f&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span>. Solutions give you critical numbers.
+<span class="math display">\[\begin{align}
+f&#39;(x) &amp;= 0 \\
+\frac{2x+1}{3x^{2/3}(1-x)^2} &amp;= 0 \\
+2x+1 &amp;= 0 \quad (x \neq 0, x \neq 1) \\
+x &amp;= -\frac{1}{2}
+\end{align}\]</span>
+<span class="math inline">\(-\frac{1}{2}\)</span> is a critical number.</p></li>
+<li><p>Setting the denominator of <span class="math inline">\(f&#39;(x)\)</span> to zero:
+<span class="math display">\[\begin{align}
+3x^{2/3}(1-x)^2 &amp;= 0 \\
+x &amp;= 1 \text{ or } x = 0
+\end{align}\]</span>
+The function <span class="math inline">\(f\)</span> is undefined at <span class="math inline">\(x = 1\)</span>, therefore <span class="math inline">\(1\)</span> is not a critical number. The function <span class="math inline">\(f\)</span> is defined at <span class="math inline">\(x = 0\)</span>, but the derivative is undefined at <span class="math inline">\(x = 0\)</span>. <span class="math inline">\(0\)</span> is a critical number.</p></li>
+</ol>
+<p>Therefore, <span class="math inline">\(0\)</span> and <span class="math inline">\(-\frac{1}{2}\)</span> are critical numbers of <span class="math inline">\(f(x) = \frac{\sqrt[3]{x}}{1-x}\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-82" class="theorem"><strong>Theorem 4.4  (Critical Point Theorem) </strong></span>Relative maximum or minimum of a continuous function can occur only at its critical points.</p>
+</div>
+</div>
+<div id="absolute-extrema" class="section level3 hasAnchor" number="4.10.2">
+<h3><span class="header-section-number">4.10.2</span> Absolute Extrema<a href="differentiation.html#absolute-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose we are looking for the absolute extrema of a continuous function <span class="math inline">\(f\)</span> on the closed, bounded interval <span class="math inline">\([a,b]\)</span>. The Extreme Value Theorem tells us that these extrema exist and the Critical Point Theorem enables us to narrow the list of “candidates” for points where extrema can occur from the entire interval <span class="math inline">\([a,b]\)</span> to just the endpoints <span class="math inline">\(x = a\)</span>, <span class="math inline">\(x = b\)</span>, and the critical numbers between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. This suggests the following procedure.</p>
+<div id="procedure-for-finding-absolute-extrema" class="section level4 hasAnchor" number="4.10.2.1">
+<h4><span class="header-section-number">4.10.2.1</span> Procedure for Finding Absolute Extrema<a href="differentiation.html#procedure-for-finding-absolute-extrema" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To find the absolute extrema of a continuous function <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span> follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Find all critical numbers of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>.</li>
+<li>Evaluate <span class="math inline">\(f\)</span> at the endpoints <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and at each critical number <span class="math inline">\(c\)</span>.</li>
+<li>Compare the values in step 2. The largest value of <span class="math inline">\(f\)</span> is the absolute maximum of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>. The smallest value of <span class="math inline">\(f\)</span> is the absolute minimum of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>.</li>
+</ol>
+<div class="figure"><span style="display:block;" id="fig:your-chunk-name"></span>
+<img src="fig/fig38.png" alt="Main caption" width="33%" /><img src="fig/fig38.png" alt="Main caption" width="33%" /><img src="fig/fig38.png" alt="Main caption" width="33%" />
+<p class="caption">
+Figure 4.1: Main caption
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="limits-and-continuity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sequence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-diff.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

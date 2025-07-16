@@ -1,0 +1,380 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Calculus},
+  pdfauthor={Ashan J},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Calculus}
+\author{Ashan J}
+\date{2025-04-07}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Introduction}\label{introduction}
+
+Later add this section
+
+\chapter{Functions}\label{functions}
+
+Placeholder
+
+\section{Functions}\label{functions-1}
+
+\subsubsection{Representing Functions}\label{representing-functions}
+
+\section{Piecewise Defined Functions}\label{piecewise-defined-functions}
+
+\section{Combining Functions}\label{combining-functions}
+
+\section{Inverse Functions}\label{inverse-functions}
+
+\chapter{Limits and Continuity}\label{limits-and-continuity}
+
+Placeholder
+
+\section{The Limit of a Function}\label{the-limit-of-a-function}
+
+\section{\texorpdfstring{Limits involving indeterminate forms \(\frac{0}{0}\)}{Limits involving indeterminate forms \textbackslash frac\{0\}\{0\}}}\label{limits-involving-indeterminate-forms-frac00}
+
+\section{Limits Involving Infinity}\label{limits-involving-infinity}
+
+\subsection{Infinite Limits}\label{infinite-limits}
+
+\subsection{The Nature of Discontinuities}\label{the-nature-of-discontinuities}
+
+\subsection{Examples of Discontinuities}\label{examples-of-discontinuities}
+
+\chapter{Sequence}\label{sequence}
+
+Placeholder
+
+\section{\texorpdfstring{The \(\epsilon- N\) Definition of a Limit of Sequence}{The \textbackslash epsilon- N Definition of a Limit of Sequence}}\label{the-epsilon--n-definition-of-a-limit-of-sequence}
+
+\section{Divergent Sequences}\label{divergent-sequences}
+
+\section{Limit Laws}\label{limit-laws}
+
+\section{Limits of Some Important Sequences}\label{limits-of-some-important-sequences}
+
+\section{Exercise}\label{exercise}
+
+\chapter{Series}\label{series}
+
+\section{Introduction}\label{introduction-1}
+
+Let the sequence \(\{S_n\}\) be defined as follows:
+
+\[
+S_1 = 1
+\]
+
+\[
+S_2 = 1 + 2 = 3
+\]
+
+\[
+S_3 = 1 + 2 + 3 = 6
+\]
+
+\[
+S_4 = 1 + 2 + 3 + 4 = 10
+\]
+
+By observing \(\{S_n\}\), we conclude that the series \(1 + 2 + 3 + 4 + \dots\) diverges.
+
+To determine the behavior of \(1 + 2 + 3 + \dots\), we need to compute \(\lim_{n \to \infty} S_n\).
+
+An \textbf{infinite series}, informally speaking, is the sum of the terms of an infinite sequence. It can be expressed in the form:
+
+\[
+a_1 + a_2 + a_3 + \dots = \sum_{i=1}^{\infty} a_i
+\]
+
+The \(n\)th \textbf{partial sum} of the series is:
+
+\[
+S_n = a_1 + a_2 + a_3 + \dots + a_n = \sum_{i=1}^{n} a_i
+\]
+
+The series is said to \textbf{converge} to the sum \(S\) if the sequence of partial sums \(\{S_n\}\) converges to \(S\). In this case, we write:
+
+\[
+\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} S_n = S
+\]
+
+If the sequence does not converge, the series \(\sum_{i=1}^{\infty} a_i\) \textbf{diverges} and does not have a sum.
+
+\section{Sequence of Partial Sums}\label{sequence-of-partial-sums}
+
+\textbf{Geometric Series}
+
+A geometric sequence is one where each term is obtained by multiplying the previous term by a fixed ratio \(r\).
+
+For example:
+
+\begin{itemize}
+\tightlist
+\item
+  \(2, 6, 18, 54, \dots\) has a common ratio of \(r = 3\).
+\item
+  \(10, 5, 2.5, 1.25, \dots\) has a common ratio of \(r = \frac{1}{2}\).
+\end{itemize}
+
+A geometric series has the form:
+
+\[
+a + ar + ar^2 + ar^3 + \dots = \sum_{i=0}^{\infty} ar^i
+\]
+
+\begin{theorem}[The Convergence and Divergence of a Geometric Series]
+\protect\hypertarget{thm:unnamed-chunk-1}{}\label{thm:unnamed-chunk-1}
+
+Consider the geometric series:
+
+\[
+a + ar + ar^2 + ar^3 + \dots + ar^{n-1} + \dots
+\]
+
+The sequence of partial sums is given by:
+
+\[
+S_n = \frac{a(1 - r^n)}{1 - r}, \quad \text{when } |r| < 1.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  If \(|r| < 1\), the infinite series converges:
+\end{itemize}
+
+\[
+\sum_{i=1}^\infty a_i = \frac{a}{1 - r}.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  If \(|r| \geq 1\), the series \(\sum_{i=1}^\infty a_i\) diverges.
+\end{itemize}
+
+\end{theorem}
+
+\begin{proof}
+
+\begin{eqnarray}
+S_n  &=& a + ar + ar^2 + \dots + ar^{n-1}\\
+rS_n &=& ar + ar^2 + \dots + ar^n \\
+S_n - rS_n &=& a - ar^n\\
+S_n(1 - r) &=& a(1 - r^n)\\
+S_n &=& \frac{a(1 - r^n)}{1 - r}
+\end{eqnarray}
+
+Taking the limit as \(n \to \infty\):
+
+\begin{eqnarray}
+\sum_{i=1}^\infty a_i 
+&=& \lim_{n \to \infty} S_n\\
+&=& \lim_{n \to \infty} \frac{a(1 - r^n)}{1 - r}\\
+&=& \frac{a(1 - \lim_{n \to \infty} r^n)}{1 - r} \\
+\end{eqnarray}
+
+\begin{itemize}
+\tightlist
+\item
+  When \(|r| < 1\), \(\lim_{n \to \infty} r^n = 0\), so:
+\end{itemize}
+
+\[
+\sum_{i=1}^\infty a_i = \frac{a}{1 - r}.
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  When \(|r| \geq 1\), the series \(\sum_{i=1}^\infty a_i\) diverges.
+\end{itemize}
+
+\end{proof}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-3}{}\label{exm:unnamed-chunk-3}Find the Sum of the Following Infinite Series\}
+
+If it is divergent, write ``Diverges.''
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(1000, 500, 250, \dots\)
+
+  This is a geometric series with a common ratio \(r = \frac{1}{2} < 1\), hence:
+\end{enumerate}
+
+\[
+    \sum_{i=1}^\infty a_i = \frac{a}{1-r} = \frac{1000}{1 - \frac{1}{2}} = 2000
+    \]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \(0.1, 0.2, 0.4, \dots\)
+
+  This is a geometric series with a common ratio \(r = 2\), hence it diverges.
+\item
+  \(1, \frac{1}{2}, \frac{1}{4}, \dots\)
+
+  This is a geometric series with a common ratio \(r = \frac{1}{2} < 1\), hence:
+\end{enumerate}
+
+\[
+    \sum_{i=1}^\infty a_i = \frac{a}{1-r} = \frac{1}{1 - \frac{1}{2}} = 2
+    \]
+\end{example}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-4}{}\label{exm:unnamed-chunk-4}Consider the Following Series
+
+\[
+\sum_{n=1}^\infty \frac{x^n}{3^n}
+\]
+\end{example}
+
+Find the values of \(x\) for which the series converges.
+
+First, observe that:
+
+\[
+    \sum_{n=1}^\infty \frac{x^n}{3^n} = \frac{x}{3} + \frac{x^2}{3^2} + \frac{x^3}{3^3} + \dots
+    \]
+
+This is a geometric series with a common ratio \(r = \frac{x}{3}\). The series will converge when:
+
+\[
+    \left|\frac{x}{3}\right| < 1 \quad \Rightarrow \quad -3 < x < 3
+    \]
+
+Find the sum of the series for those values of \(x\). Write the formula in terms of \(x\).
+
+When \(|r| < 1\), the sum of the geometric series is given by:
+
+\[\sum_{n=1}^\infty a_i = \frac{a}{1-r}\]
+
+Here:
+
+\[\sum_{n=1}^\infty \frac{x^n}{3^n} = \frac{\frac{x}{3}}{1 - \frac{x}{3}} = \frac{x}{3 - x}\]
+
+\begin{remark}
+The function:
+
+\[
+f(x) = \frac{x}{3 - x}
+\]
+
+can be expressed as the limit of polynomial functions inside the interval \(-3 < x < 3\):
+
+\[
+f(x) = \frac{x}{3 - x} = \lim_{k \to \infty} \sum_{n=1}^k \frac{x^n}{3^n}.
+\]
+
+Sometimes, properties of the terms of the sequence will be passed to the limit. Instead of studying the limiting function, we can study the behavior of simpler polynomial functions to understand the limiting function.
+\end{remark}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

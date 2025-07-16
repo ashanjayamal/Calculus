@@ -1,9 +1,10 @@
 # Sequence
 
+
 ## The \(\epsilon- N\) Definition of a Limit of Sequence
 
 ```{definition,name='The epsilon− N  Definition of a Limit of Sequence'}
-The number $L$ is the limit of the sequence $\{a_n\}$. If for each \(\epsilon> 0 , \exists N \in \mathbb{R}\),such that $$n > N \implies |an − L| < \epsilon.$$
+The number $L$ is the limit of the sequence $\{a_n\}$. If for each \(\epsilon> 0 , \exists N \in \mathbb{R}\),such that $$n > N \implies |a_n − L| < \epsilon.$$
 ```
 
 Now let us look at examples demonstrating the use of the \( \epsilon - N \) definition in proofs. Note that the definition provides no help in postulating the value of the limit. It is only applicable when proving that the postulated value is correct. As we are concentrating on the proofs, in the upcoming examples, we will provide the value of the limits.

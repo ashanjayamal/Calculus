@@ -15,4 +15,13 @@ github-repo: rstudio/bookdown-demo
 
 # Introduction
 
-Later add this section
+
+Calculus, often regarded as one of the pillars of mathematics, serves as the bridge between theoretical concepts and their practical applications. It is the language that allows us to quantify change, understand behavior, and make predictions in diverse fields ranging from physics and engineering to economics and biology.
+
+This book is designed to guide you through the foundational principles of calculus, building an intuitive understanding while fostering a rigorous approach to problem-solving. Starting with the concept of functions, you will explore their properties, transformations, and inverse relationships. From there, we delve into the profound concepts of limits and continuity, the cornerstone of calculus that enables us to make sense of infinitesimal changes and instantaneous rates.
+
+Differentiation will provide the tools to understand the slope of curves, optimize functions, and reveal the geometry of graphs. The exploration of sequences and series will demonstrate how seemingly infinite processes can be summed and analyzed with precision. Ultimately, the study of infinite series will unveil the power of calculus in capturing the essence of infinite behavior within finite bounds.
+
+Through a combination of intuitive explanations, precise mathematical definitions, and illustrative examples, this book aims to not only teach calculus but to spark an appreciation for its elegance and utility. Whether you are embarking on a journey of discovery or honing your mathematical expertise, the concepts presented within these pages are bound to enrich your perspective of the world around you.
+
+Let us begin this exciting journey into the infinite possibilities of calculus.

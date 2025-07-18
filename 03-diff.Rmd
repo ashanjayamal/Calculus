@@ -844,16 +844,28 @@ Sign of \( s(t) \) | \( + \) | \( - \) |
  
 - Second, let’s identify the points where \(v(t) = 0\)
 
+    - If \( s(t) > 0 \) at the test value, then it is positive throughout that subinterval.
+    - If \( s(t) < 0 \) at the test value, then it is negative throughout that subinterval.
 
-- If \( s(t) > 0 \) at the test value, then it is positive throughout that subinterval.
-- If \( s(t) < 0 \) at the test value, then it is negative throughout that subinterval.
+\[ v(t) = 2\cos(t) − 2\sin(t)\]
+![](fig\fig65.png)
 
+-  Object is advancing when $s(t) > 0,v(t) > 0$ and $s(t) < 0,v(t) < 0$.
+
+\[ s(t) = 2\cos(t) + 2\sin(t) − 2\]
+![](fig\fig64.png)
+\[ v(t) = 2\cos(t) − 2\sin(t)\]
+![](fig\fig65.png)
+
+Object is advancing from \(\left(0, \frac{\pi}{4} \right)\)\
+Object is advancing from \(\left(\frac{\pi}{2},\frac{5\pi}{4}\right)\)
 
 d. The object is retracting when $s(t) > 0, v(t) < 0$ or $s(t) < 0, v(t) > 0$ in $[0, 2\pi]$.
 
-<center>
-<span style="color:blue"> *I will update this part*  text</span>.
-</center>
+Object is advancing from \(\left(0, \frac{\pi}{4} \right)\)\
+Object is advancing from \(\left(\frac{\pi}{2},\frac{5\pi}{4}\right)\)
+
+
 
 ### Falling Body Problems
 An object projected directly upward with initial velocity $v_0$ from height $s_0$, under constant downward acceleration $g$ (32 ft/s$^2$ or 9.8 m/s$^2$), has height at time $t$ given by:
@@ -896,7 +908,7 @@ p(t) = 0.02t^2 + 0.1t + 6 \text{ dollars per pound}
 \]
 At what rate will the weekly demand for coffee be changing with respect to time 10 weeks from now? Will the demand be increasing or decreasing?
 
-## # Extreme Values of a Function
+## Extreme Values of a Function
 
 ```{definition,name='Absolute Extrema'}
 Let $f$ be a function defined on an interval $I$ that contains the number $c$. Then
@@ -1019,6 +1031,689 @@ To find the absolute extrema of a continuous function $f$ on $[a,b]$ follow thes
 1. Compare the values in step 2. The largest value of $f$ is the absolute maximum of $f$ on $[a,b]$. The smallest value of $f$ is the absolute minimum of $f$ on $[a,b]$.  
 
 
-```{r your-chunk-name, echo=FALSE, fig.cap="Main caption", fig.subcap=c("Description for image 1", "Description for image 2", "Description for image 3"), out.width="33%", fig.show="hold", fig.env="figure"}
-knitr::include_graphics(c("fig/fig38.png", "fig/fig38.png", "fig/fig38.png"))
+
+| Pictures | Descriptions |
+|-----|---|
+| ![](fig/fig39.png) | $f(x) = x^3 - 4x^2 + 3x + 3$ on $[0.5, 2]$<br>$f$ is continuous with an extremum at each endpoint |
+| ![](fig/fig40.png) | $g(x) = \sin(x)$ on $[0, 2\pi]$<br>$g$ is continuous; neither extremum at an endpoint |
+| ![](fig/fig41.png) | $h(x) = x^2 - 4x + 1$ on $[0, 3]$<br>$h$ is continuous; one extremum at an endpoint |
+
+
+
+
+
+
+
+
+```{example}
+Find the absolute extrema of the function defined by the equation $f(x) = x^4 - 2x^2 + 3$ on the closed interval $[-1,2]$.
+```
+
+## The Mean Value Theorem
+
+### Introduction
+
+If a car travels smoothly down a straight, level road with average velocity 60 mi/h, we would expect the speedometer reading to be exactly 60 mi/h at least once during the trip. After all, if the car's velocity were always above 60 mi/h, the average velocity would also be above that level, and the same reasoning applies if the velocity were always below 60 mi/h. 
+
+More generally, if $f(t)$ is the car's position at time $t$ during a trip over the time interval $a < t < b$, then there should be a time $t = c$ when the velocity $f'(c)$ equals the average velocity between times $t = a$ and $t = b$. That is, for some $c$ with $a < c < b$,
+
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
+
+![](fig\fig42.png)
+
+```{theorem,name='Rolle`s theorem'}
+Suppose $f$ is continuous on the closed interval $[a, b]$ and differentiable on the open interval $(a,b)$. If $f(a) = f(b)$, then there exists at least one number $c$ between $a$ and $b$ such that $f'(c) = 0$.
+```
+
+![](fig\fig43.png)
+
+
+```{theorem,name='The mean value theorem for derivatives (MVT)'}
+If $f$ is continuous on the closed interval $[a,b]$ and differentiable on the open interval $(a, b)$, then there exists in $(a,b)$ at least one number $c$ such that
+
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
+
+![](fig/fig44.png)
+```
+```{example}
+Show that the function $f(x) = x^3 + x^2$ satisfies the hypotheses of the MVT on the closed interval $[1,2]$, and find a number $c$ between 1 and 2 so that 
+
+$$f'(c) = \frac{f(2) - f(1)}{2 - 1}$$
+```
+
+```{example}
+Show that $|\sin x_2 - \sin x_1| \leq |x_2 - x_1|$ for all numbers $x_1$ and $x_2$ by applying the mean value theorem.
+```
+
+
+
+
+```{theorem,name='Zero-derivative theorem'}
+Suppose $f$ is a continuous function on the closed interval $[a,b]$ and is differentiable on the open interval $(a,b)$, with $f'(x) = 0$ for all $x$ on $(a,b)$. Then the function $f$ is constant on $[a,b]$.
+```
+
+```{theorem,name='Constant difference theorem'}
+Suppose the functions $f$ and $g$ are continuous on the closed interval $[a,b]$ and differentiable on the open interval $(a, b)$. Then if $f'(x) = g'(x)$ for all $x$ in $(a,b)$, there exists a constant $C$ such that $f(x) = g(x) + C$.
+```
+
+
+## Derivative and the Shape of the Graph
+
+```{definition,name='Strictly Increasing and Strictly Decreasing Functions'}
+
+The function $f$ is **strictly increasing** on an interval $I$ if
+$$f(x_1) < f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+
+The function $f$ is **strictly decreasing** on an interval $I$ if
+$$f(x_1) > f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+```
+
+![](fig\fig45.png)
+
+```{theorem,name='Monotone Function Theorem'}
+Let $f$ be differentiable on the open interval $(a,b)$. If $f'(x) > 0$ for every $x$ in $(a,b)$, then $f$ is strictly increasing on $(a,b)$. If $f'(x) < 0$ for every $x$ in $(a,b)$, then $f$ is strictly decreasing on $(a,b)$.
+```
+
+## Derivative and the Shape of the Graph
+
+```{definition,name='Strictly Increasing and Strictly Decreasing Functions'}
+
+The function $f$ is **strictly increasing** on an interval $I$ if
+$$f(x_1) < f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+
+The function $f$ is **strictly decreasing** on an interval $I$ if
+$$f(x_1) > f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+```
+```{theorem,name='Monotone Function Theorem'}
+Let $f$ be differentiable on the open interval $(a,b)$. If $f'(x) > 0$ for every $x$ in $(a,b)$, then $f$ is strictly increasing on $(a,b)$. If $f'(x) < 0$ for every $x$ in $(a,b)$, then $f$ is strictly decreasing on $(a,b)$.
+```
+
+
+
+```{definition,name='Strictly Increasing and Strictly Decreasing Functions'}
+
+The function $f$ is **strictly increasing** on an interval $I$ if
+$$f(x_1) < f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+
+The function $f$ is **strictly decreasing** on an interval $I$ if
+$$f(x_1) > f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 < x_2$$
+```
+
+
+```{theorem,name='Monotone Function Theorem'}
+Let $f$ be differentiable on the open interval $(a,b)$. If $f'(x) > 0$ for every $x$ in $(a,b)$, then $f$ is strictly increasing on $(a,b)$. If $f'(x) < 0$ for every $x$ in $(a,b)$, then $f$ is strictly decreasing on $(a,b)$.
+```
+
+**Steps to Find Where $f(x)$ is Strictly Increasing and *Decreasing**
+
+1. Find $f'(x)$
+2. Set $f'(x) = 0$ and solve for $x$
+3. Mark the solutions on a number line
+4. Pick a test value from each sub-interval and evaluate $f'(x)$ at test values.
+   - (a) If $f'(x)$ is positive at a test value, then $f'(x)$ is positive in that interval and $f(x)$ is increasing in that interval
+   - (b) If $f'(x)$ is negative at a test value, then $f'(x)$ is negative in that interval and $f(x)$ is decreasing in that interval
+
+```{example}
+Determine where the function defined by $f(x) = x^3 + 12x^2 + 45x$ is strictly increasing and where it is strictly decreasing.
+```
+**Solution:**
+
+1. Find $f'(x)$
+
+\begin{align}
+f(x) &= x^3 + 12x^2 + 45x \\
+\frac{df}{dx} &= \frac{d}{dx}[x^3 + 12x^2 + 45x] \\
+&= 3x^2 + 24x + 45
+\end{align}
+
+2. Set $f'(x) = 0$ and solve for $x$
+
+\begin{align}
+\frac{df}{dx} &= 0 \\
+3x^2 + 24x + 45 &= 0 \\
+x^2 + 8x + 15 &= 0 \\
+(x + 3)(x + 5) &= 0 \\
+x + 3 = 0 \text{ or } x + 5 &= 0 \\
+x = -3 \text{ or } x &= -5
+\end{align}
+
+3. Mark the solutions on a number line.
+![Number line](fig\fig46.png)
+4. Pick a test value from each sub-interval and evaluate $f'(x)$ at test values.
+![Number line](fig\fig47.png)
+
+|Interval | $(-\infty, -5)$ | $(-5, -3)$ | $(-3, \infty)$ |
+|:-:|:---:|:---:|:------:|
+| Test value | $-6$ | $-4$ | $0$ |
+| Sign of $\frac{df}{dx}$ | $+$ | $-$ | $+$ |
+
+The derivative $3x^2 + 24x + 45$ is a continuous function. Therefore, the derivative cannot change sign without going through a point that makes it zero. It only becomes zero at endpoints. It cannot change sign inside an interval. The function takes the same sign as the test value inside the corresponding interval.
+
+In the interval $(-\infty, -5)$, the derivative is positive at test point $-6$; therefore, it remains positive inside the interval $(-\infty, -5)$. The function is increasing in $(-\infty, -5)$. The derivative is negative at test point $-4$. The derivative remains negative inside $(-5, -3)$, hence decreases inside $(-5, -3)$. The derivative is positive inside $(-3, \infty)$ and increases in $(-3, \infty)$.
+
+![Increasing and Decreasing Intervals](fig\fig48.png)
+
+### Identifying Whether a Critical Point is Minimum or Maximum
+
+```{theorem,name=' First Derivative Test'}
+Let $c$ be a critical number of a function $f$ that is continuous on an open interval $I$ containing $c$. If $f$ is differentiable on the interval, except possibly at $c$, then $f(c)$ can be classified as follows:
+
+- If $f'(x)$ changes from negative to positive at $c$, then $f(c)$ is a relative minimum of $f$.
+- If $f'(x)$ changes from positive to negative at $c$, then $f(c)$ is a relative maximum of $f$.
+- If $f'(x)$ does not change sign at $c$, then $f(c)$ is not a relative extremum.
+```
+
+
+
+
+
+```{example}
+Find all critical points for $f(x) = \frac{\sqrt[3]{x}}{1-x}$ and determine whether each corresponds to a relative maximum, relative minimum, or neither.
+
+  Let $f(x) = \frac{\sqrt[3]{x}}{1-x}$
+
+From earlier work, $0$ and $-\frac{1}{2}$ are critical numbers of $f(x) = \frac{\sqrt[3]{x}}{1-x}$.
+
+$f(0) = 0$ and $f\left(-\frac{1}{2}\right) = \frac{\sqrt[3]{2}}{3}$.
+
+$(0,0)$ and $\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)$ are critical points.
+
+To identify relative extrema using the first derivative test, we have to check the sign of the derivative around critical points. 
+
+Therefore, let's make a sign chart.
+
+1. Mark the solutions in number 
+
+![Number line](fig\fig49.png)
+
+2. Pick a test value from each subinterval and evaluate $f′(x)$ at test values.
+![Test vlaues](fig\fig50.png)
+
+$$f'(x) = \frac{1 + 2x}{3x^{2/3}(1-x)^2}$$
+
+| Interval | $\left(-\infty, -\frac{1}{2}\right)$ | $\left(-\frac{1}{2}, 0\right)$ | $(0, \infty)$ |
+|:----------:|:--------------------------------------:|:--------------------------------:|---------------:|
+| Test Value | $-2$ | $-0.1$ | $2$ |
+| Sign | $-$ | $+$ | $+$ |
+
+At the critical point $\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)$, the sign of the derivative changes from negative to positive. The critical point $\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)$ is a relative minimum.
+
+At the critical point $(0,0)$, the sign of the derivative changes from positive to positive. The critical point $(0,0)$ is neither a relative maximum nor relative minimum.
+<center>
+![](fig\fig51.png)
+</center>
+```
+
+
+```{example}
+Find all critical points for $f(x) = x^3 - 3x^2 - 9x + 1$ and determine whether each corresponds to a relative maximum, relative minimum, or neither.
+```
+
+
+```{definition,name='Concavity'}
+
+Given a function $f$:
+- $f$ is **concave up** on an interval $I$ if all of the tangents to the curve on $I$ are below the graph of $f(x)$.
+- $f$ is **concave down** on an interval $I$ if all of the tangents to the curve on $I$ are above the graph of $f(x)$.
+```
+
+![](fig\fig52.png)
+
+
+
+```{theorem,name='Derivative Characterization of Concavity'}
+
+Given a function $f$:
+  
+- If $f''(x) > 0$ for all $x$ in some interval $I$, then $f$ is concave up on $I$.
+- If $f''(x) < 0$ for all $x$ in some interval $I$, then $f$ is concave down on $I$.
+```
+
+
+```{definition,name='Inflection Point'}
+A point $(c, f(c))$ is called an **inflection point** if the function is continuous at the point and the concavity of the graph changes at that point.
+```
+
+
+```{example}
+
+Find where the graph of $f(x) = x^3 + 5x^2 + 6$ is concave up and where it is concave down.
+```
+**Solution:**
+
+- First find $f''(x)$
+
+\begin{align}
+f(x) &= x^3 + 5x^2 + 6 \\
+f'(x) &= (x^3 + 5x^2 + 6)' \\
+&= 3x^2 + 10x \\
+f''(x) &= 6x + 10
+\end{align}
+
+- Set $f''(x) = 0$ and solve for $x$
+
+\begin{align}
+f''(x) &= 0 \\
+6x + 10 &= 0 \\
+x &= -\frac{5}{3}
+\end{align}
+
+- Mark the solutions on a number line.
+
+![](fig\fig53.png)
+
+- Pick a test value from each sub-interval and evaluate $f''(x)$ at test values.
+![](fig\fig54.png)
+$f''(x) = 6x + 10$
+
+| Interval | $\left(-\infty, -\frac{5}{3}\right)$ | $\left(-\frac{5}{3}, \infty\right)$ |
+|:----------:|:--------------------------------------:|:-------------------------------------:|
+| Test Value | $-4$ | $0$ |
+| Sign | $-$ | $+$ |
+
+$f''(x) < 0$ on $\left(-\infty, -\frac{5}{3}\right)$, so $f$ is concave down on $\left(-\infty, -\frac{5}{3}\right)$.
+
+$f''(x) > 0$ on $\left(-\frac{5}{3}, \infty\right)$, so $f$ is concave up on $\left(-\frac{5}{3}, \infty\right)$.
+
+Concavity changes at $x = -\frac{5}{3}$, so $\left(-\frac{5}{3}, f\left(-\frac{5}{3}\right)\right)$ is an inflection point.
+
+
+```{theorem,name=' Second Derivative Test for Relative Extrema'}
+
+Let $f$ be a function such that $f'(c) = 0$ and the second derivative of $f$ exists on an open interval containing $c$.
+
+- If $f''(c) > 0$, then $f(c)$ is a relative minimum.
+- If $f''(c) < 0$, then $f(c)$ is a relative maximum.
+- If $f''(c) = 0$, then the test fails. Either a maximum, or a minimum, or neither may occur. (In such cases, you can use the First Derivative Test.)
+```
+
+```{example}
+
+Find the relative extrema for $f(x) = -3x^5 + 5x^3$.
+```
+**Solution:**
+
+\begin{align}
+f(x) &= -3x^5 + 5x^3 \\
+f'(x) &= (-3x^5 + 5x^3)' \\
+&= -15x^4 + 15x^2 \\
+f''(x) &= (-15x^4 + 15x^2)' \\
+&= -60x^3 + 30x
+\end{align}
+
+To find critical points, set $f'(x) = 0$ and solve for $x$:
+
+\begin{align}
+f'(x) &= 0 \\
+-15x^4 + 15x^2 &= 0 \\
+-15x^2(x^2 - 1) &= 0 \\
+x &= 0 \text{ or } x^2 - 1 = 0 \\
+x &= 0 \text{ or } x = -1 \text{ or } x = 1
+\end{align}
+
+$f'(x)$ is defined for $\forall x \in \mathbb{R}$. So $x = 0$, $x = -1$, and $x = 1$ are critical points. Let's use the second derivative test for relative extrema:
+
+$f''(x) = 30x - 60x^3$
+
+\begin{align}
+f''(-1) &= -30 + 60 = 30 > 0 \\
+&\Rightarrow f(-1) \text{ is a relative minimum}
+\end{align}
+
+\begin{align}
+f''(1) &= 30 - 60 = -30 < 0 \\
+&\Rightarrow f(1) \text{ is a relative maximum}
+\end{align}
+
+\begin{align}
+f''(0) &= 0
+\end{align}
+
+At $x = 0$, the test fails. Either a maximum, a minimum, or neither may occur. Let's use the first derivative test for relative extrema for $x = 0$.
+
+Mark the critical point on the number line and pick test values (we are only interested in intervals adjacent to zero):
+
+![](fig\fig55.png)
+
+$f'(x) = -15x^4 + 15x^2$
+
+| Interval | $(-1, 0)$ | $(0, 1)$ |
+|----------|------------|----------|
+| Test Value | $-0.5$ | $0.5$ |
+| Sign | $+$ | $+$ |
+
+Since $f'$ is positive on either side of zero, and there is no sign change at $0$, $f(0)$ is neither a relative maximum nor a relative minimum.
+
+
+## Curve Sketching
+
+The following steps are helpful when sketching curves. These are general guidelines for all curves, so each step may not always apply to all functions.
+
+1. **Intercepts:** Find the $x$- and $y$-intercepts of the function, if possible. To find the $x$-intercept, we set $y = 0$ and solve the equation for $x$. Similarly, we set $x = 0$ to find the $y$-intercept.
+
+2. **Critical Numbers:** Find the critical numbers of the function.
+
+3. **Intervals of Increase and Decrease:** Determine where $f'(x)$ is positive and negative to find the intervals where the function is increasing and decreasing.
+
+   Steps to find where $f(x)$ is strictly increasing and where it is strictly decreasing:
+   
+   - (a) Mark the critical numbers on a number line.
+   - (b) Pick a test value from each sub-interval and evaluate $f'(x)$ at test values.
+     - i. If $f'(x)$ is positive at a test value, then $f'(x)$ is positive in that interval and $f(x)$ is increasing in that interval.
+     - ii. If $f'(x)$ is negative at a test value, then $f'(x)$ is negative in that interval and $f(x)$ is decreasing in that interval.
+
+4. **Local Maximum/Minimum:** Use the first (or second) derivative test to find the local maximums and minimums of the function.
+
+5. **Concavity and Points of Inflection:** We must determine when $f''(x)$ is positive and negative to find the intervals where the function is concave upward and concave downward. Inflection points occur whenever the curve changes in concavity.
+
+6. **Sketch:** Using the information obtained from steps 1 to 5, we can sketch the curve. First, we draw dashed lines for the asymptotes of the function. Then plot the $x$- and $y$-intercepts, maximum and minimum points, and points of inflection on the graph. Sketch the curve between the points, using the intervals of increase and decrease and intervals of concavity.
+
+
+```{example} 
+Sketch the graph of $f(x) = x^3 + 3x^2 + 1$.
+```
+
+```{example} 
+Sketch the graph of $f(x) = e^x - e^{-x}$.
+```
+
+```{example} 
+Sketch the graph of $f(\theta) = \theta - 2\sin(\theta)$ on $[0, 2\pi]$.
+```
+
+## Limits Involving Infinity
+
+### Limits to Infinity
+
+| x            | f(x) = 1/x       |
+|--------------:|------------------|
+| 10           | 0.1              |
+| 100          | 0.01             |
+| 1,000        | 0.001            |
+| 10,000       | 0.0001           |
+| 100,000      | 0.00001          |
+| 1,000,000    | 0.000001         |
+| 10,000,000   | 0.0000001        |
+| 100,000,000  | 0.00000001       |
+| 1,000,000,000| 0.000000001      |
+| 10,000,000,000| 0.0000000001    |
+
+From numerical tables, we can see that $f(x) = \frac{1}{x}$ keeps getting closer to zero as $x$ keeps getting larger. Mathematicians use a notation to express this situation. First, to tell $x$ keeps getting larger they use the notation $x \to \infty$. To tell $f(x) = \frac{1}{x}$ keeps getting closer to zero as $x$ keeps getting larger, they use the notation:
+$$\lim_{x \to \infty} f(x) = 0$$
+
+| x            | f(x) = 1/x       |
+|--------------:|------------------|
+| -10           | -0.1              |
+| -100          | -0.01             |
+| -1,000        | -0.001            |
+| -10,000       | -0.0001           |
+| -100,000      | -0.00001          |
+| -1,000,000    | -0.000001         |
+| -10,000,000   | -0.0000001        |
+| -100,000,000  | -0.00000001       |
+| -1,000,000,000| -0.000000001      |
+| -10,000,000,000| -0.0000000001     |
+
+
+From numerical analysis, we can see that $f(x) = \frac{1}{x}$ keeps getting closer to zero as $x$ keeps getting larger in the negative direction. To tell $x$ keeps getting larger in the negative direction (actually, the correct terminology in this case is to say $x$ keeps getting smaller as negative values are smaller than zero) we use $x \to -\infty$. To represent this situation we use:
+
+$$\lim_{x \to -\infty} f(x) = 0$$
+
+In general,
+
+- If $f(x)$ keeps getting closer to a real number $L$ as $x$ keeps getting larger, we say:
+$$\lim_{x \to \infty} f(x) = L$$
+
+- If $f(x)$ keeps getting closer to a real number $L$ as $x$ keeps getting smaller (numerical value of $x$ keeps getting large, but in the negative direction), we say:
+$$\lim_{x \to -\infty} f(x) = L$$
+
+### Limits of Special Functions
+
+
+| Function                       | Graph              | $\lim_{x \to -\infty} f(x)$ | $\lim_{x \to \infty} f(x)$ |
+| ------ | ------------------| --- |--- |
+| $\log(x)$                      | ![](fig/fig56.png) | Undefined                   | $\infty$                   |
+| $e^x$                          | ![](fig/fig57.png) | 0                           | $\infty$                   |
+| $\sin(x)$                      | ![](fig/fig58.png) | Undefined                   | Undefined                  |
+| $\cos(x)$                      | ![](fig/fig59.png) | Undefined                   | Undefined                  |
+| $\tan(x)$                      | ![](fig/fig60.png) | Undefined                   | Undefined                  |
+| $\frac{A}{x^r}$ <br>($A \in \mathbb{R}$ and $r$ is positive odd number)  | ![](fig/fig61.png) | 0                           | 0                          |
+| $\frac{A}{x^r}$ <br>($A \in \mathbb{R}$ and $r$ is positive even number) | ![](fig/fig62.png) | 0                           | 0                          |
+| $\tan^{-1}(x)$                 | ![](fig/fig63.png) | $-\frac{\pi}{2}$            | $\frac{\pi}{2}$            |
+
+```{theorem}
+ If $\lim_{x \to \infty} f(x)$ and $\lim_{x \to \infty} g(x)$ exist:
+
+
+- **Multiple rule**: $\lim_{x \to \infty} [kf(x)] = k \lim_{x \to \infty} f(x)$ for any constant $k$ 
+- **Sum rule**: $\lim_{x \to \infty} [f(x) + g(x)] = \lim_{x \to \infty} f(x) + \lim_{x \to \infty} g(x)$ 
+- **Difference rule**: $\lim_{x \to \infty} [f(x) - g(x)] = \lim_{x \to \infty} f(x) - \lim_{x \to \infty} g(x)$ 
+- **Product rule**: $\lim_{x \to \infty} [f(x)g(x)] = \left[\lim_{x \to \infty} f(x)\right]\left[\lim_{x \to \infty} g(x)\right]$
+- **Quotient rule**: $\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}$ if $\lim_{x \to \infty} g(x) \neq 0$
+- **Power rule**: $\lim_{x \to \infty} [f(x)]^n = \left[\lim_{x \to \infty} f(x)\right]^n$
+```
+
+Analogous results hold for $\lim_{x \to -\infty}$.
+
+### Evaluating Limits to Infinity
+
+```{example}
+Evaluate each of the following limits:
+
+
+- $\lim_{x \to \infty} \frac{5x^3 + 6x + 8}{x^4 + 6x + 9}$
+    
+- $\lim_{x \to \infty} \frac{5x^5 + 6x + 8}{x^4 + 6x + 9}$
+    
+- $\lim_{x \to -\infty} \frac{5x^7 + 6x^6 + 8}{15x^7 + 6x + 9}$
+    
+- $\lim_{x \to -\infty} \frac{5x^7 + 6x^6 + 8}{15x^7 + 6x + 9}$
+    
+- $\lim_{x \to \infty} \frac{\cos(x)}{e^x}$
+```
+
+
+| \( x \)        | 10     | 100     | 1000     | 100,000       | 1,000,000       |
+|:----------------:|--------:|---------:|----------:|----------------:|------------------:|
+| \( x^2 + 2 \)  | 102    | 10,002  | 1,000,002| 10,000,000,002 | 1,000,000,000,002 |
+| \( x^3 + 2 \)  | 1,002  | 1,000,002| 1,000,000,002| \( 10^{15} \)     | \( 10^{18} \)        |
+| \( \frac{x^2 + 2}{x^3 + 2} \) | 0.101796407186 | 0.010001979996 | 0.001000001998 | 0.000010000000 | 0.000001000000 |
+
+
+| \( x \)        | 10     | 100     | 1000     | 100,000       | 1,000,000       |
+|:----------------:|--------:|---------:|----------:|----------------:|------------------:|
+| \( x^3 + 2 \)  | 1,002  | 1,000,002| 1,000,000,002| \( 10^{15} \)     | \( 10^{18} \)        |
+| \( x^2 + 2 \)  | 102    | 10,002  | 1,000,002| 10,000,000,002 | 1,000,000,000,002 |
+| \( \frac{x^3 + 2}{x^2 + 2} \) | 9.823529412 | 99.98020396 | 999.998002 | 99999.99998 | 1000000 |
+
+
+| \( x \)        | 10     | 100     | 1000     | 100,000       | 1,000,000       |
+|:----------------:|--------:|---------:|----------:|----------------:|------------------:|
+| \( x^3 + 2 \)  | 1,002  | 1,000,002| 1,000,000,002| \( 10^{15} \)     | \( 10^{18} \)        |
+| \( x^2 + 2 \)  | 102    | 10,002  | 1,000,002| 10,000,000,002 | 1,000,000,000,002 |
+| \( \frac{x^3 + 2}{x^2 + 2} \) | 9.823529412 | 99.98020396 | 999.998002 | 99999.99998 | 1000000 |
+
+
+## L’Hôpital’s Rule
+
+Let $f$ and $g$ be differentiable functions, and suppose $g'(x) \neq 0$ on an open interval containing $c$ (except possibly at $c$ itself).
+
+Suppose
+
+$$
+\lim_{x \to c} \frac{f(x)}{g(x)}
+$$
+
+is an indeterminate form of type $\frac{0}{0}$ or $\frac{\infty}{\infty}$, and that
+
+$$
+\lim_{x \to c} \frac{f'(x)}{g'(x)} = L
+$$
+
+where $L$ is a finite number, $+\infty$, or $-\infty$. Then,
+
+$$
+\lim_{x \to c} \frac{f(x)}{g(x)} = L
+$$
+
+This theorem also applies to one-sided limits and to limits at infinity (i.e., $x \to +\infty$ or $x \to -\infty$)
+
+
+### Curve Sketching with Asymptotes
+
+
+```{definition,name='Horizontal Asymptotes'}
+
+The line $y = L$ is a horizontal asymptote of the graph of $f$ if
+
+$$
+\lim_{x \to \infty} f(x) = L \quad \text{or} \quad \lim_{x \to -\infty} f(x) = L
+$$
+```
+
+
+```{definition,name='2: Vertical Asymptotes'}
+
+The line $x = c$ is a vertical asymptote of the graph of $f$ if either of the one-sided limits
+
+$$
+\lim_{x \to c^-} f(x) \quad \text{or} \quad \lim_{x \to c^+} f(x)
+$$
+
+is infinite.
+```
+
+
+```{definition,name='3: Vertical Tangents and Cusps'}
+
+Suppose $f$ is continuous at the point $P(c, f(c))$. Then:
+
+* **Vertical Tangent** at $P$:
+  If
+
+  $$
+  \lim_{x \to c^-} f'(x) = \pm\infty \quad \text{and} \quad \lim_{x \to c^+} f'(x) = \pm\infty
+  $$
+
+  (both infinite and same sign), the graph has a vertical tangent at $P$.
+
+* **Cusp** at $P$:
+  If
+
+  $$
+  \lim_{x \to c^-} f'(x) = \infty, \quad \lim_{x \to c^+} f'(x) = -\infty
+  $$
+
+  or vice versa (both infinite and **opposite signs**), the graph has a cusp at $P$.
+```
+
+#### Graphing Strategy for a Function $y = f(x)$
+
+1. **Simplify** the function algebraically, if possible.
+
+2. **Intercepts:** Find $x$- and $y$-intercepts.
+
+   * For the $x$-intercept, set $y = 0$.
+   * For the $y$-intercept, set $x = 0$.
+
+3. **Find Asymptotes, Vertical Tangents, and Cusps.**
+
+4. **Differentiation:**
+
+   * **a)** Vertical asymptotes:
+     Occur at values where $f$ is undefined.
+     Use
+
+     $$
+     \lim_{x \to c^-} f(x), \quad \lim_{x \to c^+} f(x)
+     $$
+
+     to analyze behavior near $x = c$.
+   * **b)** Horizontal asymptotes:
+     Evaluate
+
+     $$
+     \lim_{x \to -\infty} f(x), \quad \lim_{x \to \infty} f(x)
+     $$
+
+     and plot if finite.
+   * **c)** Find vertical tangents and cusps.
+
+5. **Critical Numbers:** Find values where $f'(x) = 0$ or $f'(x)$ is undefined.
+
+6. **Intervals of Increase/Decrease:**
+
+   * Mark critical numbers and asymptotes on the number line.
+   * Choose test values from each subinterval and evaluate $f'(x)$:
+
+     * If $f'(x) > 0$: $f$ is increasing.
+     * If $f'(x) < 0$: $f$ is decreasing.
+
+7. **Local Maxima and Minima:** Use the first or second derivative test.
+
+8. **Concavity and Inflection Points:**
+
+   * Determine where $f''(x) > 0$ (concave up) and $f''(x) < 0$ (concave down).
+   * Inflection points occur where the concavity changes.
+
+9. **Sketching:**
+
+   * Draw asymptotes.
+   * Plot intercepts, extrema, and inflection points.
+   * Sketch the curve using intervals of increase/decrease and concavity.
+
+```{exercise}
+
+a) The tangent line to $y = \sin(\theta)$ at $\theta = \frac{\pi}{4}$
+b) The normal line to $f(x) = \cos(\theta)$ at $\theta = \frac{\pi}{4}$
+c) All tangent lines to $f(x) = -3x^2 + 5$ that pass through the point $(0, 8)$
+d) Points where the tangent line to
+
+  $$
+  f(x) = \frac{1}{3}x^3 - \frac{5}{2}x^2 + 6x
+  $$
+
+  is horizontal
+```
+
+```{exercise}
+ Assume that the position at time t of an object moving along a line is
+ given by:
+$$
+s(t) = t^3 - 9t^2 + 15t + 25
+$$
+
+Find:
+
+a) Initial position, velocity, and acceleration. Discuss motion.
+b) Times where acceleration is zero.
+c) Time intervals where acceleration is positive.
+d) Time intervals where acceleration is negative.
+
+```
+
+```{exercise}
+a) Determine where $f(x) = x^2 + 12x + 45$ is strictly increasing or decreasing.
+a) Determine where $f(t) = t - 2\sin(t)$, $0 \le t \le 2\pi$, is increasing/decreasing.
+```
+
+
+```{exercise}
+Find critical numbers of:
+
+a) $f(x) = x^3 + 12x^2 + 45x$
+b) $f(t) = t - 2\sin(t)$, $0 \le t \le 2\pi$
+d) $f(x) = \frac{e^x}{x - 2}$
+f) $f(x) = |x|$
+
+```
+
+
+```{exercise}
+For each function below, find all critical points and determine whether each corresponds to a **relative maximum**, **relative minimum**, or **neither**:
+
+a) $f(x) = x^3 + 12x^2 + 45x$
+b) $f(x) = x^2 + 12x + 5$
+c) $f(t) = t - 2\sin(t)$, $0 \le t \le 2\pi$
+d) $f(x) = |x|$
 ```

@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2025-07-16" />
+<meta name="date" content="2025-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -134,10 +134,30 @@
 <li class="chapter" data-level="4.8.2" data-path="differentiation.html"><a href="differentiation.html#falling-body-problems"><i class="fa fa-check"></i><b>4.8.2</b> Falling Body Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="differentiation.html"><a href="differentiation.html#real-world-application-of-chain-rule"><i class="fa fa-check"></i><b>4.9</b> Real-World Application of Chain Rule</a></li>
-<li class="chapter" data-level="4.10" data-path="differentiation.html"><a href="differentiation.html#extreme-values-of-a-function"><i class="fa fa-check"></i><b>4.10</b> # Extreme Values of a Function</a>
+<li class="chapter" data-level="4.10" data-path="differentiation.html"><a href="differentiation.html#extreme-values-of-a-function"><i class="fa fa-check"></i><b>4.10</b> Extreme Values of a Function</a>
 <ul>
 <li class="chapter" data-level="4.10.1" data-path="differentiation.html"><a href="differentiation.html#steps-to-find-critical-numbers"><i class="fa fa-check"></i><b>4.10.1</b> Steps to Find Critical Numbers</a></li>
 <li class="chapter" data-level="4.10.2" data-path="differentiation.html"><a href="differentiation.html#absolute-extrema"><i class="fa fa-check"></i><b>4.10.2</b> Absolute Extrema</a></li>
+</ul></li>
+<li class="chapter" data-level="4.11" data-path="differentiation.html"><a href="differentiation.html#the-mean-value-theorem"><i class="fa fa-check"></i><b>4.11</b> The Mean Value Theorem</a>
+<ul>
+<li class="chapter" data-level="4.11.1" data-path="differentiation.html"><a href="differentiation.html#introduction-2"><i class="fa fa-check"></i><b>4.11.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="4.12" data-path="differentiation.html"><a href="differentiation.html#derivative-and-the-shape-of-the-graph"><i class="fa fa-check"></i><b>4.12</b> Derivative and the Shape of the Graph</a></li>
+<li class="chapter" data-level="4.13" data-path="differentiation.html"><a href="differentiation.html#derivative-and-the-shape-of-the-graph-1"><i class="fa fa-check"></i><b>4.13</b> Derivative and the Shape of the Graph</a>
+<ul>
+<li class="chapter" data-level="4.13.1" data-path="differentiation.html"><a href="differentiation.html#identifying-whether-a-critical-point-is-minimum-or-maximum"><i class="fa fa-check"></i><b>4.13.1</b> Identifying Whether a Critical Point is Minimum or Maximum</a></li>
+</ul></li>
+<li class="chapter" data-level="4.14" data-path="differentiation.html"><a href="differentiation.html#curve-sketching"><i class="fa fa-check"></i><b>4.14</b> Curve Sketching</a></li>
+<li class="chapter" data-level="4.15" data-path="differentiation.html"><a href="differentiation.html#limits-involving-infinity-1"><i class="fa fa-check"></i><b>4.15</b> Limits Involving Infinity</a>
+<ul>
+<li class="chapter" data-level="4.15.1" data-path="differentiation.html"><a href="differentiation.html#limits-to-infinity"><i class="fa fa-check"></i><b>4.15.1</b> Limits to Infinity</a></li>
+<li class="chapter" data-level="4.15.2" data-path="differentiation.html"><a href="differentiation.html#limits-of-special-functions"><i class="fa fa-check"></i><b>4.15.2</b> Limits of Special Functions</a></li>
+<li class="chapter" data-level="4.15.3" data-path="differentiation.html"><a href="differentiation.html#evaluating-limits-to-infinity"><i class="fa fa-check"></i><b>4.15.3</b> Evaluating Limits to Infinity</a></li>
+</ul></li>
+<li class="chapter" data-level="4.16" data-path="03-diff.html"><a href="#lh%C3%B4pitals-rule"><i class="fa fa-check"></i><b>4.16</b> L’Hôpital’s Rule</a>
+<ul>
+<li class="chapter" data-level="4.16.1" data-path="differentiation.html"><a href="differentiation.html#curve-sketching-with-asymptotes"><i class="fa fa-check"></i><b>4.16.1</b> Curve Sketching with Asymptotes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="sequence.html"><a href="sequence.html"><i class="fa fa-check"></i><b>5</b> Sequence</a>
@@ -150,7 +170,7 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>6</b> Series</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="series.html"><a href="series.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.1" data-path="series.html"><a href="series.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
 <li class="chapter" data-level="6.2" data-path="series.html"><a href="series.html#sequence-of-partial-sums"><i class="fa fa-check"></i><b>6.2</b> Sequence of Partial Sums</a>
 <ul>
 <li class="chapter" data-level="6.2.1" data-path="series.html"><a href="series.html#telescoping-series"><i class="fa fa-check"></i><b>6.2.1</b> Telescoping Series</a></li>
@@ -872,16 +892,28 @@ t &amp;= n\pi+(-1)^n\frac{\pi}{4}- \frac{\pi}{4} ,\quad n \in \mathbb{Z}\\
 </table>
 <p><span class="math display">\[s(t) = 2cos(t) + 2sin(t) − 2\]</span></p>
 <ul>
-<li><p>Second, let’s identify the points where <span class="math inline">\(v(t) = 0\)</span></p></li>
-<li><p>If <span class="math inline">\(s(t) &gt; 0\)</span> at the test value, then it is positive throughout that subinterval.</p></li>
-<li><p>If <span class="math inline">\(s(t) &lt; 0\)</span> at the test value, then it is negative throughout that subinterval.</p></li>
+<li><p>Second, let’s identify the points where <span class="math inline">\(v(t) = 0\)</span></p>
+<ul>
+<li>If <span class="math inline">\(s(t) &gt; 0\)</span> at the test value, then it is positive throughout that subinterval.</li>
+<li>If <span class="math inline">\(s(t) &lt; 0\)</span> at the test value, then it is negative throughout that subinterval.</li>
+</ul></li>
 </ul>
+<p><span class="math display">\[ v(t) = 2\cos(t) − 2\sin(t)\]</span>
+<img src="fig/fig65.png" /></p>
+<ul>
+<li>Object is advancing when <span class="math inline">\(s(t) &gt; 0,v(t) &gt; 0\)</span> and <span class="math inline">\(s(t) &lt; 0,v(t) &lt; 0\)</span>.</li>
+</ul>
+<p><span class="math display">\[ s(t) = 2\cos(t) + 2\sin(t) − 2\]</span>
+<img src="fig/fig64.png" />
+<span class="math display">\[ v(t) = 2\cos(t) − 2\sin(t)\]</span>
+<img src="fig/fig65.png" /></p>
+<p>Object is advancing from <span class="math inline">\(\left(0, \frac{\pi}{4} \right)\)</span><br />
+Object is advancing from <span class="math inline">\(\left(\frac{\pi}{2},\frac{5\pi}{4}\right)\)</span></p>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>The object is retracting when <span class="math inline">\(s(t) &gt; 0, v(t) &lt; 0\)</span> or <span class="math inline">\(s(t) &lt; 0, v(t) &gt; 0\)</span> in <span class="math inline">\([0, 2\pi]\)</span>.</li>
 </ol>
-<center>
-<span style="color:blue"> <em>I will update this part</em> text</span>.
-</center>
+<p>Object is advancing from <span class="math inline">\(\left(0, \frac{\pi}{4} \right)\)</span><br />
+Object is advancing from <span class="math inline">\(\left(\frac{\pi}{2},\frac{5\pi}{4}\right)\)</span></p>
 </div>
 <div id="falling-body-problems" class="section level3 hasAnchor" number="4.8.2">
 <h3><span class="header-section-number">4.8.2</span> Falling Body Problems<a href="differentiation.html#falling-body-problems" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -924,7 +956,7 @@ p(t) = 0.02t^2 + 0.1t + 6 \text{ dollars per pound}
 At what rate will the weekly demand for coffee be changing with respect to time 10 weeks from now? Will the demand be increasing or decreasing?</p>
 </div>
 <div id="extreme-values-of-a-function" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> # Extreme Values of a Function<a href="differentiation.html#extreme-values-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">4.10</span> Extreme Values of a Function<a href="differentiation.html#extreme-values-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
 <p><span id="def:unnamed-chunk-74" class="definition"><strong>Definition 4.5  (Absolute Extrema) </strong></span>Let <span class="math inline">\(f\)</span> be a function defined on an interval <span class="math inline">\(I\)</span> that contains the number <span class="math inline">\(c\)</span>. Then</p>
 <ul>
@@ -1040,11 +1072,925 @@ The function <span class="math inline">\(f\)</span> is undefined at <span class=
 <li>Evaluate <span class="math inline">\(f\)</span> at the endpoints <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and at each critical number <span class="math inline">\(c\)</span>.</li>
 <li>Compare the values in step 2. The largest value of <span class="math inline">\(f\)</span> is the absolute maximum of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>. The smallest value of <span class="math inline">\(f\)</span> is the absolute minimum of <span class="math inline">\(f\)</span> on <span class="math inline">\([a,b]\)</span>.</li>
 </ol>
-<div class="figure"><span style="display:block;" id="fig:your-chunk-name"></span>
-<img src="fig/fig38.png" alt="Main caption" width="33%" /><img src="fig/fig38.png" alt="Main caption" width="33%" /><img src="fig/fig38.png" alt="Main caption" width="33%" />
-<p class="caption">
-Figure 4.1: Main caption
-</p>
+<table>
+<colgroup>
+<col width="62%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pictures</th>
+<th>Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="fig/fig39.png" /></td>
+<td><span class="math inline">\(f(x) = x^3 - 4x^2 + 3x + 3\)</span> on <span class="math inline">\([0.5, 2]\)</span><br><span class="math inline">\(f\)</span> is continuous with an extremum at each endpoint</td>
+</tr>
+<tr class="even">
+<td><img src="fig/fig40.png" /></td>
+<td><span class="math inline">\(g(x) = \sin(x)\)</span> on <span class="math inline">\([0, 2\pi]\)</span><br><span class="math inline">\(g\)</span> is continuous; neither extremum at an endpoint</td>
+</tr>
+<tr class="odd">
+<td><img src="fig/fig41.png" /></td>
+<td><span class="math inline">\(h(x) = x^2 - 4x + 1\)</span> on <span class="math inline">\([0, 3]\)</span><br><span class="math inline">\(h\)</span> is continuous; one extremum at an endpoint</td>
+</tr>
+</tbody>
+</table>
+<div class="example">
+<p><span id="exm:unnamed-chunk-83" class="example"><strong>Example 4.14  </strong></span>Find the absolute extrema of the function defined by the equation <span class="math inline">\(f(x) = x^4 - 2x^2 + 3\)</span> on the closed interval <span class="math inline">\([-1,2]\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="the-mean-value-theorem" class="section level2 hasAnchor" number="4.11">
+<h2><span class="header-section-number">4.11</span> The Mean Value Theorem<a href="differentiation.html#the-mean-value-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-2" class="section level3 hasAnchor" number="4.11.1">
+<h3><span class="header-section-number">4.11.1</span> Introduction<a href="differentiation.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If a car travels smoothly down a straight, level road with average velocity 60 mi/h, we would expect the speedometer reading to be exactly 60 mi/h at least once during the trip. After all, if the car’s velocity were always above 60 mi/h, the average velocity would also be above that level, and the same reasoning applies if the velocity were always below 60 mi/h.</p>
+<p>More generally, if <span class="math inline">\(f(t)\)</span> is the car’s position at time <span class="math inline">\(t\)</span> during a trip over the time interval <span class="math inline">\(a &lt; t &lt; b\)</span>, then there should be a time <span class="math inline">\(t = c\)</span> when the velocity <span class="math inline">\(f&#39;(c)\)</span> equals the average velocity between times <span class="math inline">\(t = a\)</span> and <span class="math inline">\(t = b\)</span>. That is, for some <span class="math inline">\(c\)</span> with <span class="math inline">\(a &lt; c &lt; b\)</span>,</p>
+<p><span class="math display">\[f&#39;(c) = \frac{f(b) - f(a)}{b - a}\]</span></p>
+<p><img src="fig/fig42.png" /></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-84" class="theorem"><strong>Theorem 4.5  (Rolle`s theorem) </strong></span>Suppose <span class="math inline">\(f\)</span> is continuous on the closed interval <span class="math inline">\([a, b]\)</span> and differentiable on the open interval <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f(a) = f(b)\)</span>, then there exists at least one number <span class="math inline">\(c\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(f&#39;(c) = 0\)</span>.</p>
+</div>
+<p><img src="fig/fig43.png" /></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-85" class="theorem"><strong>Theorem 4.6  (The mean value theorem for derivatives (MVT)) </strong></span>If <span class="math inline">\(f\)</span> is continuous on the closed interval <span class="math inline">\([a,b]\)</span> and differentiable on the open interval <span class="math inline">\((a, b)\)</span>, then there exists in <span class="math inline">\((a,b)\)</span> at least one number <span class="math inline">\(c\)</span> such that</p>
+<p><span class="math display">\[f&#39;(c) = \frac{f(b) - f(a)}{b - a}\]</span></p>
+<p><img src="fig/fig44.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-86" class="example"><strong>Example 4.15  </strong></span>Show that the function <span class="math inline">\(f(x) = x^3 + x^2\)</span> satisfies the hypotheses of the MVT on the closed interval <span class="math inline">\([1,2]\)</span>, and find a number <span class="math inline">\(c\)</span> between 1 and 2 so that</p>
+<p><span class="math display">\[f&#39;(c) = \frac{f(2) - f(1)}{2 - 1}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-87" class="example"><strong>Example 4.16  </strong></span>Show that <span class="math inline">\(|\sin x_2 - \sin x_1| \leq |x_2 - x_1|\)</span> for all numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> by applying the mean value theorem.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-88" class="theorem"><strong>Theorem 4.7  (Zero-derivative theorem) </strong></span>Suppose <span class="math inline">\(f\)</span> is a continuous function on the closed interval <span class="math inline">\([a,b]\)</span> and is differentiable on the open interval <span class="math inline">\((a,b)\)</span>, with <span class="math inline">\(f&#39;(x) = 0\)</span> for all <span class="math inline">\(x\)</span> on <span class="math inline">\((a,b)\)</span>. Then the function <span class="math inline">\(f\)</span> is constant on <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-89" class="theorem"><strong>Theorem 4.8  (Constant difference theorem) </strong></span>Suppose the functions <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are continuous on the closed interval <span class="math inline">\([a,b]\)</span> and differentiable on the open interval <span class="math inline">\((a, b)\)</span>. Then if <span class="math inline">\(f&#39;(x) = g&#39;(x)\)</span> for all <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, there exists a constant <span class="math inline">\(C\)</span> such that <span class="math inline">\(f(x) = g(x) + C\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="derivative-and-the-shape-of-the-graph" class="section level2 hasAnchor" number="4.12">
+<h2><span class="header-section-number">4.12</span> Derivative and the Shape of the Graph<a href="differentiation.html#derivative-and-the-shape-of-the-graph" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-90" class="definition"><strong>Definition 4.8  (Strictly Increasing and Strictly Decreasing Functions) </strong></span>The function <span class="math inline">\(f\)</span> is <strong>strictly increasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &lt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+<p>The function <span class="math inline">\(f\)</span> is <strong>strictly decreasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &gt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+</div>
+<p><img src="fig/fig45.png" /></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-91" class="theorem"><strong>Theorem 4.9  (Monotone Function Theorem) </strong></span>Let <span class="math inline">\(f\)</span> be differentiable on the open interval <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &gt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly increasing on <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &lt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly decreasing on <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+</div>
+<div id="derivative-and-the-shape-of-the-graph-1" class="section level2 hasAnchor" number="4.13">
+<h2><span class="header-section-number">4.13</span> Derivative and the Shape of the Graph<a href="differentiation.html#derivative-and-the-shape-of-the-graph-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unnamed-chunk-92" class="definition"><strong>Definition 4.9  (Strictly Increasing and Strictly Decreasing Functions) </strong></span>The function <span class="math inline">\(f\)</span> is <strong>strictly increasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &lt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+<p>The function <span class="math inline">\(f\)</span> is <strong>strictly decreasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &gt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-93" class="theorem"><strong>Theorem 4.10  (Monotone Function Theorem) </strong></span>Let <span class="math inline">\(f\)</span> be differentiable on the open interval <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &gt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly increasing on <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &lt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly decreasing on <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-94" class="definition"><strong>Definition 4.10  (Strictly Increasing and Strictly Decreasing Functions) </strong></span>The function <span class="math inline">\(f\)</span> is <strong>strictly increasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &lt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+<p>The function <span class="math inline">\(f\)</span> is <strong>strictly decreasing</strong> on an interval <span class="math inline">\(I\)</span> if
+<span class="math display">\[f(x_1) &gt; f(x_2) \text{ whenever } x_1, x_2 \in I \text{ and } x_1 &lt; x_2\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-95" class="theorem"><strong>Theorem 4.11  (Monotone Function Theorem) </strong></span>Let <span class="math inline">\(f\)</span> be differentiable on the open interval <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &gt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly increasing on <span class="math inline">\((a,b)\)</span>. If <span class="math inline">\(f&#39;(x) &lt; 0\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\((a,b)\)</span>, then <span class="math inline">\(f\)</span> is strictly decreasing on <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+<p>**Steps to Find Where <span class="math inline">\(f(x)\)</span> is Strictly Increasing and *Decreasing**</p>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(f&#39;(x)\)</span></li>
+<li>Set <span class="math inline">\(f&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span></li>
+<li>Mark the solutions on a number line</li>
+<li>Pick a test value from each sub-interval and evaluate <span class="math inline">\(f&#39;(x)\)</span> at test values.
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(f&#39;(x)\)</span> is positive at a test value, then <span class="math inline">\(f&#39;(x)\)</span> is positive in that interval and <span class="math inline">\(f(x)\)</span> is increasing in that interval</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>If <span class="math inline">\(f&#39;(x)\)</span> is negative at a test value, then <span class="math inline">\(f&#39;(x)\)</span> is negative in that interval and <span class="math inline">\(f(x)\)</span> is decreasing in that interval</li>
+</ol></li>
+</ul></li>
+</ol>
+<div class="example">
+<p><span id="exm:unnamed-chunk-96" class="example"><strong>Example 4.17  </strong></span>Determine where the function defined by <span class="math inline">\(f(x) = x^3 + 12x^2 + 45x\)</span> is strictly increasing and where it is strictly decreasing.</p>
+</div>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>Find <span class="math inline">\(f&#39;(x)\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{align}
+f(x) &amp;= x^3 + 12x^2 + 45x \\
+\frac{df}{dx} &amp;= \frac{d}{dx}[x^3 + 12x^2 + 45x] \\
+&amp;= 3x^2 + 24x + 45
+\end{align}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Set <span class="math inline">\(f&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{align}
+\frac{df}{dx} &amp;= 0 \\
+3x^2 + 24x + 45 &amp;= 0 \\
+x^2 + 8x + 15 &amp;= 0 \\
+(x + 3)(x + 5) &amp;= 0 \\
+x + 3 = 0 \text{ or } x + 5 &amp;= 0 \\
+x = -3 \text{ or } x &amp;= -5
+\end{align}\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Mark the solutions on a number line.
+<img src="fig/fig46.png" alt="Number line" /></li>
+<li>Pick a test value from each sub-interval and evaluate <span class="math inline">\(f&#39;(x)\)</span> at test values.
+<img src="fig/fig47.png" alt="Number line" /></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Interval</th>
+<th align="center"><span class="math inline">\((-\infty, -5)\)</span></th>
+<th align="center"><span class="math inline">\((-5, -3)\)</span></th>
+<th align="center"><span class="math inline">\((-3, \infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Test value</td>
+<td align="center"><span class="math inline">\(-6\)</span></td>
+<td align="center"><span class="math inline">\(-4\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Sign of <span class="math inline">\(\frac{df}{dx}\)</span></td>
+<td align="center"><span class="math inline">\(+\)</span></td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+<td align="center"><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The derivative <span class="math inline">\(3x^2 + 24x + 45\)</span> is a continuous function. Therefore, the derivative cannot change sign without going through a point that makes it zero. It only becomes zero at endpoints. It cannot change sign inside an interval. The function takes the same sign as the test value inside the corresponding interval.</p>
+<p>In the interval <span class="math inline">\((-\infty, -5)\)</span>, the derivative is positive at test point <span class="math inline">\(-6\)</span>; therefore, it remains positive inside the interval <span class="math inline">\((-\infty, -5)\)</span>. The function is increasing in <span class="math inline">\((-\infty, -5)\)</span>. The derivative is negative at test point <span class="math inline">\(-4\)</span>. The derivative remains negative inside <span class="math inline">\((-5, -3)\)</span>, hence decreases inside <span class="math inline">\((-5, -3)\)</span>. The derivative is positive inside <span class="math inline">\((-3, \infty)\)</span> and increases in <span class="math inline">\((-3, \infty)\)</span>.</p>
+<div class="float">
+<img src="fig/fig48.png" alt="Increasing and Decreasing Intervals" />
+<div class="figcaption">Increasing and Decreasing Intervals</div>
+</div>
+<div id="identifying-whether-a-critical-point-is-minimum-or-maximum" class="section level3 hasAnchor" number="4.13.1">
+<h3><span class="header-section-number">4.13.1</span> Identifying Whether a Critical Point is Minimum or Maximum<a href="differentiation.html#identifying-whether-a-critical-point-is-minimum-or-maximum" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>::: {.theorem #unnamed-chunk-97 name=” First Derivative Test”}
+Let <span class="math inline">\(c\)</span> be a critical number of a function <span class="math inline">\(f\)</span> that is continuous on an open interval <span class="math inline">\(I\)</span> containing <span class="math inline">\(c\)</span>. If <span class="math inline">\(f\)</span> is differentiable on the interval, except possibly at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f(c)\)</span> can be classified as follows:</p>
+<ul>
+<li>If <span class="math inline">\(f&#39;(x)\)</span> changes from negative to positive at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f(c)\)</span> is a relative minimum of <span class="math inline">\(f\)</span>.</li>
+<li>If <span class="math inline">\(f&#39;(x)\)</span> changes from positive to negative at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f(c)\)</span> is a relative maximum of <span class="math inline">\(f\)</span>.</li>
+<li>If <span class="math inline">\(f&#39;(x)\)</span> does not change sign at <span class="math inline">\(c\)</span>, then <span class="math inline">\(f(c)\)</span> is not a relative extremum.
+:::</li>
+</ul>
+<div class="example">
+<p><span id="exm:unnamed-chunk-98" class="example"><strong>Example 4.18  </strong></span>Find all critical points for <span class="math inline">\(f(x) = \frac{\sqrt[3]{x}}{1-x}\)</span> and determine whether each corresponds to a relative maximum, relative minimum, or neither.</p>
+<p>Let <span class="math inline">\(f(x) = \frac{\sqrt[3]{x}}{1-x}\)</span></p>
+<p>From earlier work, <span class="math inline">\(0\)</span> and <span class="math inline">\(-\frac{1}{2}\)</span> are critical numbers of <span class="math inline">\(f(x) = \frac{\sqrt[3]{x}}{1-x}\)</span>.</p>
+<p><span class="math inline">\(f(0) = 0\)</span> and <span class="math inline">\(f\left(-\frac{1}{2}\right) = \frac{\sqrt[3]{2}}{3}\)</span>.</p>
+<p><span class="math inline">\((0,0)\)</span> and <span class="math inline">\(\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)\)</span> are critical points.</p>
+<p>To identify relative extrema using the first derivative test, we have to check the sign of the derivative around critical points.</p>
+<p>Therefore, let’s make a sign chart.</p>
+<ol style="list-style-type: decimal">
+<li>Mark the solutions in number</li>
+</ol>
+<div class="float">
+<img src="fig/fig49.png" alt="Number line" />
+<div class="figcaption">Number line</div>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Pick a test value from each subinterval and evaluate <span class="math inline">\(f′(x)\)</span> at test values.
+<img src="fig/fig50.png" alt="Test vlaues" /></li>
+</ol>
+<p><span class="math display">\[f&#39;(x) = \frac{1 + 2x}{3x^{2/3}(1-x)^2}\]</span></p>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="39%" />
+<col width="33%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Interval</th>
+<th align="center"><span class="math inline">\(\left(-\infty, -\frac{1}{2}\right)\)</span></th>
+<th align="center"><span class="math inline">\(\left(-\frac{1}{2}, 0\right)\)</span></th>
+<th align="right"><span class="math inline">\((0, \infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Test Value</td>
+<td align="center"><span class="math inline">\(-2\)</span></td>
+<td align="center"><span class="math inline">\(-0.1\)</span></td>
+<td align="right"><span class="math inline">\(2\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Sign</td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+<td align="center"><span class="math inline">\(+\)</span></td>
+<td align="right"><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>At the critical point <span class="math inline">\(\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)\)</span>, the sign of the derivative changes from negative to positive. The critical point <span class="math inline">\(\left(-\frac{1}{2}, \frac{\sqrt[3]{2}}{3}\right)\)</span> is a relative minimum.</p>
+At the critical point <span class="math inline">\((0,0)\)</span>, the sign of the derivative changes from positive to positive. The critical point <span class="math inline">\((0,0)\)</span> is neither a relative maximum nor relative minimum.
+<center>
+<img src="fig/fig51.png" />
+</center>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-99" class="example"><strong>Example 4.19  </strong></span>Find all critical points for <span class="math inline">\(f(x) = x^3 - 3x^2 - 9x + 1\)</span> and determine whether each corresponds to a relative maximum, relative minimum, or neither.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-100" class="definition"><strong>Definition 4.11  (Concavity) </strong></span>Given a function <span class="math inline">\(f\)</span>:
+- <span class="math inline">\(f\)</span> is <strong>concave up</strong> on an interval <span class="math inline">\(I\)</span> if all of the tangents to the curve on <span class="math inline">\(I\)</span> are below the graph of <span class="math inline">\(f(x)\)</span>.
+- <span class="math inline">\(f\)</span> is <strong>concave down</strong> on an interval <span class="math inline">\(I\)</span> if all of the tangents to the curve on <span class="math inline">\(I\)</span> are above the graph of <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<p><img src="fig/fig52.png" /></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-101" class="theorem"><strong>Theorem 4.12  (Derivative Characterization of Concavity) </strong></span>Given a function <span class="math inline">\(f\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span> for all <span class="math inline">\(x\)</span> in some interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f\)</span> is concave up on <span class="math inline">\(I\)</span>.</li>
+<li>If <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> for all <span class="math inline">\(x\)</span> in some interval <span class="math inline">\(I\)</span>, then <span class="math inline">\(f\)</span> is concave down on <span class="math inline">\(I\)</span>.</li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-102" class="definition"><strong>Definition 4.12  (Inflection Point) </strong></span>A point <span class="math inline">\((c, f(c))\)</span> is called an <strong>inflection point</strong> if the function is continuous at the point and the concavity of the graph changes at that point.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-103" class="example"><strong>Example 4.20  </strong></span>Find where the graph of <span class="math inline">\(f(x) = x^3 + 5x^2 + 6\)</span> is concave up and where it is concave down.</p>
+</div>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>First find <span class="math inline">\(f&#39;&#39;(x)\)</span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+f(x) &amp;= x^3 + 5x^2 + 6 \\
+f&#39;(x) &amp;= (x^3 + 5x^2 + 6)&#39; \\
+&amp;= 3x^2 + 10x \\
+f&#39;&#39;(x) &amp;= 6x + 10
+\end{align}\]</span></p>
+<ul>
+<li>Set <span class="math inline">\(f&#39;&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+f&#39;&#39;(x) &amp;= 0 \\
+6x + 10 &amp;= 0 \\
+x &amp;= -\frac{5}{3}
+\end{align}\]</span></p>
+<ul>
+<li>Mark the solutions on a number line.</li>
+</ul>
+<p><img src="fig/fig53.png" /></p>
+<ul>
+<li>Pick a test value from each sub-interval and evaluate <span class="math inline">\(f&#39;&#39;(x)\)</span> at test values.
+<img src="fig/fig54.png" />
+<span class="math inline">\(f&#39;&#39;(x) = 6x + 10\)</span></li>
+</ul>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="43%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Interval</th>
+<th align="center"><span class="math inline">\(\left(-\infty, -\frac{5}{3}\right)\)</span></th>
+<th align="center"><span class="math inline">\(\left(-\frac{5}{3}, \infty\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Test Value</td>
+<td align="center"><span class="math inline">\(-4\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Sign</td>
+<td align="center"><span class="math inline">\(-\)</span></td>
+<td align="center"><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> on <span class="math inline">\(\left(-\infty, -\frac{5}{3}\right)\)</span>, so <span class="math inline">\(f\)</span> is concave down on <span class="math inline">\(\left(-\infty, -\frac{5}{3}\right)\)</span>.</p>
+<p><span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span> on <span class="math inline">\(\left(-\frac{5}{3}, \infty\right)\)</span>, so <span class="math inline">\(f\)</span> is concave up on <span class="math inline">\(\left(-\frac{5}{3}, \infty\right)\)</span>.</p>
+<p>Concavity changes at <span class="math inline">\(x = -\frac{5}{3}\)</span>, so <span class="math inline">\(\left(-\frac{5}{3}, f\left(-\frac{5}{3}\right)\right)\)</span> is an inflection point.</p>
+<p>::: {.theorem #unnamed-chunk-104 name=” Second Derivative Test for Relative Extrema”}</p>
+<p>Let <span class="math inline">\(f\)</span> be a function such that <span class="math inline">\(f&#39;(c) = 0\)</span> and the second derivative of <span class="math inline">\(f\)</span> exists on an open interval containing <span class="math inline">\(c\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(f&#39;&#39;(c) &gt; 0\)</span>, then <span class="math inline">\(f(c)\)</span> is a relative minimum.</li>
+<li>If <span class="math inline">\(f&#39;&#39;(c) &lt; 0\)</span>, then <span class="math inline">\(f(c)\)</span> is a relative maximum.</li>
+<li>If <span class="math inline">\(f&#39;&#39;(c) = 0\)</span>, then the test fails. Either a maximum, or a minimum, or neither may occur. (In such cases, you can use the First Derivative Test.)
+:::</li>
+</ul>
+<div class="example">
+<p><span id="exm:unnamed-chunk-105" class="example"><strong>Example 4.21  </strong></span>Find the relative extrema for <span class="math inline">\(f(x) = -3x^5 + 5x^3\)</span>.</p>
+</div>
+<p><strong>Solution:</strong></p>
+<p><span class="math display">\[\begin{align}
+f(x) &amp;= -3x^5 + 5x^3 \\
+f&#39;(x) &amp;= (-3x^5 + 5x^3)&#39; \\
+&amp;= -15x^4 + 15x^2 \\
+f&#39;&#39;(x) &amp;= (-15x^4 + 15x^2)&#39; \\
+&amp;= -60x^3 + 30x
+\end{align}\]</span></p>
+<p>To find critical points, set <span class="math inline">\(f&#39;(x) = 0\)</span> and solve for <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+f&#39;(x) &amp;= 0 \\
+-15x^4 + 15x^2 &amp;= 0 \\
+-15x^2(x^2 - 1) &amp;= 0 \\
+x &amp;= 0 \text{ or } x^2 - 1 = 0 \\
+x &amp;= 0 \text{ or } x = -1 \text{ or } x = 1
+\end{align}\]</span></p>
+<p><span class="math inline">\(f&#39;(x)\)</span> is defined for <span class="math inline">\(\forall x \in \mathbb{R}\)</span>. So <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = -1\)</span>, and <span class="math inline">\(x = 1\)</span> are critical points. Let’s use the second derivative test for relative extrema:</p>
+<p><span class="math inline">\(f&#39;&#39;(x) = 30x - 60x^3\)</span></p>
+<p><span class="math display">\[\begin{align}
+f&#39;&#39;(-1) &amp;= -30 + 60 = 30 &gt; 0 \\
+&amp;\Rightarrow f(-1) \text{ is a relative minimum}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+f&#39;&#39;(1) &amp;= 30 - 60 = -30 &lt; 0 \\
+&amp;\Rightarrow f(1) \text{ is a relative maximum}
+\end{align}\]</span></p>
+<p><span class="math display">\[\begin{align}
+f&#39;&#39;(0) &amp;= 0
+\end{align}\]</span></p>
+<p>At <span class="math inline">\(x = 0\)</span>, the test fails. Either a maximum, a minimum, or neither may occur. Let’s use the first derivative test for relative extrema for <span class="math inline">\(x = 0\)</span>.</p>
+<p>Mark the critical point on the number line and pick test values (we are only interested in intervals adjacent to zero):</p>
+<p><img src="fig/fig55.png" /></p>
+<p><span class="math inline">\(f&#39;(x) = -15x^4 + 15x^2\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Interval</th>
+<th><span class="math inline">\((-1, 0)\)</span></th>
+<th><span class="math inline">\((0, 1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Value</td>
+<td><span class="math inline">\(-0.5\)</span></td>
+<td><span class="math inline">\(0.5\)</span></td>
+</tr>
+<tr class="even">
+<td>Sign</td>
+<td><span class="math inline">\(+\)</span></td>
+<td><span class="math inline">\(+\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Since <span class="math inline">\(f&#39;\)</span> is positive on either side of zero, and there is no sign change at <span class="math inline">\(0\)</span>, <span class="math inline">\(f(0)\)</span> is neither a relative maximum nor a relative minimum.</p>
+</div>
+</div>
+<div id="curve-sketching" class="section level2 hasAnchor" number="4.14">
+<h2><span class="header-section-number">4.14</span> Curve Sketching<a href="differentiation.html#curve-sketching" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The following steps are helpful when sketching curves. These are general guidelines for all curves, so each step may not always apply to all functions.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Intercepts:</strong> Find the <span class="math inline">\(x\)</span>- and <span class="math inline">\(y\)</span>-intercepts of the function, if possible. To find the <span class="math inline">\(x\)</span>-intercept, we set <span class="math inline">\(y = 0\)</span> and solve the equation for <span class="math inline">\(x\)</span>. Similarly, we set <span class="math inline">\(x = 0\)</span> to find the <span class="math inline">\(y\)</span>-intercept.</p></li>
+<li><p><strong>Critical Numbers:</strong> Find the critical numbers of the function.</p></li>
+<li><p><strong>Intervals of Increase and Decrease:</strong> Determine where <span class="math inline">\(f&#39;(x)\)</span> is positive and negative to find the intervals where the function is increasing and decreasing.</p>
+<p>Steps to find where <span class="math inline">\(f(x)\)</span> is strictly increasing and where it is strictly decreasing:</p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Mark the critical numbers on a number line.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Pick a test value from each sub-interval and evaluate <span class="math inline">\(f&#39;(x)\)</span> at test values.</li>
+</ol>
+<ul>
+<li><ol style="list-style-type: lower-roman">
+<li>If <span class="math inline">\(f&#39;(x)\)</span> is positive at a test value, then <span class="math inline">\(f&#39;(x)\)</span> is positive in that interval and <span class="math inline">\(f(x)\)</span> is increasing in that interval.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-roman">
+<li>If <span class="math inline">\(f&#39;(x)\)</span> is negative at a test value, then <span class="math inline">\(f&#39;(x)\)</span> is negative in that interval and <span class="math inline">\(f(x)\)</span> is decreasing in that interval.</li>
+</ol></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Local Maximum/Minimum:</strong> Use the first (or second) derivative test to find the local maximums and minimums of the function.</p></li>
+<li><p><strong>Concavity and Points of Inflection:</strong> We must determine when <span class="math inline">\(f&#39;&#39;(x)\)</span> is positive and negative to find the intervals where the function is concave upward and concave downward. Inflection points occur whenever the curve changes in concavity.</p></li>
+<li><p><strong>Sketch:</strong> Using the information obtained from steps 1 to 5, we can sketch the curve. First, we draw dashed lines for the asymptotes of the function. Then plot the <span class="math inline">\(x\)</span>- and <span class="math inline">\(y\)</span>-intercepts, maximum and minimum points, and points of inflection on the graph. Sketch the curve between the points, using the intervals of increase and decrease and intervals of concavity.</p></li>
+</ol>
+<div class="example">
+<p><span id="exm:unnamed-chunk-106" class="example"><strong>Example 4.22  </strong></span>Sketch the graph of <span class="math inline">\(f(x) = x^3 + 3x^2 + 1\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-107" class="example"><strong>Example 4.23  </strong></span>Sketch the graph of <span class="math inline">\(f(x) = e^x - e^{-x}\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-108" class="example"><strong>Example 4.24  </strong></span>Sketch the graph of <span class="math inline">\(f(\theta) = \theta - 2\sin(\theta)\)</span> on <span class="math inline">\([0, 2\pi]\)</span>.</p>
+</div>
+</div>
+<div id="limits-involving-infinity-1" class="section level2 hasAnchor" number="4.15">
+<h2><span class="header-section-number">4.15</span> Limits Involving Infinity<a href="differentiation.html#limits-involving-infinity-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="limits-to-infinity" class="section level3 hasAnchor" number="4.15.1">
+<h3><span class="header-section-number">4.15.1</span> Limits to Infinity<a href="differentiation.html#limits-to-infinity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th>f(x) = 1/x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10</td>
+<td>0.1</td>
+</tr>
+<tr class="even">
+<td align="right">100</td>
+<td>0.01</td>
+</tr>
+<tr class="odd">
+<td align="right">1,000</td>
+<td>0.001</td>
+</tr>
+<tr class="even">
+<td align="right">10,000</td>
+<td>0.0001</td>
+</tr>
+<tr class="odd">
+<td align="right">100,000</td>
+<td>0.00001</td>
+</tr>
+<tr class="even">
+<td align="right">1,000,000</td>
+<td>0.000001</td>
+</tr>
+<tr class="odd">
+<td align="right">10,000,000</td>
+<td>0.0000001</td>
+</tr>
+<tr class="even">
+<td align="right">100,000,000</td>
+<td>0.00000001</td>
+</tr>
+<tr class="odd">
+<td align="right">1,000,000,000</td>
+<td>0.000000001</td>
+</tr>
+<tr class="even">
+<td align="right">10,000,000,000</td>
+<td>0.0000000001</td>
+</tr>
+</tbody>
+</table>
+<p>From numerical tables, we can see that <span class="math inline">\(f(x) = \frac{1}{x}\)</span> keeps getting closer to zero as <span class="math inline">\(x\)</span> keeps getting larger. Mathematicians use a notation to express this situation. First, to tell <span class="math inline">\(x\)</span> keeps getting larger they use the notation <span class="math inline">\(x \to \infty\)</span>. To tell <span class="math inline">\(f(x) = \frac{1}{x}\)</span> keeps getting closer to zero as <span class="math inline">\(x\)</span> keeps getting larger, they use the notation:
+<span class="math display">\[\lim_{x \to \infty} f(x) = 0\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th>f(x) = 1/x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">-10</td>
+<td>-0.1</td>
+</tr>
+<tr class="even">
+<td align="right">-100</td>
+<td>-0.01</td>
+</tr>
+<tr class="odd">
+<td align="right">-1,000</td>
+<td>-0.001</td>
+</tr>
+<tr class="even">
+<td align="right">-10,000</td>
+<td>-0.0001</td>
+</tr>
+<tr class="odd">
+<td align="right">-100,000</td>
+<td>-0.00001</td>
+</tr>
+<tr class="even">
+<td align="right">-1,000,000</td>
+<td>-0.000001</td>
+</tr>
+<tr class="odd">
+<td align="right">-10,000,000</td>
+<td>-0.0000001</td>
+</tr>
+<tr class="even">
+<td align="right">-100,000,000</td>
+<td>-0.00000001</td>
+</tr>
+<tr class="odd">
+<td align="right">-1,000,000,000</td>
+<td>-0.000000001</td>
+</tr>
+<tr class="even">
+<td align="right">-10,000,000,000</td>
+<td>-0.0000000001</td>
+</tr>
+</tbody>
+</table>
+<p>From numerical analysis, we can see that <span class="math inline">\(f(x) = \frac{1}{x}\)</span> keeps getting closer to zero as <span class="math inline">\(x\)</span> keeps getting larger in the negative direction. To tell <span class="math inline">\(x\)</span> keeps getting larger in the negative direction (actually, the correct terminology in this case is to say <span class="math inline">\(x\)</span> keeps getting smaller as negative values are smaller than zero) we use <span class="math inline">\(x \to -\infty\)</span>. To represent this situation we use:</p>
+<p><span class="math display">\[\lim_{x \to -\infty} f(x) = 0\]</span></p>
+<p>In general,</p>
+<ul>
+<li><p>If <span class="math inline">\(f(x)\)</span> keeps getting closer to a real number <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> keeps getting larger, we say:
+<span class="math display">\[\lim_{x \to \infty} f(x) = L\]</span></p></li>
+<li><p>If <span class="math inline">\(f(x)\)</span> keeps getting closer to a real number <span class="math inline">\(L\)</span> as <span class="math inline">\(x\)</span> keeps getting smaller (numerical value of <span class="math inline">\(x\)</span> keeps getting large, but in the negative direction), we say:
+<span class="math display">\[\lim_{x \to -\infty} f(x) = L\]</span></p></li>
+</ul>
+</div>
+<div id="limits-of-special-functions" class="section level3 hasAnchor" number="4.15.2">
+<h3><span class="header-section-number">4.15.2</span> Limits of Special Functions<a href="differentiation.html#limits-of-special-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="60%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Graph</th>
+<th><span class="math inline">\(\lim_{x \to -\infty} f(x)\)</span></th>
+<th><span class="math inline">\(\lim_{x \to \infty} f(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\log(x)\)</span></td>
+<td><img src="fig/fig56.png" /></td>
+<td>Undefined</td>
+<td><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e^x\)</span></td>
+<td><img src="fig/fig57.png" /></td>
+<td>0</td>
+<td><span class="math inline">\(\infty\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\sin(x)\)</span></td>
+<td><img src="fig/fig58.png" /></td>
+<td>Undefined</td>
+<td>Undefined</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\cos(x)\)</span></td>
+<td><img src="fig/fig59.png" /></td>
+<td>Undefined</td>
+<td>Undefined</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tan(x)\)</span></td>
+<td><img src="fig/fig60.png" /></td>
+<td>Undefined</td>
+<td>Undefined</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\frac{A}{x^r}\)</span> <br>(<span class="math inline">\(A \in \mathbb{R}\)</span> and <span class="math inline">\(r\)</span> is positive odd number)</td>
+<td><img src="fig/fig61.png" /></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{A}{x^r}\)</span> <br>(<span class="math inline">\(A \in \mathbb{R}\)</span> and <span class="math inline">\(r\)</span> is positive even number)</td>
+<td><img src="fig/fig62.png" /></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tan^{-1}(x)\)</span></td>
+<td><img src="fig/fig63.png" /></td>
+<td><span class="math inline">\(-\frac{\pi}{2}\)</span></td>
+<td><span class="math inline">\(\frac{\pi}{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-109" class="theorem"><strong>Theorem 4.13  </strong></span>If <span class="math inline">\(\lim_{x \to \infty} f(x)\)</span> and <span class="math inline">\(\lim_{x \to \infty} g(x)\)</span> exist:</p>
+<ul>
+<li><strong>Multiple rule</strong>: <span class="math inline">\(\lim_{x \to \infty} [kf(x)] = k \lim_{x \to \infty} f(x)\)</span> for any constant <span class="math inline">\(k\)</span></li>
+<li><strong>Sum rule</strong>: <span class="math inline">\(\lim_{x \to \infty} [f(x) + g(x)] = \lim_{x \to \infty} f(x) + \lim_{x \to \infty} g(x)\)</span></li>
+<li><strong>Difference rule</strong>: <span class="math inline">\(\lim_{x \to \infty} [f(x) - g(x)] = \lim_{x \to \infty} f(x) - \lim_{x \to \infty} g(x)\)</span></li>
+<li><strong>Product rule</strong>: <span class="math inline">\(\lim_{x \to \infty} [f(x)g(x)] = \left[\lim_{x \to \infty} f(x)\right]\left[\lim_{x \to \infty} g(x)\right]\)</span></li>
+<li><strong>Quotient rule</strong>: <span class="math inline">\(\lim_{x \to \infty} \frac{f(x)}{g(x)} = \frac{\lim_{x \to \infty} f(x)}{\lim_{x \to \infty} g(x)}\)</span> if <span class="math inline">\(\lim_{x \to \infty} g(x) \neq 0\)</span></li>
+<li><strong>Power rule</strong>: <span class="math inline">\(\lim_{x \to \infty} [f(x)]^n = \left[\lim_{x \to \infty} f(x)\right]^n\)</span></li>
+</ul>
+</div>
+<p>Analogous results hold for <span class="math inline">\(\lim_{x \to -\infty}\)</span>.</p>
+</div>
+<div id="evaluating-limits-to-infinity" class="section level3 hasAnchor" number="4.15.3">
+<h3><span class="header-section-number">4.15.3</span> Evaluating Limits to Infinity<a href="differentiation.html#evaluating-limits-to-infinity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="example">
+<p><span id="exm:unnamed-chunk-110" class="example"><strong>Example 4.25  </strong></span>Evaluate each of the following limits:</p>
+<ul>
+<li><p><span class="math inline">\(\lim_{x \to \infty} \frac{5x^3 + 6x + 8}{x^4 + 6x + 9}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x \to \infty} \frac{5x^5 + 6x + 8}{x^4 + 6x + 9}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x \to -\infty} \frac{5x^7 + 6x^6 + 8}{15x^7 + 6x + 9}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x \to -\infty} \frac{5x^7 + 6x^6 + 8}{15x^7 + 6x + 9}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x \to \infty} \frac{\cos(x)}{e^x}\)</span></p></li>
+</ul>
+</div>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="11%" />
+<col width="13%" />
+<col width="20%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="right">10</th>
+<th align="right">100</th>
+<th align="right">1000</th>
+<th align="right">100,000</th>
+<th align="right">1,000,000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^2 + 2\)</span></td>
+<td align="right">102</td>
+<td align="right">10,002</td>
+<td align="right">1,000,002</td>
+<td align="right">10,000,000,002</td>
+<td align="right">1,000,000,000,002</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x^3 + 2\)</span></td>
+<td align="right">1,002</td>
+<td align="right">1,000,002</td>
+<td align="right">1,000,000,002</td>
+<td align="right"><span class="math inline">\(10^{15}\)</span></td>
+<td align="right"><span class="math inline">\(10^{18}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\frac{x^2 + 2}{x^3 + 2}\)</span></td>
+<td align="right">0.101796407186</td>
+<td align="right">0.010001979996</td>
+<td align="right">0.001000001998</td>
+<td align="right">0.000010000000</td>
+<td align="right">0.000001000000</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="11%" />
+<col width="13%" />
+<col width="20%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="right">10</th>
+<th align="right">100</th>
+<th align="right">1000</th>
+<th align="right">100,000</th>
+<th align="right">1,000,000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^3 + 2\)</span></td>
+<td align="right">1,002</td>
+<td align="right">1,000,002</td>
+<td align="right">1,000,000,002</td>
+<td align="right"><span class="math inline">\(10^{15}\)</span></td>
+<td align="right"><span class="math inline">\(10^{18}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x^2 + 2\)</span></td>
+<td align="right">102</td>
+<td align="right">10,002</td>
+<td align="right">1,000,002</td>
+<td align="right">10,000,000,002</td>
+<td align="right">1,000,000,000,002</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\frac{x^3 + 2}{x^2 + 2}\)</span></td>
+<td align="right">9.823529412</td>
+<td align="right">99.98020396</td>
+<td align="right">999.998002</td>
+<td align="right">99999.99998</td>
+<td align="right">1000000</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="11%" />
+<col width="13%" />
+<col width="20%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="right">10</th>
+<th align="right">100</th>
+<th align="right">1000</th>
+<th align="right">100,000</th>
+<th align="right">1,000,000</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x^3 + 2\)</span></td>
+<td align="right">1,002</td>
+<td align="right">1,000,002</td>
+<td align="right">1,000,000,002</td>
+<td align="right"><span class="math inline">\(10^{15}\)</span></td>
+<td align="right"><span class="math inline">\(10^{18}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(x^2 + 2\)</span></td>
+<td align="right">102</td>
+<td align="right">10,002</td>
+<td align="right">1,000,002</td>
+<td align="right">10,000,000,002</td>
+<td align="right">1,000,000,000,002</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\frac{x^3 + 2}{x^2 + 2}\)</span></td>
+<td align="right">9.823529412</td>
+<td align="right">99.98020396</td>
+<td align="right">999.998002</td>
+<td align="right">99999.99998</td>
+<td align="right">1000000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="lhôpitals-rule" class="section level2 hasAnchor" number="4.16">
+<h2><span class="header-section-number">4.16</span> L’Hôpital’s Rule<a href="#lh%C3%B4pitals-rule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be differentiable functions, and suppose <span class="math inline">\(g&#39;(x) \neq 0\)</span> on an open interval containing <span class="math inline">\(c\)</span> (except possibly at <span class="math inline">\(c\)</span> itself).</p>
+<p>Suppose</p>
+<p><span class="math display">\[
+\lim_{x \to c} \frac{f(x)}{g(x)}
+\]</span></p>
+<p>is an indeterminate form of type <span class="math inline">\(\frac{0}{0}\)</span> or <span class="math inline">\(\frac{\infty}{\infty}\)</span>, and that</p>
+<p><span class="math display">\[
+\lim_{x \to c} \frac{f&#39;(x)}{g&#39;(x)} = L
+\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is a finite number, <span class="math inline">\(+\infty\)</span>, or <span class="math inline">\(-\infty\)</span>. Then,</p>
+<p><span class="math display">\[
+\lim_{x \to c} \frac{f(x)}{g(x)} = L
+\]</span></p>
+<p>This theorem also applies to one-sided limits and to limits at infinity (i.e., <span class="math inline">\(x \to +\infty\)</span> or <span class="math inline">\(x \to -\infty\)</span>)</p>
+<div id="curve-sketching-with-asymptotes" class="section level3 hasAnchor" number="4.16.1">
+<h3><span class="header-section-number">4.16.1</span> Curve Sketching with Asymptotes<a href="differentiation.html#curve-sketching-with-asymptotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unnamed-chunk-111" class="definition"><strong>Definition 4.13  (Horizontal Asymptotes) </strong></span>The line <span class="math inline">\(y = L\)</span> is a horizontal asymptote of the graph of <span class="math inline">\(f\)</span> if</p>
+<p><span class="math display">\[
+\lim_{x \to \infty} f(x) = L \quad \text{or} \quad \lim_{x \to -\infty} f(x) = L
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-112" class="definition"><strong>Definition 4.14  (2: Vertical Asymptotes) </strong></span>The line <span class="math inline">\(x = c\)</span> is a vertical asymptote of the graph of <span class="math inline">\(f\)</span> if either of the one-sided limits</p>
+<p><span class="math display">\[
+\lim_{x \to c^-} f(x) \quad \text{or} \quad \lim_{x \to c^+} f(x)
+\]</span></p>
+<p>is infinite.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-113" class="definition"><strong>Definition 4.15  (3: Vertical Tangents and Cusps) </strong></span>Suppose <span class="math inline">\(f\)</span> is continuous at the point <span class="math inline">\(P(c, f(c))\)</span>. Then:</p>
+<ul>
+<li><p><strong>Vertical Tangent</strong> at <span class="math inline">\(P\)</span>:
+If</p>
+<p><span class="math display">\[
+\lim_{x \to c^-} f&#39;(x) = \pm\infty \quad \text{and} \quad \lim_{x \to c^+} f&#39;(x) = \pm\infty
+\]</span></p>
+<p>(both infinite and same sign), the graph has a vertical tangent at <span class="math inline">\(P\)</span>.</p></li>
+<li><p><strong>Cusp</strong> at <span class="math inline">\(P\)</span>:
+If</p>
+<p><span class="math display">\[
+\lim_{x \to c^-} f&#39;(x) = \infty, \quad \lim_{x \to c^+} f&#39;(x) = -\infty
+\]</span></p>
+<p>or vice versa (both infinite and <strong>opposite signs</strong>), the graph has a cusp at <span class="math inline">\(P\)</span>.</p></li>
+</ul>
+</div>
+<div id="graphing-strategy-for-a-function-y-fx" class="section level4 hasAnchor" number="4.16.1.1">
+<h4><span class="header-section-number">4.16.1.1</span> Graphing Strategy for a Function <span class="math inline">\(y = f(x)\)</span><a href="differentiation.html#graphing-strategy-for-a-function-y-fx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Simplify</strong> the function algebraically, if possible.</p></li>
+<li><p><strong>Intercepts:</strong> Find <span class="math inline">\(x\)</span>- and <span class="math inline">\(y\)</span>-intercepts.</p>
+<ul>
+<li>For the <span class="math inline">\(x\)</span>-intercept, set <span class="math inline">\(y = 0\)</span>.</li>
+<li>For the <span class="math inline">\(y\)</span>-intercept, set <span class="math inline">\(x = 0\)</span>.</li>
+</ul></li>
+<li><p><strong>Find Asymptotes, Vertical Tangents, and Cusps.</strong></p></li>
+<li><p><strong>Differentiation:</strong></p>
+<ul>
+<li><p><strong>a)</strong> Vertical asymptotes:
+Occur at values where <span class="math inline">\(f\)</span> is undefined.
+Use</p>
+<p><span class="math display">\[
+\lim_{x \to c^-} f(x), \quad \lim_{x \to c^+} f(x)
+\]</span></p>
+<p>to analyze behavior near <span class="math inline">\(x = c\)</span>.</p></li>
+<li><p><strong>b)</strong> Horizontal asymptotes:
+Evaluate</p>
+<p><span class="math display">\[
+\lim_{x \to -\infty} f(x), \quad \lim_{x \to \infty} f(x)
+\]</span></p>
+<p>and plot if finite.</p></li>
+<li><p><strong>c)</strong> Find vertical tangents and cusps.</p></li>
+</ul></li>
+<li><p><strong>Critical Numbers:</strong> Find values where <span class="math inline">\(f&#39;(x) = 0\)</span> or <span class="math inline">\(f&#39;(x)\)</span> is undefined.</p></li>
+<li><p><strong>Intervals of Increase/Decrease:</strong></p>
+<ul>
+<li><p>Mark critical numbers and asymptotes on the number line.</p></li>
+<li><p>Choose test values from each subinterval and evaluate <span class="math inline">\(f&#39;(x)\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(f&#39;(x) &gt; 0\)</span>: <span class="math inline">\(f\)</span> is increasing.</li>
+<li>If <span class="math inline">\(f&#39;(x) &lt; 0\)</span>: <span class="math inline">\(f\)</span> is decreasing.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Local Maxima and Minima:</strong> Use the first or second derivative test.</p></li>
+<li><p><strong>Concavity and Inflection Points:</strong></p>
+<ul>
+<li>Determine where <span class="math inline">\(f&#39;&#39;(x) &gt; 0\)</span> (concave up) and <span class="math inline">\(f&#39;&#39;(x) &lt; 0\)</span> (concave down).</li>
+<li>Inflection points occur where the concavity changes.</li>
+</ul></li>
+<li><p><strong>Sketching:</strong></p>
+<ul>
+<li>Draw asymptotes.</li>
+<li>Plot intercepts, extrema, and inflection points.</li>
+<li>Sketch the curve using intervals of increase/decrease and concavity.</li>
+</ul></li>
+</ol>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-114" class="exercise"><strong>Exercise 4.2  </strong></span></p>
+<ol style="list-style-type: lower-alpha">
+<li>The tangent line to <span class="math inline">\(y = \sin(\theta)\)</span> at <span class="math inline">\(\theta = \frac{\pi}{4}\)</span></li>
+<li>The normal line to <span class="math inline">\(f(x) = \cos(\theta)\)</span> at <span class="math inline">\(\theta = \frac{\pi}{4}\)</span></li>
+<li>All tangent lines to <span class="math inline">\(f(x) = -3x^2 + 5\)</span> that pass through the point <span class="math inline">\((0, 8)\)</span></li>
+<li>Points where the tangent line to</li>
+</ol>
+<p><span class="math display">\[
+  f(x) = \frac{1}{3}x^3 - \frac{5}{2}x^2 + 6x
+  \]</span></p>
+<p>is horizontal</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-115" class="exercise"><strong>Exercise 4.3  </strong></span>Assume that the position at time t of an object moving along a line is
+given by:
+<span class="math display">\[
+s(t) = t^3 - 9t^2 + 15t + 25
+\]</span></p>
+<p>Find:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Initial position, velocity, and acceleration. Discuss motion.</li>
+<li>Times where acceleration is zero.</li>
+<li>Time intervals where acceleration is positive.</li>
+<li>Time intervals where acceleration is negative.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-116" class="exercise"><strong>Exercise 4.4  </strong></span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Determine where <span class="math inline">\(f(x) = x^2 + 12x + 45\)</span> is strictly increasing or decreasing.</li>
+<li>Determine where <span class="math inline">\(f(t) = t - 2\sin(t)\)</span>, <span class="math inline">\(0 \le t \le 2\pi\)</span>, is increasing/decreasing.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-117" class="exercise"><strong>Exercise 4.5  </strong></span>Find critical numbers of:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x) = x^3 + 12x^2 + 45x\)</span></li>
+<li><span class="math inline">\(f(t) = t - 2\sin(t)\)</span>, <span class="math inline">\(0 \le t \le 2\pi\)</span></li>
+<li><span class="math inline">\(f(x) = \frac{e^x}{x - 2}\)</span></li>
+<li><span class="math inline">\(f(x) = |x|\)</span></li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-118" class="exercise"><strong>Exercise 4.6  </strong></span>For each function below, find all critical points and determine whether each corresponds to a <strong>relative maximum</strong>, <strong>relative minimum</strong>, or <strong>neither</strong>:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x) = x^3 + 12x^2 + 45x\)</span></li>
+<li><span class="math inline">\(f(x) = x^2 + 12x + 5\)</span></li>
+<li><span class="math inline">\(f(t) = t - 2\sin(t)\)</span>, <span class="math inline">\(0 \le t \le 2\pi\)</span></li>
+<li><span class="math inline">\(f(x) = |x|\)</span></li>
+</ol>
 </div>
 
 </div>

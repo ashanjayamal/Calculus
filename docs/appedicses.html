@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan J" />
 
 
-<meta name="date" content="2025-07-16" />
+<meta name="date" content="2025-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -134,10 +134,30 @@
 <li class="chapter" data-level="4.8.2" data-path="differentiation.html"><a href="differentiation.html#falling-body-problems"><i class="fa fa-check"></i><b>4.8.2</b> Falling Body Problems</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="differentiation.html"><a href="differentiation.html#real-world-application-of-chain-rule"><i class="fa fa-check"></i><b>4.9</b> Real-World Application of Chain Rule</a></li>
-<li class="chapter" data-level="4.10" data-path="differentiation.html"><a href="differentiation.html#extreme-values-of-a-function"><i class="fa fa-check"></i><b>4.10</b> # Extreme Values of a Function</a>
+<li class="chapter" data-level="4.10" data-path="differentiation.html"><a href="differentiation.html#extreme-values-of-a-function"><i class="fa fa-check"></i><b>4.10</b> Extreme Values of a Function</a>
 <ul>
 <li class="chapter" data-level="4.10.1" data-path="differentiation.html"><a href="differentiation.html#steps-to-find-critical-numbers"><i class="fa fa-check"></i><b>4.10.1</b> Steps to Find Critical Numbers</a></li>
 <li class="chapter" data-level="4.10.2" data-path="differentiation.html"><a href="differentiation.html#absolute-extrema"><i class="fa fa-check"></i><b>4.10.2</b> Absolute Extrema</a></li>
+</ul></li>
+<li class="chapter" data-level="4.11" data-path="differentiation.html"><a href="differentiation.html#the-mean-value-theorem"><i class="fa fa-check"></i><b>4.11</b> The Mean Value Theorem</a>
+<ul>
+<li class="chapter" data-level="4.11.1" data-path="differentiation.html"><a href="differentiation.html#introduction-2"><i class="fa fa-check"></i><b>4.11.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="4.12" data-path="differentiation.html"><a href="differentiation.html#derivative-and-the-shape-of-the-graph"><i class="fa fa-check"></i><b>4.12</b> Derivative and the Shape of the Graph</a></li>
+<li class="chapter" data-level="4.13" data-path="differentiation.html"><a href="differentiation.html#derivative-and-the-shape-of-the-graph-1"><i class="fa fa-check"></i><b>4.13</b> Derivative and the Shape of the Graph</a>
+<ul>
+<li class="chapter" data-level="4.13.1" data-path="differentiation.html"><a href="differentiation.html#identifying-whether-a-critical-point-is-minimum-or-maximum"><i class="fa fa-check"></i><b>4.13.1</b> Identifying Whether a Critical Point is Minimum or Maximum</a></li>
+</ul></li>
+<li class="chapter" data-level="4.14" data-path="differentiation.html"><a href="differentiation.html#curve-sketching"><i class="fa fa-check"></i><b>4.14</b> Curve Sketching</a></li>
+<li class="chapter" data-level="4.15" data-path="differentiation.html"><a href="differentiation.html#limits-involving-infinity-1"><i class="fa fa-check"></i><b>4.15</b> Limits Involving Infinity</a>
+<ul>
+<li class="chapter" data-level="4.15.1" data-path="differentiation.html"><a href="differentiation.html#limits-to-infinity"><i class="fa fa-check"></i><b>4.15.1</b> Limits to Infinity</a></li>
+<li class="chapter" data-level="4.15.2" data-path="differentiation.html"><a href="differentiation.html#limits-of-special-functions"><i class="fa fa-check"></i><b>4.15.2</b> Limits of Special Functions</a></li>
+<li class="chapter" data-level="4.15.3" data-path="differentiation.html"><a href="differentiation.html#evaluating-limits-to-infinity"><i class="fa fa-check"></i><b>4.15.3</b> Evaluating Limits to Infinity</a></li>
+</ul></li>
+<li class="chapter" data-level="4.16" data-path="06-appendix.html"><a href="#lh%C3%B4pitals-rule"><i class="fa fa-check"></i><b>4.16</b> L’Hôpital’s Rule</a>
+<ul>
+<li class="chapter" data-level="4.16.1" data-path="differentiation.html"><a href="differentiation.html#curve-sketching-with-asymptotes"><i class="fa fa-check"></i><b>4.16.1</b> Curve Sketching with Asymptotes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="sequence.html"><a href="sequence.html"><i class="fa fa-check"></i><b>5</b> Sequence</a>
@@ -150,7 +170,7 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>6</b> Series</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="series.html"><a href="series.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.1" data-path="series.html"><a href="series.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
 <li class="chapter" data-level="6.2" data-path="series.html"><a href="series.html#sequence-of-partial-sums"><i class="fa fa-check"></i><b>6.2</b> Sequence of Partial Sums</a>
 <ul>
 <li class="chapter" data-level="6.2.1" data-path="series.html"><a href="series.html#telescoping-series"><i class="fa fa-check"></i><b>6.2.1</b> Telescoping Series</a></li>
@@ -251,6 +271,625 @@ ax.text(0.5, 1.1, &#39;g(x) = x on (0,1): No Maximum, No Minimum&#39;,
 plt.tight_layout()
 plt.show()</code></pre>
 <p><img src="fig/fig37.png" /></p>
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# Plot 1: f(x) = x³ - 4x² + 3x + 3 on [0.5, 2]
+plt.figure(figsize=(8, 6))
+x1 = np.linspace(0.5, 2, 1000)
+y1 = x1**3 - 4*x1**2 + 3*x1 + 3
+
+plt.plot(x1, y1, &#39;r-&#39;, linewidth=2)
+plt.grid(True, alpha=0.3)
+plt.xlim(0, 2.5)
+plt.ylim(0, 4.5)
+
+# Mark endpoints and extrema for function 1
+f_05 = 0.5**3 - 4*0.5**2 + 3*0.5 + 3
+f_2 = 2**3 - 4*2**2 + 3*2 + 3
+plt.plot(0.5, f_05, &#39;ro&#39;, markersize=8)
+plt.plot(2, f_2, &#39;ro&#39;, markersize=8)
+plt.text(0.3, f_05 + 0.2, &#39;maximum&#39;, fontsize=10, ha=&#39;center&#39;)
+plt.text(2.1, f_2 - 0.2, &#39;minimum&#39;, fontsize=10, ha=&#39;left&#39;)
+
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;f(x) = x³ - 4x² + 3x + 3 on [0.5, 2]&#39;)
+plt.tight_layout()
+plt.show()
+
+# Plot 2: g(x) = sin(x) on [0, 2π]
+plt.figure(figsize=(8, 6))
+x2 = np.linspace(0, 2*np.pi, 1000)
+y2 = np.sin(x2)
+
+plt.plot(x2, y2, &#39;r-&#39;, linewidth=2)
+plt.grid(True, alpha=0.3)
+plt.xlim(-0.5, 7)
+plt.ylim(-1.5, 1.5)
+
+# Mark extrema for function 2
+plt.plot(np.pi/2, 1, &#39;ro&#39;, markersize=8)
+plt.plot(3*np.pi/2, -1, &#39;ro&#39;, markersize=8)
+plt.plot(0, 0, &#39;ro&#39;, markersize=8)
+plt.plot(2*np.pi, 0, &#39;ro&#39;, markersize=8)
+plt.text(np.pi/2, 1.2, &#39;maximum&#39;, fontsize=10, ha=&#39;center&#39;)
+plt.text(3*np.pi/2, -1.3, &#39;minimum&#39;, fontsize=10, ha=&#39;center&#39;)
+
+# Add x-axis labels
+plt.xticks([0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi], [&#39;0&#39;, &#39;π/2&#39;, &#39;π&#39;, &#39;3π/2&#39;, &#39;2π&#39;])
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.title(&#39;g(x) = sin(x) on [0, 2π]&#39;)
+plt.tight_layout()
+plt.show()
+
+# Plot 3: h(x) = x² - 4x + 1 on [0, 3]
+plt.figure(figsize=(8, 6))
+x3 = np.linspace(0, 3, 1000)
+y3 = x3**2 - 4*x3 + 1
+
+plt.plot(x3, y3, &#39;r-&#39;, linewidth=2)
+plt.grid(True, alpha=0.3)
+plt.xlim(-0.5, 5.5)
+plt.ylim(-4.5, 2.5)
+
+# Mark extrema for function 3
+h_0 = 0**2 - 4*0 + 1
+h_3 = 3**2 - 4*3 + 1
+h_2 = 2**2 - 4*2 + 1
+plt.plot(0, h_0, &#39;ro&#39;, markersize=8)
+plt.plot(3, h_3, &#39;ro&#39;, markersize=8)
+plt.plot(2, h_2, &#39;ro&#39;, markersize=8)
+plt.text(0.5, h_0 + 0.3, &#39;maximum&#39;, fontsize=10, ha=&#39;center&#39;)
+plt.text(2, h_2 - 0.4, &#39;minimum&#39;, fontsize=10, ha=&#39;center&#39;)
+
+# Add x-axis ticks
+plt.xticks([0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5])
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+# plt.title(&#39;h(x) = x² - 4x + 1 on [0, 3]&#39;)
+plt.tight_layout()
+plt.show()</code></pre>
+<p><img src="fig/fig39.png" />
+<img src="fig/fig40.png" />
+<img src="fig/fig41.png" /></p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Use dark background
+plt.style.use(&#39;dark_background&#39;)
+
+# Define a non-symmetric function
+def f(x):
+    return -1.2 * (x - 1.2) ** 2 + 3.8
+
+# Define points a, b, c
+a, b = 0.6, 2.2
+c = (a + b) / 2
+fa, fb, fc = f(a), f(b), f(c)
+
+# Function domain only from a to b
+x = np.linspace(a, b, 400)
+y = f(x)
+
+# Create plot
+fig, ax = plt.subplots(figsize=(10, 8))
+fig.patch.set_facecolor(&#39;black&#39;)
+ax.set_facecolor(&#39;black&#39;)
+
+# Plot the curve between a and b
+ax.plot(x, y, color=&#39;dodgerblue&#39;, linewidth=3)
+
+# Plot blue dots at (a, f(a)) and (b, f(b))
+ax.plot(a, fa, &#39;o&#39;, color=&#39;dodgerblue&#39;, markersize=9, zorder=5)
+ax.plot(b, fb, &#39;o&#39;, color=&#39;dodgerblue&#39;, markersize=9, zorder=5)
+
+# Plot red dot at (c, f(c))
+ax.plot(c, fc, &#39;ro&#39;, markersize=9, zorder=6)
+
+# Plot secant line from (a, f(a)) to (b, f(b))
+ax.plot([a, b], [fa, fb], color=&#39;orange&#39;, linewidth=2)
+
+# Plot tangent line at c
+slope = (fb - fa) / (b - a)
+tangent_line = lambda x: slope * (x - c) + fc
+x_tan = np.linspace(a, b, 200)
+ax.plot(x_tan, tangent_line(x_tan), color=&#39;orange&#39;, linestyle=&#39;--&#39;, linewidth=2)
+
+# Vertical dashed lines at a, b, c
+ax.vlines([a, b, c], ymin=0, ymax=[fa, fb, fc], colors=&#39;white&#39;, linestyles=&#39;dotted&#39;)
+
+# Axes limits
+ax.set_xlim(-0.2, 3.2)
+ax.set_ylim(-1, 5)
+
+# Remove ticks and spines
+ax.set_xticks([])
+ax.set_yticks([])
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+# Custom axis arrows
+ax.annotate(&#39;&#39;, xy=(3.1, 0), xytext=(-0.2, 0),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=2))
+ax.annotate(&#39;&#39;, xy=(0, 5), xytext=(0, -0.5),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=2))
+
+# Label points a, b, c
+ax.text(a, -0.4, &#39;a&#39;, fontsize=14, color=&#39;white&#39;, ha=&#39;center&#39;)
+ax.text(b, -0.4, &#39;b&#39;, fontsize=14, color=&#39;white&#39;, ha=&#39;center&#39;)
+ax.text(c, -0.4, &#39;c&#39;, fontsize=14, color=&#39;white&#39;, ha=&#39;center&#39;)
+
+# Label the curve
+ax.text(b + 0.1, f(b), &#39;$f$&#39;, fontsize=16, color=&#39;dodgerblue&#39;)
+
+# Mean Value Theorem formula
+ax.text(0.1, 4.5, r&quot;$f&#39;(c) = \dfrac{f(b) - f(a)}{b - a}$&quot;, fontsize=18, color=&#39;white&#39;)
+
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p><img src="fig/fig42.png" /></p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Dark theme
+plt.style.use(&#39;dark_background&#39;)
+
+# Curve with same start and end values
+x = np.linspace(0, 10, 400)
+y = np.cos((x - 3) * np.pi / 5) + 1.5
+
+# Setup plot
+fig, ax = plt.subplots(figsize=(8, 5))
+fig.patch.set_facecolor(&#39;black&#39;)
+ax.set_facecolor(&#39;black&#39;)
+
+# Plot function
+ax.plot(x, y, color=&#39;deepskyblue&#39;, linewidth=2, label=r&#39;$y = f(x)$&#39;)
+
+# Points
+a, b = x[0], x[-1]
+fa, fb = y[0], y[-1]
+c2 = x[np.argmax(y)]
+c1 = x[np.argmin(y)]
+fc2 = max(y)
+fc1 = min(y)
+
+# Draw f(a) = f(b) line
+ax.plot([a-1, b+0.5], [fa, fb], color=&#39;white&#39;, linestyle=&#39;-&#39;, linewidth=1)
+
+# Vertical dashed lines to local extrema
+ax.plot([c2, c2], [0, fc2], &#39;w--&#39;, linewidth=1)
+ax.plot([c1, c1], [0, fc1], &#39;w--&#39;, linewidth=1)
+
+# Horizontal caps
+ax.plot([c2 - 0.5, c2 + 0.5], [fc2, fc2], &#39;white&#39;, linewidth=1.5)
+ax.plot([c1 - 0.5, c1 + 0.5], [fc1, fc1], &#39;white&#39;, linewidth=1.5)
+
+# Mark and label points
+ax.plot([a, b], [fa, fb], &#39;o&#39;, color=&#39;deepskyblue&#39;)
+ax.text(a + 0.1, -0.1, &#39;a&#39;, fontsize=12, color=&#39;white&#39;)  # Adjusted position
+ax.text(b - 0.1, -0.1, &#39;b&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text(c2 - 0.1, -0.1, r&#39;$c_2$&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text(c1 - 0.1, -0.1, r&#39;$c_1$&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text((a + b) / 2, 0.8, r&#39;$y = f(x)$&#39;, fontsize=14, color=&#39;deepskyblue&#39;)
+ax.text((a + b) / 2 + 2, 1.4, r&#39;$y=d$&#39;, fontsize=14, color=&#39;white&#39;)
+
+# Move y-axis to the left by adjusting xlim
+left_margin = -2  # How much to show left of x=0
+ax.set_xlim(left_margin, b + 1)  # Extend left limit
+
+# Axes lines (y-axis will now appear at x=left_margin)
+ax.axhline(0, color=&#39;white&#39;, linewidth=1)
+ax.axvline(left_margin, color=&#39;white&#39;, linewidth=1)  # Moved y-axis to left
+
+# Axis arrows
+ax.annotate(&#39;&#39;, xy=(b +1, 0), xytext=(b + 0.1, 0),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=1.5))
+# Adjust y-axis arrow to new position
+ax.annotate(&#39;&#39;, xy=(left_margin, y.max() + 0.5), 
+            xytext=(left_margin, y.max() + 0.1),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=1.5))
+
+# Mark and label extrema
+ax.plot([c1, c2], [fc1, fc2], &#39;o&#39;, color=&#39;deepskyblue&#39;)
+ax.text(c1 + 0.3, fc1 - 0.1, r&#39;$(c_1, f(c_1))$&#39;, fontsize=12, color=&#39;deepskyblue&#39;)
+ax.text(c2 - 0.3, fc2 + 0.07, r&#39;$(c_2, f(c_2))$&#39;, fontsize=12, color=&#39;deepskyblue&#39;)
+ax.text(a - 0.3, fa - 0.1, r&#39;$(a,d)$&#39;, fontsize=12, color=&#39;deepskyblue&#39;)
+ax.text(b - 0.3, fb + 0.07, r&#39;$(b,d)$&#39;, fontsize=12, color=&#39;deepskyblue&#39;)
+
+# Axis labels
+ax.text(b + 0.4, -0.1, &#39;x&#39;, fontsize=12, color=&#39;white&#39;)
+# Adjust y-label to new y-axis position
+ax.text(left_margin - 0.3, y.max() + 0.4, &#39;y&#39;, fontsize=12, color=&#39;white&#39;)
+
+# Clean up
+ax.set_ylim(y.min() - 0.5, y.max() + 0.5)
+ax.set_xticks([])
+ax.set_yticks([])
+ax.spines[&#39;top&#39;].set_visible(False)
+ax.spines[&#39;right&#39;].set_visible(False)
+ax.spines[&#39;bottom&#39;].set_visible(True)
+ax.spines[&#39;left&#39;].set_visible(False)
+
+plt.tight_layout()
+plt.show()</code></pre>
+<p><img src="fig/fig43.png" /></p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import fsolve
+
+# Dark theme
+plt.style.use(&#39;dark_background&#39;)
+
+# Define the function and its derivative (FIXED: consistent coefficient)
+def f(x):
+    return np.cos(1.3*(x - 3) * np.pi / 5) + 1.5
+
+def f_prime(x):
+    return -1.3 * np.pi / 5 * np.sin(1.3*(x - 3) * np.pi / 5)
+
+# Curve with same start and end values
+x = np.linspace(0, 10, 400)
+y = f(x)
+
+# Setup plot
+fig, ax = plt.subplots(figsize=(10, 6))
+fig.patch.set_facecolor(&#39;black&#39;)
+ax.set_facecolor(&#39;black&#39;)
+
+# Plot function
+ax.plot(x, y, color=&#39;deepskyblue&#39;, linewidth=2)
+
+# Points
+a, b = x[0], x[-1]
+fa, fb = f(a), f(b)
+
+# Calculate the slope of secant line connecting (a, f(a)) and (b, f(b))
+secant_slope = (fb - fa) / (b - a)
+print(f&quot;Secant line slope: {secant_slope:.6f}&quot;)
+
+# Find points where f&#39;(c) = secant_slope (MVT points)
+def equation(c):
+    return f_prime(c) - secant_slope
+
+# Find all solutions in the interval [a, b]
+mvt_points = []
+for start in np.linspace(a, b, 20):
+    try:
+        sol = fsolve(equation, start)[0]
+        if a &lt; sol &lt; b and abs(equation(sol)) &lt; 1e-10:
+            # Check if this solution is already in our list
+            if not any(abs(sol - existing) &lt; 1e-6 for existing in mvt_points):
+                mvt_points.append(sol)
+    except:
+        pass
+
+mvt_points.sort()
+print(f&quot;MVT points (c values): {mvt_points}&quot;)
+print(f&quot;Derivatives at MVT points: {[f_prime(c) for c in mvt_points]}&quot;)
+
+# Draw secant line
+ax.plot([a, b], [fa, fb], color=&#39;red&#39;, linestyle=&#39;-&#39;, linewidth=2)
+
+# Draw tangent lines at MVT points
+for i, c in enumerate(mvt_points):
+    fc = f(c)
+    slope = f_prime(c)
+    
+    # Calculate tangent line points
+    x_tangent = np.linspace(c - 1.5, c + 1.5, 100)
+    y_tangent = slope * (x_tangent - c) + fc
+    
+    # Plot tangent line
+    ax.plot(x_tangent, y_tangent, color=&#39;yellow&#39;, linestyle=&#39;--&#39;, linewidth=2)
+    
+    # Mark MVT point
+    ax.plot(c, fc, &#39;o&#39;, color=&#39;yellow&#39;, markersize=8)
+    
+    # Vertical dashed line to MVT point
+    ax.plot([c, c], [0, fc], &#39;yellow&#39;, linestyle=&#39;:&#39;, linewidth=1, alpha=0.7)
+    
+    # Label MVT point - improved positioning
+    ax.text(c - 0.1, -0.3, f&#39;$c_{i+1}$&#39;, fontsize=12, color=&#39;yellow&#39;)
+    
+    # Position labels to avoid overlap
+    if i == 0:
+        ax.text(c - 0.8, fc + 0.1, f&#39;$(c_{i+1}, f(c_{i+1}))$&#39;, fontsize=10, color=&#39;yellow&#39;)
+    else:
+        ax.text(c + 0.2, fc - 0.1, f&#39;$(c_{i+1}, f(c_{i+1}))$&#39;, fontsize=10, color=&#39;yellow&#39;)
+
+# Mark and label endpoints
+ax.plot([a, b], [fa, fb], &#39;o&#39;, color=&#39;deepskyblue&#39;, markersize=8)
+ax.text(a + 0.1, -0.3, &#39;a&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text(b - 0.1, -0.3, &#39;b&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text(a - 0.3, fa - 0.1, f&#39;$(a, f(a))$&#39;, fontsize=10, color=&#39;deepskyblue&#39;)
+ax.text(b - 0.9, fb + 0.1, f&#39;$(b, f(b))$&#39;, fontsize=10, color=&#39;deepskyblue&#39;)
+
+# Function label
+ax.text((a + b) / 2, max(y) - 0.3, r&#39;$y = f(x)$&#39;, fontsize=14, color=&#39;deepskyblue&#39;)
+
+# Move y-axis to the left
+left_margin = -2
+ax.set_xlim(left_margin, b + 1)
+
+# Axes lines
+ax.axhline(0, color=&#39;white&#39;, linewidth=1)
+ax.axvline(left_margin, color=&#39;white&#39;, linewidth=1)
+
+# Axis arrows
+ax.annotate(&#39;&#39;, xy=(b + 1, 0), xytext=(b + 0.1, 0),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=1.5))
+ax.annotate(&#39;&#39;, xy=(left_margin, max(y) + 0.5),
+            xytext=(left_margin, max(y) + 0.1),
+            arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=1.5))
+
+# Axis labels
+ax.text(b + 0.4, -0.1, &#39;x&#39;, fontsize=12, color=&#39;white&#39;)
+ax.text(left_margin - 0.3, max(y) + 0.4, &#39;y&#39;, fontsize=12, color=&#39;white&#39;)
+
+# Clean up
+ax.set_ylim(min(y) - 0.5, max(y) + 0.5)
+ax.set_xticks([])
+ax.set_yticks([])
+ax.spines[&#39;top&#39;].set_visible(False)
+ax.spines[&#39;right&#39;].set_visible(False)
+ax.spines[&#39;bottom&#39;].set_visible(True)
+ax.spines[&#39;left&#39;].set_visible(False)
+
+# Add legend
+ax.legend(loc=&#39;upper left&#39;, fontsize=10)
+
+# Add title
+# ax.set_title(&#39;Mean Value Theorem for Derivatives&#39;, fontsize=16, color=&#39;white&#39;, pad=20)
+
+plt.tight_layout()
+plt.show()
+
+</code></pre>
+<p><img src="fig/fig44.png" /></p>
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Dark theme
+plt.style.use(&#39;dark_background&#39;)
+
+# Create figure with two subplots side by side
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+# Define x values
+x = np.linspace(-3, 3, 1000)
+
+# Strictly Increasing Function: f(x) = x^3 + x + 1
+y1 = x**3 + x + 1
+
+# Strictly Decreasing Function: f(x) = -x^3 - x + 1  
+y2 = -x**3 - x + 1
+
+# Plot Strictly Increasing Function
+ax1.plot(x, y1, &#39;cyan&#39;, linewidth=2, label=&#39;f(x) = x³ + x + 1&#39;)
+ax1.grid(True, alpha=0.3)
+# ax1.set_xlabel(&#39;x&#39;)
+# ax1.set_ylabel(&#39;f(x)&#39;)
+ax1.set_title(&#39;Strictly Increasing Function&#39;)
+ax1.axhline(y=0, color=&#39;k&#39;, linewidth=0.5)
+ax1.axvline(x=0, color=&#39;k&#39;, linewidth=0.5)
+
+# Remove axis numbers but keep grid
+ax1.set_xticks([])
+ax1.set_yticks([])
+
+# Add example points to show x1 &lt; x2 implies f(x1) &lt; f(x2)
+x1_inc, x2_inc = -1, 1
+y1_inc, y2_inc = x1_inc**3 + x1_inc + 1, x2_inc**3 + x2_inc + 1
+ax1.plot([x1_inc, x2_inc], [y1_inc, y2_inc], &#39;o&#39;, markersize=8,color=&#39;red&#39;)
+ax1.plot([x1_inc, x1_inc], [-10, y1_inc], &#39;w--&#39;, alpha=0.7)
+ax1.plot([x2_inc, x2_inc], [-10, y2_inc], &#39;w--&#39;, alpha=0.7)
+ax1.plot([-3, x1_inc], [y1_inc, y1_inc], &#39;w--&#39;, alpha=0.7)
+ax1.plot([-3, x2_inc], [y2_inc, y2_inc], &#39;w--&#39;, alpha=0.7)
+ax1.text(x1_inc, -10.75, &#39;x₁&#39;, fontsize=12, ha=&#39;center&#39;)
+ax1.text(x2_inc, -10.75, &#39;x₂&#39;, fontsize=12, ha=&#39;center&#39;)
+ax1.text(-3.25, y1_inc, &#39;f(x₁)&#39;, fontsize=12, ha=&#39;center&#39;)
+ax1.text(-3.25, y2_inc, &#39;f(x₂)&#39;, fontsize=12, ha=&#39;center&#39;)
+# Grid lines
+for i in range(-10, 10):
+    ax1.axvline(i, color=&#39;#4A5568&#39;, linewidth=0.5, alpha=0.7)
+for i in range(-10, 10):
+    ax1.axhline(i, color=&#39;#4A5568&#39;, linewidth=0.5, alpha=0.7)
+
+
+# Plot Strictly Decreasing Function
+ax2.plot(x, y2, &#39;cyan&#39;, linewidth=2, label=&#39;f(x) = -x³ - x + 1&#39;)
+ax2.grid(True, alpha=0.3)
+# ax2.set_xlabel(&#39;x&#39;)
+# ax2.set_ylabel(&#39;f(x)&#39;)
+ax2.set_title(&#39;Strictly Decreasing Function&#39;)
+# ax2.axhline(y=0, color=&#39;k&#39;, linewidth=0.5)
+# ax2.axvline(x=0, color=&#39;k&#39;, linewidth=0.5)
+
+# Remove axis numbers but keep grid
+ax2.set_xticks([])
+ax2.set_yticks([])
+
+# Add example points to show x1 &lt; x2 implies f(x1) &gt; f(x2)
+x1_dec, x2_dec = -1, 1
+y1_dec, y2_dec = -x1_dec**3 - x1_dec + 1, -x2_dec**3 - x2_dec + 1
+ax2.plot([x1_dec, x2_dec], [y1_dec, y2_dec], &#39;o&#39;, markersize=8, color=&#39;red&#39;)
+ax2.plot([x1_dec, x1_dec], [-10, y1_dec], &#39;w--&#39;, alpha=0.7)
+ax2.plot([x2_dec, x2_dec], [-10, y2_dec], &#39;w--&#39;, alpha=0.7)
+ax2.plot([-3, x1_dec], [y1_dec, y1_dec], &#39;w--&#39;, alpha=0.7)
+ax2.plot([-3, x2_dec], [y2_dec, y2_dec], &#39;w--&#39;, alpha=0.7)
+ax2.text(x1_dec, -10.75, &#39;x₁&#39;, fontsize=12, ha=&#39;center&#39;)
+ax2.text(x2_dec, -10.75, &#39;x₂&#39;, fontsize=12, ha=&#39;center&#39;)
+ax2.text(-3.25, y1_dec, &#39;f(x₁)&#39;, fontsize=12, ha=&#39;center&#39;)
+ax2.text(-3.25, y2_dec, &#39;f(x₂)&#39;, fontsize=12, ha=&#39;center&#39;)
+# Grid lines
+for i in range(-10, 10):
+    ax2.axvline(i, color=&#39;#4A5568&#39;, linewidth=0.5, alpha=0.7)
+for i in range(-10, 10):
+    ax2.axhline(i, color=&#39;#4A5568&#39;, linewidth=0.5, alpha=0.7)
+# Set equal aspect ratio and limits
+ax1.set_xlim(-3, 3)
+ax1.set_ylim(-10, 10)
+ax2.set_xlim(-3, 3)
+ax2.set_ylim(-10, 10)
+
+# Add annotations explaining the conditions
+ax1.text(0.5, -8, &#39;x₁ &lt; x₂ ⟹ f(x₁) &lt; f(x₂)&#39;, fontsize=12,
+         bbox=dict(boxstyle=&quot;round,pad=0.3&quot;, facecolor=&quot;lightcoral&quot;, alpha=0.7))
+ax2.text(0.5, -8, &#39;x₁ &lt; x₂ ⟹ f(x₁) &gt; f(x₂)&#39;, fontsize=12,
+         bbox=dict(boxstyle=&quot;round,pad=0.3&quot;, facecolor=&quot;lightcoral&quot;, alpha=0.7))
+
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p><img src="fig/fig45.png" /></p>
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# Set dark theme
+plt.style.use(&#39;dark_background&#39;)
+
+# Create figure
+fig, ax = plt.subplots(1, 1, figsize=(12, 3))
+
+# Define the range for the number line
+x_min, x_max = -7, 1
+
+# Draw the main number line
+ax.axhline(y=0, color=&#39;white&#39;, linewidth=3, xmin=0, xmax=1)
+
+# Add tick marks for each integer
+for i in range(x_min, x_max + 1):
+    ax.plot([i, i], [-0.1, 0.1], color=&#39;white&#39;, linewidth=2)
+    ax.text(i, -0.3, str(i), ha=&#39;center&#39;, va=&#39;top&#39;, fontsize=12, color=&#39;white&#39;)
+
+# Mark -3 and -5 with special highlighting
+marked_points = [-3, -5]
+for point in marked_points:
+    # Draw a larger circle at the marked point
+    ax.plot(point, 0, &#39;o&#39;, color=&#39;red&#39;, markersize=12, markeredgecolor=&#39;red&#39;, markeredgewidth=2)
+    # Add label above the point
+    # ax.text(point, 0.4, f&#39;x = {point}&#39;, ha=&#39;center&#39;, va=&#39;bottom&#39;, fontsize=14, 
+    #         color=&#39;yellow&#39;, fontweight=&#39;bold&#39;)
+
+# Add arrows at the ends of the number line
+# ax.annotate(&#39;&#39;, xy=(x_min-0.3, 0), xytext=(x_min-0.1, 0),
+#             arrowprops=dict(arrowstyle=&#39;&lt;-&#39;, color=&#39;white&#39;, lw=2))
+# ax.annotate(&#39;&#39;, xy=(x_max+0.3, 0), xytext=(x_max+0.1, 0),
+#             arrowprops=dict(arrowstyle=&#39;-&gt;&#39;, color=&#39;white&#39;, lw=2))
+
+# Set the limits and appearance
+ax.set_xlim(x_min - 0.5, x_max + 0.5)
+ax.set_ylim(-0.8, 0.8)
+
+# Remove y-axis and spines
+ax.set_yticks([])
+ax.spines[&#39;top&#39;].set_visible(False)
+ax.spines[&#39;right&#39;].set_visible(False)
+ax.spines[&#39;bottom&#39;].set_visible(False)
+ax.spines[&#39;left&#39;].set_visible(False)
+
+# Add title
+# ax.set_title(&#39;Number Line: x = -7 to 1 (with marked points at -3 and -5)&#39;, 
+#              fontsize=16, color=&#39;white&#39;, pad=20)
+
+# Add grid for better readability (optional)
+# ax.grid(True, alpha=0.3, axis=&#39;x&#39;, color=&#39;gray&#39;)
+ax.set_xticks([])
+ax.set_yticks([])
+plt.tight_layout()
+plt.show()</code></pre>
+<p><img src="fig/fig46.png" /></p>
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# Create figure with two subplots side by side
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+
+# Define x values for both plots
+x1 = np.linspace(0, 6, 1000)
+x2 = np.linspace(0, 6, 1000)
+
+# Concave up function (e.g., x^2)
+y1 = x2**2
+
+# Concave down function (e.g., square root)
+y2 = 2 * np.sqrt(x2)
+
+# Plot concave up function
+ax1.plot(x1, y1, color=&#39;cyan&#39;, linewidth=2)
+ax1.grid(True, alpha=0.5)
+ax1.set_xlim(0, 3)
+ax1.set_ylim(0, 6)
+ax1.set_xlabel(&#39;x&#39;)
+ax1.set_ylabel(&#39;y&#39;)
+ax1.set_title(&#39;Concave up&#39;, fontsize=12)
+
+# First tangent line at x = 1
+x_tangent1 = 1
+y_tangent1 = x_tangent1**2
+slope1 = 2 * x_tangent1  # derivative of x^2
+x_line1 = np.linspace(0.2, 2.2, 100)
+y_line1 = slope1 * (x_line1 - x_tangent1) + y_tangent1
+ax1.plot(x_line1, y_line1, color=&#39;orange&#39;, linewidth=2)
+ax1.scatter(1, 1, color=&#39;orange&#39;, s=40, zorder=5)
+ax1.annotate(&quot;(1,1)&quot;, xy=(1,1), xytext=(-30,10),
+             textcoords=&#39;offset points&#39;, color=&#39;orange&#39;, fontsize=10)
+
+# Second tangent line at x = 2
+x_tangent2 = 2
+y_tangent2 = x_tangent2**2
+slope2 = 2 * x_tangent2  # derivative of x^2
+x_line2 = np.linspace(1, 3, 100)
+y_line2 = slope2 * (x_line2 - x_tangent2) + y_tangent2
+ax1.plot(x_line2, y_line2, color=&#39;magenta&#39;, linewidth=2)
+ax1.scatter(2, 4, color=&#39;magenta&#39;, s=40, zorder=5)
+ax1.annotate(&quot;(2,4)&quot;, xy=(2,4), xytext=(-30, 10),
+             textcoords=&#39;offset points&#39;, color=&#39;magenta&#39;, fontsize=10)
+
+# Plot concave down function
+ax2.plot(x2, y2, color=&#39;cyan&#39;, linewidth=2)
+ax2.grid(True, alpha=0.5)
+ax2.set_xlim(0, 6)
+ax2.set_ylim(0, 6)
+ax2.set_xlabel(&#39;x&#39;)
+ax2.set_ylabel(&#39;y&#39;)
+ax2.set_title(&#39;Concave down&#39;, fontsize=12)
+
+# First tangent line at x = 2
+x_tangent3 = 2
+y_tangent3 = 2 * np.sqrt(x_tangent3)
+slope3 = 1 / np.sqrt(x_tangent3)  # derivative of 2*sqrt(x)
+x_line3 = np.linspace(0.5, 4, 100)
+y_line3 = slope3 * (x_line3 - x_tangent3) + y_tangent3
+ax2.plot(x_line3, y_line3, color=&#39;orange&#39;, linewidth=2)
+ax2.scatter(2, 2.828, color=&#39;orange&#39;, s=40, zorder=5)
+ax2.annotate(&quot;$(2,2\\sqrt{2})$&quot;, xy=(2,2.828), xytext=(-30,10),
+             textcoords=&#39;offset points&#39;, color=&#39;orange&#39;, fontsize=10)
+
+# Second tangent line at x = 4
+x_tangent4 = 4
+y_tangent4 = 2 * np.sqrt(x_tangent4)
+slope4 = 1 / np.sqrt(x_tangent4)  # derivative of 2*sqrt(x)
+x_line4 = np.linspace(2, 6, 100)
+y_line4 = slope4 * (x_line4 - x_tangent4) + y_tangent4
+ax2.plot(x_line4, y_line4, color=&#39;magenta&#39;, linewidth=2)
+ax2.scatter(4, 4, color=&#39;magenta&#39;, s=40, zorder=5)
+ax2.annotate(&quot;(4,4)&quot;, xy=(4,4), xytext=(-30, 10),
+             textcoords=&#39;offset points&#39;, color=&#39;magenta&#39;, fontsize=10)
+
+# Set background to black
+ax1.set_facecolor(&#39;black&#39;)
+ax2.set_facecolor(&#39;black&#39;)
+fig.patch.set_facecolor(&#39;black&#39;)
+
+plt.tight_layout()
+plt.show()</code></pre>
+<p><img src="fig/fig52.png" /></p>
 
 </div>
 
